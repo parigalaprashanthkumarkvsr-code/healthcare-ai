@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 6. Specialty Applications: Radiology, Pathology, Oncology, Cardiology — Healthcare AI</title>
+  <meta name="description" content="Describe the flagship AI applications in radiology, pathology, oncology, and cardiology.">
+  <meta name="color-scheme" content="light dark">
+  <script>
+  (function(){try{var t=localStorage.getItem('healthai:theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  
+</head>
+<body data-page="chapter" data-chapter="ch-06">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="banner" id="siteBanner">
+    <div class="banner__inner">
+      <strong>First edition · 2026</strong>
+      <span><span class="banner__lead">Five units, thirty-six chapters, a full question bank with model answers.</span> <a href="../index.html#preface">Read the preface</a> or <a href="../read/ch-01.html">start with Chapter 1</a>.</span>
+    </div>
+    <button class="banner__close" id="bannerClose" type="button" aria-label="Dismiss the announcement">×</button>
+  </div>
+  <header class="site-header" id="siteHeader">
+    <div class="site-header__inner">
+      <a class="brand" href="../index.html" aria-label="Healthcare AI, home">
+        <span class="brand__mark">HEALTH<span>/</span>CARE&nbsp;AI</span>
+        <span class="brand__tag">A complete<br>textbook</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../contents.html">Contents</a>
+        <a href="../index.html#units">Units</a>
+        <a href="../labs.html">Labs</a>
+        <a href="../glossary.html">Glossary</a>
+        <a href="../reading.html">Reading</a>
+        <a href="../question-bank.html">Questions</a>
+      </nav>
+      <div class="header-tools">
+        <button class="search-trigger" type="button" aria-label="Search the textbook (Command K)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+          <span>Search</span>
+          <kbd>⌘K</kbd>
+        </button>
+        <div class="theme-wrap">
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"></path></svg>
+          </button>
+          <div class="theme-menu" id="themeMenu" role="menu" aria-label="Theme" hidden>
+            <div class="theme-menu__label">Appearance</div>
+            <button type="button" role="menuitemradio" data-mode="system" aria-checked="true">System</button>
+            <button type="button" role="menuitemradio" data-mode="light" aria-checked="false">Light</button>
+            <button type="button" role="menuitemradio" data-mode="dark" aria-checked="false">Dark</button>
+          </div>
+        </div>
+        <a class="btn btn--primary btn--sm header-cta" href="../read/ch-01.html">Start reading</a>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="../contents.html">Contents <span>36 chapters</span></a>
+    <a href="../index.html#units">Units <span>5 units</span></a>
+    <a href="../labs.html">Labs <span>8 exercises</span></a>
+    <a href="../glossary.html">Glossary <span>key terms</span></a>
+    <a href="../reading.html">Reading list <span>appendix C</span></a>
+    <a href="../question-bank.html">Question bank <span>appendix D</span></a>
+    <div class="mobile-nav__tools">
+      <a class="btn btn--primary btn--sm" href="../read/ch-01.html">Start reading</a>
+      <a class="btn btn--ghost btn--sm" href="../contents.html">Open contents</a>
+    </div>
+  </div>
+  <div class="reader-progress" aria-hidden="true"><i id="readerBar"></i></div>
+  <div class="reader-shell">
+    <nav class="reader-nav" aria-label="Book navigation">
+    <div class="reader-nav__label">The textbook</div>
+    <div class="reader-nav__unit">
+        <a href="../contents.html#unit-1">I · Introduction to AI in Healthcare<span>8</span></a>
+        <ul class="reader-nav__chapters">
+          <li><a href="../read/ch-01.html" data-slug="ch-01" class="">
+              <span class="n">01</span><span>Foundations of Healthcare AI: Definition, Evolution, Scope</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-02.html" data-slug="ch-02" class="">
+              <span class="n">02</span><span>Traditional vs AI-Enabled Healthcare Workflows</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-03.html" data-slug="ch-03" class="">
+              <span class="n">03</span><span>Clinical Decision Support Systems (CDSS)</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-04.html" data-slug="ch-04" class="">
+              <span class="n">04</span><span>The Medical Data Ecosystem</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-05.html" data-slug="ch-05" class="">
+              <span class="n">05</span><span>EHRs vs Paper-Based Records</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-06.html" data-slug="ch-06" class="current" aria-current="page">
+              <span class="n">06</span><span>Specialty Applications: Radiology, Pathology, Oncology, Cardiology</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-07.html" data-slug="ch-07" class="">
+              <span class="n">07</span><span>Diagnosis, Prognosis, and Patient Monitoring</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-08.html" data-slug="ch-08" class="">
+              <span class="n">08</span><span>Telemedicine and Deployment Challenges</span><span class="check"></span>
+            </a></li>
+        </ul>
+      </div><div class="reader-nav__unit">
+        <a href="../contents.html#unit-2">II · Data Preprocessing and Feature Engineering in Clinical Datasets<span>6</span></a>
+        <ul class="reader-nav__chapters">
+          <li><a href="../read/ch-09.html" data-slug="ch-09" class="">
+              <span class="n">09</span><span>Clinical Data Cleaning, Normalization, and Standardization</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-10.html" data-slug="ch-10" class="">
+              <span class="n">10</span><span>Missing Values, Outliers, and Collection Bias</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-11.html" data-slug="ch-11" class="">
+              <span class="n">11</span><span>Feature Engineering for EHR Data</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-12.html" data-slug="ch-12" class="">
+              <span class="n">12</span><span>Physiological Time-Series Features and Dimensionality Reduction</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-13.html" data-slug="ch-13" class="">
+              <span class="n">13</span><span>Text Mining and NLP for Clinical Notes</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-14.html" data-slug="ch-14" class="">
+              <span class="n">14</span><span>ICD and CPT Coding Systems</span><span class="check"></span>
+            </a></li>
+        </ul>
+      </div><div class="reader-nav__unit">
+        <a href="../contents.html#unit-3">III · Machine Learning &amp; Deep Learning for Healthcare Analytics<span>8</span></a>
+        <ul class="reader-nav__chapters">
+          <li><a href="../read/ch-15.html" data-slug="ch-15" class="">
+              <span class="n">15</span><span>Supervised Learning for Risk Prediction and Diagnostic Classification</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-16.html" data-slug="ch-16" class="">
+              <span class="n">16</span><span>Unsupervised Learning: Stratification, Phenotyping, Anomaly Detection</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-17.html" data-slug="ch-17" class="">
+              <span class="n">17</span><span>CNNs and Transfer Learning for Medical Imaging</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-18.html" data-slug="ch-18" class="">
+              <span class="n">18</span><span>RNNs/LSTMs for Clinical Time Series</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-19.html" data-slug="ch-19" class="">
+              <span class="n">19</span><span>Evaluation Metrics: Sensitivity, Specificity, AUC-ROC, Precision, F1</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-20.html" data-slug="ch-20" class="">
+              <span class="n">20</span><span>Imbalanced Healthcare Datasets: Rare Disease Detection</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-21.html" data-slug="ch-21" class="">
+              <span class="n">21</span><span>Explainable AI: LIME and SHAP</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-22.html" data-slug="ch-22" class="">
+              <span class="n">22</span><span>Privacy, Anonymization, and HIPAA</span><span class="check"></span>
+            </a></li>
+        </ul>
+      </div><div class="reader-nav__unit">
+        <a href="../contents.html#unit-4">IV · Specialized AI Applications &amp; Clinical Implementation<span>7</span></a>
+        <ul class="reader-nav__chapters">
+          <li><a href="../read/ch-23.html" data-slug="ch-23" class="">
+              <span class="n">23</span><span>AI in Disease Diagnosis: Diabetes, Cancer, Heart Disease</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-24.html" data-slug="ch-24" class="">
+              <span class="n">24</span><span>Multi-Modal AI Systems</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-25.html" data-slug="ch-25" class="">
+              <span class="n">25</span><span>Advanced Medical Image Analysis: Detection and Segmentation</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-26.html" data-slug="ch-26" class="">
+              <span class="n">26</span><span>Predictive Analytics in Critical Care (ICU)</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-27.html" data-slug="ch-27" class="">
+              <span class="n">27</span><span>Genomics, Pharmacogenomics, and Personalized Medicine</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-28.html" data-slug="ch-28" class="">
+              <span class="n">28</span><span>AI-Driven Drug Discovery and Repurposing</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-29.html" data-slug="ch-29" class="">
+              <span class="n">29</span><span>Digital Health: Chatbots, Virtual Assistants, IoT, and Wearables</span><span class="check"></span>
+            </a></li>
+        </ul>
+      </div><div class="reader-nav__unit">
+        <a href="../contents.html#unit-5">V · Ethics, Governance &amp; Regulatory Landscape<span>7</span></a>
+        <ul class="reader-nav__chapters">
+          <li><a href="../read/ch-30.html" data-slug="ch-30" class="">
+              <span class="n">30</span><span>Bioethical Principles and Ethical Frameworks for Healthcare AI</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-31.html" data-slug="ch-31" class="">
+              <span class="n">31</span><span>Bias, Fairness, and Health Equity</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-32.html" data-slug="ch-32" class="">
+              <span class="n">32</span><span>Regulatory Landscape: FDA, CE Marking, and SaMD</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-33.html" data-slug="ch-33" class="">
+              <span class="n">33</span><span>Responsible Deployment and Governance</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-34.html" data-slug="ch-34" class="">
+              <span class="n">34</span><span>Explainable AI and Building Clinical Trust</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-35.html" data-slug="ch-35" class="">
+              <span class="n">35</span><span>Federated Learning and Privacy-Preserving AI</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-36.html" data-slug="ch-36" class="">
+              <span class="n">36</span><span>Clinical Validation, Trials, and the Future of Healthcare AI</span><span class="check"></span>
+            </a></li>
+        </ul>
+      </div>
+    <div class="reader-nav__toc">
+      <div class="reader-nav__label">Reference</div>
+      <ul class="reader-nav__chapters">
+        <li><a href="../glossary.html"><span class="n">A</span><span>Glossary</span><span></span></a></li>
+        <li><a href="../labs.html"><span class="n">B</span><span>Lab manual</span><span></span></a></li>
+        <li><a href="../reading.html"><span class="n">C</span><span>Further reading</span><span></span></a></li>
+        <li><a href="../question-bank.html"><span class="n">D</span><span>Question bank</span><span></span></a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="chapter" id="main" data-chapter="ch-06">
+      <header class="chapter-head">
+        <div class="chapter-head__meta">
+          <span><b>Unit I</b></span><span>Chapter 06</span><span>2 min read</span><span>8 sections</span>
+        </div>
+        <h1>Specialty Applications: Radiology, Pathology, Oncology, Cardiology</h1>
+        <p class="chapter-head__dek">Describe the flagship AI applications in radiology, pathology, oncology, and cardiology.</p>
+        <div class="chapter-head__foot">
+          <div class="chapter-head__stats"><span><b>8</b> sections</span><span><b>2</b> min</span><span><b>Unit I</b></span></div>
+          <button class="btn btn--sm" type="button" data-read-toggle="ch-06" aria-pressed="false">Mark chapter read</button>
+        </div>
+      </header>
+      <div class="chapter-body">
+        <p>Each specialty&#39;s AI is shaped by its data: radiology by voxel volumes, pathology by gigapixel slides, oncology by longitudinal outcomes, cardiology by waveforms.</p>
+
+        <section class="chapter-section chapter-section--brief" id="s-6-1" data-section="6.1 Chapter objectives"><h2><span class="sec-num">6.1</span>Chapter objectives</h2>
+<ol>
+<li>Describe the flagship AI applications in radiology, pathology, oncology, and cardiology.</li>
+<li>Connect each application to its data substrate and its evaluation method.</li>
+<li>Identify the specialty-specific adoption barriers.</li>
+</ol>
+</section>
+<section class="chapter-section" id="s-6-2" data-section="6.2 Radiology — detection and triage on pixels"><h2><span class="sec-num">6.2</span>Radiology — detection and triage on pixels</h2>
+<p>Radiology was the first AI beachhead because imaging was already digital (DICOM/PACS). Flagship tasks: chest X-ray findings (pneumonia, pneumothorax, consolidation), CT intracranial hemorrhage triage, mammography (screening support; large 2020s trials showed AI-supported reading matched or exceeded double reading in reduction of workload and comparable cancer detection), lung-nodule detection on low-dose CT. Evaluation: per-finding sensitivity/specificity against a radiologist-adjudicated reference; deployment is typically <em>triage</em> (worklist reordering) or <em>second reader</em> (concurrent assist), keeping the radiologist accountable.</p>
+</section>
+<section class="chapter-section" id="s-6-3" data-section="6.3 Pathology — gigapixel whole-slide imaging"><h2><span class="sec-num">6.3</span>Pathology — gigapixel whole-slide imaging</h2>
+<p>Digital pathology converts glass slides into <strong>whole-slide images (WSI)</strong> — gigapixel, multi-gigabyte. Tasks: mitosis detection, tumor grading (e.g., Gleason grading of prostate), lymph-node metastasis detection (the CAMELYON16 challenge), biomarker quantification (IHC scoring). Constraints: staining and scanner variability (models must be stain-normalized or robust), no single-cell ground truth, and huge inputs requiring patch-based training with attention-based aggregation.</p>
+</section>
+<section class="chapter-section" id="s-6-4" data-section="6.4 Oncology — longitudinal prognosis and treatment planning"><h2><span class="sec-num">6.4</span>Oncology — longitudinal prognosis and treatment planning</h2>
+<p>Oncology AI spans: cancer detection (imaging, pathology), prognosis (survival models from EHR + tumor features), treatment recommendation (precision oncology: matching tumor genomics to targeted therapies; radiotherapy auto-contouring of organs at risk, now routinely deployed), and trial matching. Data is longitudinal and multi-modal; ground truth (recurrence, survival) takes years — the core evaluation difficulty.</p>
+</section>
+<section class="chapter-section" id="s-6-5" data-section="6.5 Cardiology — waveform interpretation at scale"><h2><span class="sec-num">6.5</span>Cardiology — waveform interpretation at scale</h2>
+<p>Cardiology&#39;s substrate is the ECG and the echocardiogram. Landmark capabilities: deep models classifying 12-lead ECGs across dozens of rhythms at cardiologist-level performance (Stanford/Mayo work), AF detection from single-lead PPG in consumer wearables (Apple Heart Study), and AI estimation of ejection fraction from echo videos. Cardiology AI also pioneered <em>phenotype-from-ECG</em>: models inferring age, sex, and even ejection fraction from an ECG the cardiologist would not read that way.</p>
+</section>
+<section class="chapter-section" id="s-6-6" data-section="6.6 Specialty comparison and barriers"><h2><span class="sec-num">6.6</span>Specialty comparison and barriers</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Specialty</th>
+<th>Data substrate</th>
+<th>Flagship task</th>
+<th>Key barrier</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Radiology</td>
+<td>DICOM pixels</td>
+<td>Detection/triage</td>
+<td>Worklist integration; liability for misses</td>
+</tr>
+<tr>
+<td>Pathology</td>
+<td>WSI gigapixels</td>
+<td>Grading/quantification</td>
+<td>Stain/scanner variability; slide digitization cost</td>
+</tr>
+<tr>
+<td>Oncology</td>
+<td>Longitudinal multi-modal</td>
+<td>Prognosis/treatment match</td>
+<td>Slow-moving ground truth; genomics access</td>
+</tr>
+<tr>
+<td>Cardiology</td>
+<td>ECG/echo signals</td>
+<td>Rhythm/functional classification</td>
+<td>Consumer-device validation; signal quality</td>
+</tr>
+</tbody></table></div>
+</section>
+<section class="chapter-section chapter-section--terms" id="s-6-7" data-section="6.7 Key terms"><h2><span class="sec-num">6.7</span>Key terms</h2>
+<div class="terms-list"><div class="terms-list__item"><div class="terms-list__term">WSI (whole-slide imaging)</div><div class="terms-list__def">gigapixel digital scan of a pathology slide.</div></div><div class="terms-list__item"><div class="terms-list__term">Gleason grading</div><div class="terms-list__def">prostate cancer aggressiveness grading from tissue architecture.</div></div><div class="terms-list__item"><div class="terms-list__term">CADe / CADx</div><div class="terms-list__def">computer-aided detection / diagnosis.</div></div><div class="terms-list__item"><div class="terms-list__term">Ejection fraction (EF)</div><div class="terms-list__def">fraction of blood ejected per heartbeat; the echo AI headline target.</div></div><div class="terms-list__item"><div class="terms-list__term">Precision oncology</div><div class="terms-list__def">therapy selection driven by tumor molecular profile.</div></div></div>
+</section>
+<section class="chapter-section chapter-section--review" id="s-6-8" data-section="6.8 Review questions"><h2><span class="sec-num">6.8</span>Review questions</h2>
+<ol class="review-list">
+<li>Why did radiology and cardiology adopt AI earlier than oncology?</li>
+<li>What is stain variability and why does it matter for pathology ML?</li>
+<li>Name one deployed oncology AI task whose ground truth is slow and one whose ground truth is fast.</li>
+</ol>
+<hr>
+
+</section>
+      </div>
+      <footer class="chapter-foot">
+        <div class="chapter-foot__label">Continue</div>
+        <div class="chapter-foot__cards">
+          <a class="chapter-foot__card" href="ch-05.html" data-prev><small>← Previous</small><span>EHRs vs Paper-Based Records</span></a>
+          <a class="chapter-foot__card" href="ch-07.html" data-next><small>Next →</small><span>Diagnosis, Prognosis, and Patient Monitoring</span></a>
+        </div>
+      </footer>
+    </main>
+    <aside class="chapter-rail">
+      <div class="chapter-rail__progress">
+        <strong data-rail-count>0%</strong>
+        <span>Scroll position</span>
+      </div>
+      <div class="chapter-rail__label">On this page</div>
+      <ul class="chapter-rail__toc"><li><a href="#s-6-1">6.1 Chapter objectives</a></li><li><a href="#s-6-2">6.2 Radiology — detection and triage on pixels</a></li><li><a href="#s-6-3">6.3 Pathology — gigapixel whole-slide imaging</a></li><li><a href="#s-6-4">6.4 Oncology — longitudinal prognosis and treatment planning</a></li><li><a href="#s-6-5">6.5 Cardiology — waveform interpretation at scale</a></li><li><a href="#s-6-6">6.6 Specialty comparison and barriers</a></li><li><a href="#s-6-7">6.7 Key terms</a></li><li><a href="#s-6-8">6.8 Review questions</a></li></ul>
+      <div class="chapter-rail__label">Navigate</div>
+      <div class="chapter-rail__nav">
+        <a href="ch-05.html" data-prev><small>← Previous</small>EHRs vs Paper-Based Records</a>
+        <a href="ch-07.html" data-next><small>Next →</small>Diagnosis, Prognosis, and Patient Monitoring</a>
+        <a href="../contents.html"><small>Reference</small>Full contents</a>
+      </div>
+    </aside>
+  </div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../index.html"><span class="brand__mark">HEALTH<span>/</span>CARE&nbsp;AI</span></a>
+          <p>Healthcare AI (23A133403c) — from the clinical data ecosystem to the ethics and regulation that decide whether a model reaches a patient.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Read</h4>
+          <a href="../contents.html">Contents</a>
+          <a href="../read/ch-01.html">Chapter 1</a>
+          <a href="../reading.html">Reading list</a>
+          <a href="../question-bank.html">Question bank</a>
+        </div>
+        <div class="footer-col">
+          <h4>Practice</h4>
+          <a href="../labs.html">Lab manual</a>
+          <a href="../glossary.html">Glossary</a>
+          <a href="../contents.html#unit-3">ML &amp; deep learning</a>
+          <a href="../contents.html#unit-5">Ethics &amp; future</a>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="../index.html#preface">Preface</a>
+          <a href="../index.html#colophon">Colophon</a>
+          <a href="../index.html#reading-paths">Reading paths</a>
+          <a href="../index.html#units">Units</a>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>First edition · 2026 · Static site · Progress stays in your browser</span>
+        <span>Design language inspired by <a href="https://aiengineeringfromscratch.com/" rel="noopener">AI Engineering from Scratch</a> (MIT)</span>
+      </div>
+    </div>
+  </footer>
+  <div class="cp" id="cmdPalette" role="dialog" aria-modal="true" aria-label="Search the textbook" aria-hidden="true">
+    <div class="cp__panel">
+      <div class="cp__head">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+        <input class="cp__input" id="cpInput" type="text" placeholder="Search chapters, sections, glossary, labs…" autocomplete="off" spellcheck="false" aria-controls="cpResults" aria-expanded="true">
+        <span class="cp__esc">ESC</span>
+        <button class="icon-btn cp__close" type="button" aria-label="Close search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+        </button>
+      </div>
+      <div class="cp__body" id="cpResults" role="listbox" aria-label="Search results"></div>
+      <div class="cp__foot">
+        <span id="cpSummary">Search 36 chapters, 200+ sections, glossary, labs, and the question bank.</span>
+        <span><kbd>↑</kbd> <kbd>↓</kbd> to move · <kbd>enter</kbd> to open · <kbd>esc</kbd> to close</span>
+      </div>
+    </div>
+  </div>
+  
+  <script src="../assets/search-index.js"></script>
+  <script src="../assets/app.js"></script>
+</body>
+</html>

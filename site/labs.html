@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab manual — Healthcare AI</title>
+  <meta name="description" content="Eight lab exercises and public datasets for Healthcare AI.">
+  <meta name="color-scheme" content="light dark">
+  <script>
+  (function(){try{var t=localStorage.getItem('healthai:theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  
+</head>
+<body data-page="labs">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="banner" id="siteBanner">
+    <div class="banner__inner">
+      <strong>First edition · 2026</strong>
+      <span><span class="banner__lead">Five units, thirty-six chapters, a full question bank with model answers.</span> <a href="index.html#preface">Read the preface</a> or <a href="read/ch-01.html">start with Chapter 1</a>.</span>
+    </div>
+    <button class="banner__close" id="bannerClose" type="button" aria-label="Dismiss the announcement">×</button>
+  </div>
+  <header class="site-header" id="siteHeader">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="Healthcare AI, home">
+        <span class="brand__mark">HEALTH<span>/</span>CARE&nbsp;AI</span>
+        <span class="brand__tag">A complete<br>textbook</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="contents.html">Contents</a>
+        <a href="index.html#units">Units</a>
+        <a href="labs.html" aria-current="page">Labs</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="reading.html">Reading</a>
+        <a href="question-bank.html">Questions</a>
+      </nav>
+      <div class="header-tools">
+        <button class="search-trigger" type="button" aria-label="Search the textbook (Command K)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+          <span>Search</span>
+          <kbd>⌘K</kbd>
+        </button>
+        <div class="theme-wrap">
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"></path></svg>
+          </button>
+          <div class="theme-menu" id="themeMenu" role="menu" aria-label="Theme" hidden>
+            <div class="theme-menu__label">Appearance</div>
+            <button type="button" role="menuitemradio" data-mode="system" aria-checked="true">System</button>
+            <button type="button" role="menuitemradio" data-mode="light" aria-checked="false">Light</button>
+            <button type="button" role="menuitemradio" data-mode="dark" aria-checked="false">Dark</button>
+          </div>
+        </div>
+        <a class="btn btn--primary btn--sm header-cta" href="read/ch-01.html">Start reading</a>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="contents.html">Contents <span>36 chapters</span></a>
+    <a href="index.html#units">Units <span>5 units</span></a>
+    <a href="labs.html">Labs <span>8 exercises</span></a>
+    <a href="glossary.html">Glossary <span>key terms</span></a>
+    <a href="reading.html">Reading list <span>appendix C</span></a>
+    <a href="question-bank.html">Question bank <span>appendix D</span></a>
+    <div class="mobile-nav__tools">
+      <a class="btn btn--primary btn--sm" href="read/ch-01.html">Start reading</a>
+      <a class="btn btn--ghost btn--sm" href="contents.html">Open contents</a>
+    </div>
+  </div>
+  <main id="main">
+    <div class="container">
+      <header class="page-head">
+        <div class="fig-tag">Appendix B · Practice</div>
+        <h1>Lab manual</h1>
+        <p>Eight exercises that mirror the chapters. Every lab ends with a written report. Use only de-identified, synthetic, or licensed datasets, and follow each dataset's data-use agreement.</p>
+      </header>
+      <div class="labs-layout">
+        <details class="lab-card" id="lab-1">
+      <summary>
+        <span class="lab-card__num">01</span>
+        <span class="lab-card__title">Map a Clinical Data Ecosystem<small>Chapters Ch. 1–8</small></span>
+        <span class="lab-card__toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="lab-card__body"><p><strong>Objective:</strong> connect the abstract data ecosystem of Unit I to one concrete clinical workflow.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Choose one workflow (stroke care, antenatal screening, or an ICU admission).</li>
+<li>Enumerate every data type it generates (structured EHR, imaging, signals, notes, claims) and the standard each follows (FHIR, DICOM, FASTQ/VCF).</li>
+<li>Draw the flow: source → standard → storage → consumer (CDSS, model, dashboard).</li>
+<li>Mark where privacy rules apply and where data currently cannot move between institutions.</li>
+<li>Identify one AI application the workflow could support and what data it would need.</li>
+</ol>
+<p><strong>Deliverable:</strong> a one-page ecosystem diagram plus a half-page justification of the AI opportunity and its data gap.</p>
+<p><strong>Ethics note:</strong> use only publicly documented workflows; no real patient identifiers in any artifact.</p>
+</div>
+    </details><details class="lab-card" id="lab-2">
+      <summary>
+        <span class="lab-card__num">02</span>
+        <span class="lab-card__title">Clean a Messy Clinical Extract<small>Chapters Ch. 9–10</small></span>
+        <span class="lab-card__toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="lab-card__body"><p><strong>Objective:</strong> practice the cleaning and missing-data discipline of Chapter 9–10 on a deliberately dirty dataset.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Take a synthetic EHR extract (Synthea or a course-provided CSV) with mixed units, duplicates, and gaps.</li>
+<li>Write plausibility checks (physiologic ranges, chronology) and run them; log every violation.</li>
+<li>Harmonize units (mg/dL ↔ mmol/L) and document the conversion factors used.</li>
+<li>Classify missingness for three columns as MCAR, MAR, or MNAR and justify each label clinically.</li>
+<li>Impute with two methods (median and MICE or a NaN-aware learner) and add missingness indicators.</li>
+<li>Compare downstream model performance under each imputation strategy.</li>
+</ol>
+<p><strong>Deliverable:</strong> a cleaning script with a logged audit trail and a short report on how missingness handling changed the model.</p>
+</div>
+    </details><details class="lab-card" id="lab-3">
+      <summary>
+        <span class="lab-card__num">03</span>
+        <span class="lab-card__title">Engineer EHR Features Without Leakage<small>Chapters Ch. 11–12</small></span>
+        <span class="lab-card__toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="lab-card__body"><p><strong>Objective:</strong> build a time-zeroed feature matrix for a readmission or deterioration target.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Define time-zero and an observation window (e.g., first 24 h → predict the rest of the stay).</li>
+<li>Engineer at least six features per data family: labs (last/min/max/slope), comorbidity index, medications, utilization, missingness indicators.</li>
+<li>Perform a leakage audit: list every feature and argue it is computable at prediction time.</li>
+<li>Split by patient (never by encounter) and fit scalers on training data only.</li>
+<li>Train a logistic-regression baseline and a gradient-boosted model; compare AUROC, AUPRC, and calibration.</li>
+</ol>
+<p><strong>Deliverable:</strong> the feature table with per-feature leakage justification and the two-model comparison.</p>
+</div>
+    </details><details class="lab-card" id="lab-4">
+      <summary>
+        <span class="lab-card__num">04</span>
+        <span class="lab-card__title">Clinical NLP: Negation and Auto-Coding<small>Chapters Ch. 13–14</small></span>
+        <span class="lab-card__toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="lab-card__body"><p><strong>Objective:</strong> extract structured signals from clinical text without falling for its negations.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Take 20–50 de-identified discharge summaries or radiology reports (course-provided or MIMIC-derived samples).</li>
+<li>Run a clinical NLP model (scispaCy or a clinical BERT variant) for entity extraction.</li>
+<li>Implement or apply a negation/assertion pass (NegEx-style) and measure how many entities flip from &quot;present&quot; to &quot;absent&quot;.</li>
+<li>Map extracted concepts to ICD categories by hand for ten notes; compare against the notes&#39; actual coded diagnoses.</li>
+<li>Write the failure analysis: which abbreviations, hedges, and family-history mentions fooled the pipeline?</li>
+</ol>
+<p><strong>Deliverable:</strong> an extraction notebook plus a half-page &quot;where clinical NLP breaks&quot; memo.</p>
+</div>
+    </details><details class="lab-card" id="lab-5">
+      <summary>
+        <span class="lab-card__num">05</span>
+        <span class="lab-card__title">Train and Evaluate an Imbalanced Risk Model<small>Chapters Ch. 15–20</small></span>
+        <span class="lab-card__toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="lab-card__body"><p><strong>Objective:</strong> build an honest evaluation of a rare-event model, the core skill of Unit III.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Use a dataset with low positive prevalence (e.g., ICU mortality or a rare-disease cohort).</li>
+<li>Train the model ladder: logistic regression → GBM; apply class weights or focal loss.</li>
+<li>Evaluate with accuracy, AUROC, AUPRC, and precision@k; show numerically why accuracy fails.</li>
+<li>Plot the PR curve and the calibration curve; choose an operating point from a stated false-alert budget.</li>
+<li>Report the confusion matrix at that operating point with absolute numbers, noting small-denominator fragility.</li>
+</ol>
+<p><strong>Deliverable:</strong> an evaluation report a clinician could read, with every metric carrying its clinical meaning.</p>
+</div>
+    </details><details class="lab-card" id="lab-6">
+      <summary>
+        <span class="lab-card__num">06</span>
+        <span class="lab-card__title">Transfer Learning and Segmentation on Medical Images<small>Chapters Ch. 17, 24–25</small></span>
+        <span class="lab-card__toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="lab-card__body"><p><strong>Objective:</strong> fine-tune a pretrained CNN and run a U-Net segmentation, with attention checks.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Fine-tune an ImageNet-pretrained ResNet/EfficientNet on a chest X-ray classification task (CheXpert sample or NIH sample).</li>
+<li>Augment with clinically valid transforms only; justify each augmentation&#39;s anatomical plausibility.</li>
+<li>Evaluate per-finding AUPRC; run Grad-CAM on correct and incorrect predictions and check for shortcut attention (markers, drains, pacemakers).</li>
+<li>Train a small U-Net (or nnU-Net config) on a segmentation task (lungs or retinal vessels) and report Dice/IoU.</li>
+<li>Compare per-subgroup performance if demographic metadata is available.</li>
+</ol>
+<p><strong>Deliverable:</strong> two notebooks (classification + segmentation) and an attention-check figure gallery with captions.</p>
+</div>
+    </details><details class="lab-card" id="lab-7">
+      <summary>
+        <span class="lab-card__num">07</span>
+        <span class="lab-card__title">Time-Series Deterioration Prediction<small>Chapters Ch. 18, 26</small></span>
+        <span class="lab-card__toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="lab-card__body"><p><strong>Objective:</strong> build a sequence model on irregularly sampled ICU data.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Extract vitals and labs for a cohort from MIMIC-III/IV or a provided extract; define time-zero and a prediction horizon.</li>
+<li>Build the input representation: time-aware encoding (time since last measurement) and channel masks for missing streams.</li>
+<li>Train an LSTM/GRU for deterioration within the horizon; use a unidirectional model for deployment realism.</li>
+<li>Validate out-of-time (later months in test) and by patient; compare against a NEWS-style baseline score.</li>
+<li>Analyze errors: which trajectories fooled the model, and would the alert burden be acceptable?</li>
+</ol>
+<p><strong>Deliverable:</strong> the model notebook plus a deployment memo addressing the five rights (Chapter 3).</p>
+</div>
+    </details><details class="lab-card" id="lab-8">
+      <summary>
+        <span class="lab-card__num">08</span>
+        <span class="lab-card__title">Explanation, Fairness Audit, and Model Card<small>Chapters Ch. 21, 30–35</small></span>
+        <span class="lab-card__toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="lab-card__body"><p><strong>Objective:</strong> ship the governance artifact for a model built in an earlier lab.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Generate SHAP (TreeSHAP) attributions for the Lab 5 model; verify additivity on one patient.</li>
+<li>Compose the explanation artifact: score with uncertainty, top attributions in clinical language, similar cases, one counterfactual, stated limitations.</li>
+<li>Run a fairness audit: per-subgroup sensitivity, specificity, PPV, and calibration; state which fairness definition you are serving and why.</li>
+<li>Draft the model card: intended use, data provenance, evaluation, operating point, limitations, monitoring plan.</li>
+<li>Write the drift-monitoring plan: which inputs to watch, which outcome-linked checks, and the incident-reporting channel.</li>
+</ol>
+<p><strong>Deliverable:</strong> a model card document plus the audit notebook — the complete governance package of Chapters 31–33.</p>
+</div>
+    </details>
+        <h2 class="datasets-title">Datasets</h2>
+        <div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Contents</th>
+<th>Access</th>
+<th>Typical labs</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>MIMIC-III / MIMIC-IV</strong></td>
+<td>De-identified ICU stays: vitals, labs, notes, outcomes</td>
+<td>Credentialed access after training (PhysioNet)</td>
+<td>Labs 3, 5, 7, 8</td>
+</tr>
+<tr>
+<td><strong>eICU</strong></td>
+<td>Multi-center ICU dataset</td>
+<td>PhysioNet, credentialed</td>
+<td>Lab 7</td>
+</tr>
+<tr>
+<td><strong>PhysioNet challenge data</strong></td>
+<td>Waveforms and time series</td>
+<td>Open with per-dataset terms</td>
+<td>Lab 7</td>
+</tr>
+<tr>
+<td><strong>CheXpert / NIH ChestX-ray14</strong></td>
+<td>Chest X-rays with findings labels</td>
+<td>Open registration / open</td>
+<td>Lab 6</td>
+</tr>
+<tr>
+<td><strong>MIMIC-CXR</strong></td>
+<td>Chest X-rays + reports (pairing for Lab 4)</td>
+<td>PhysioNet, credentialed</td>
+<td>Labs 4, 6</td>
+</tr>
+<tr>
+<td><strong>CAMELYON16/17</strong></td>
+<td>Whole-slide lymph-node images with labels</td>
+<td>Open</td>
+<td>Lab 6</td>
+</tr>
+<tr>
+<td><strong>ISIC archive</strong></td>
+<td>Dermoscopy images</td>
+<td>Open with terms</td>
+<td>Lab 6</td>
+</tr>
+<tr>
+<td><strong>BraTS</strong></td>
+<td>Brain MRI segmentation challenge</td>
+<td>Open registration</td>
+<td>Lab 6</td>
+</tr>
+<tr>
+<td><strong>EyePACS / Messidor</strong></td>
+<td>Retinal fundus images</td>
+<td>Open / open registration</td>
+<td>Lab 6</td>
+</tr>
+<tr>
+<td><strong>PTB-XL</strong></td>
+<td>Large 12-lead ECG dataset</td>
+<td>Open (physionet.org)</td>
+<td>Lab 6–7</td>
+</tr>
+<tr>
+<td><strong>Synthea</strong></td>
+<td>Synthetic patient records generator</td>
+<td>Open source</td>
+<td>Labs 2–3</td>
+</tr>
+<tr>
+<td><strong>UCI/academic tabular sets</strong></td>
+<td>Small teaching datasets (heart disease, diabetes)</td>
+<td>Open</td>
+<td>Labs 2, 5</td>
+</tr>
+</tbody></table></div>
+<p>Always cite the dataset&#39;s own license and required attribution in any derived work; several require a data-use agreement and prohibit redistribution or commercial use.</p>
+<hr>
+
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><span class="brand__mark">HEALTH<span>/</span>CARE&nbsp;AI</span></a>
+          <p>Healthcare AI (23A133403c) — from the clinical data ecosystem to the ethics and regulation that decide whether a model reaches a patient.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Read</h4>
+          <a href="contents.html">Contents</a>
+          <a href="read/ch-01.html">Chapter 1</a>
+          <a href="reading.html">Reading list</a>
+          <a href="question-bank.html">Question bank</a>
+        </div>
+        <div class="footer-col">
+          <h4>Practice</h4>
+          <a href="labs.html">Lab manual</a>
+          <a href="glossary.html">Glossary</a>
+          <a href="contents.html#unit-3">ML &amp; deep learning</a>
+          <a href="contents.html#unit-5">Ethics &amp; future</a>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="index.html#preface">Preface</a>
+          <a href="index.html#colophon">Colophon</a>
+          <a href="index.html#reading-paths">Reading paths</a>
+          <a href="index.html#units">Units</a>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>First edition · 2026 · Static site · Progress stays in your browser</span>
+        <span>Design language inspired by <a href="https://aiengineeringfromscratch.com/" rel="noopener">AI Engineering from Scratch</a> (MIT)</span>
+      </div>
+    </div>
+  </footer>
+  <div class="cp" id="cmdPalette" role="dialog" aria-modal="true" aria-label="Search the textbook" aria-hidden="true">
+    <div class="cp__panel">
+      <div class="cp__head">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+        <input class="cp__input" id="cpInput" type="text" placeholder="Search chapters, sections, glossary, labs…" autocomplete="off" spellcheck="false" aria-controls="cpResults" aria-expanded="true">
+        <span class="cp__esc">ESC</span>
+        <button class="icon-btn cp__close" type="button" aria-label="Close search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+        </button>
+      </div>
+      <div class="cp__body" id="cpResults" role="listbox" aria-label="Search results"></div>
+      <div class="cp__foot">
+        <span id="cpSummary">Search 36 chapters, 200+ sections, glossary, labs, and the question bank.</span>
+        <span><kbd>↑</kbd> <kbd>↓</kbd> to move · <kbd>enter</kbd> to open · <kbd>esc</kbd> to close</span>
+      </div>
+    </div>
+  </div>
+  
+  <script src="assets/search-index.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

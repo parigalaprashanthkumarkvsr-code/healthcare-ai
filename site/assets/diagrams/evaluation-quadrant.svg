@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 680" role="img" aria-labelledby="evaluation-quadrant-title evaluation-quadrant-desc">
+  <title id="evaluation-quadrant-title">Choosing metrics by prevalence and cost</title>
+  <desc id="evaluation-quadrant-desc">The right evaluation metric depends on how rare the disease is and which error the clinic can afford.</desc>
+  <style>
+      :root{--dg-paper:#fafaf5;--dg-surface:#f3f1e8;--dg-ink:#1a1a1a;--dg-soft:#4a4a4a;--dg-mute:#6f6f68;--dg-rule:#d9d6c8;--dg-accent:#3553ff;--dg-tint:rgba(53,83,255,0.10);}
+      :root[data-theme="dark"]{--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}
+      @media (prefers-color-scheme: dark){:root:not([data-theme="light"]):not([data-theme="dark"]){--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}}
+
+      .dg-nm{font-family:'Source Serif 4',Georgia,serif;font-weight:600;}
+      .dg-it{font-family:'Source Serif 4',Georgia,serif;font-style:italic;}
+      .dg-mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+    </style>
+  <defs>
+    <marker id="evaluation-quadrant-arw" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-mute)"/></marker>
+    <marker id="evaluation-quadrant-acc" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-accent)"/></marker>
+  </defs>
+  <rect width="1120" height="680" fill="var(--dg-paper)"/>
+<path d="M120 560 H1032" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#evaluation-quadrant-arw)"/>
+<path d="M120 560 V108" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#evaluation-quadrant-arw)"/>
+<text class="dg-mono" x="580" y="600" font-size="11" letter-spacing="0.08em" text-anchor="middle" fill="var(--dg-soft)">DISEASE PREVALENCE — COMMON → RARE</text>
+<text class="dg-mono" x="120" y="84" font-size="11" letter-spacing="0.08em" fill="var(--dg-soft)">COST OF A MISS (FALSE NEGATIVE) — LOW → HIGH</text>
+<path d="M580 120 V560" stroke="var(--dg-rule)" stroke-width="1"/>
+<path d="M140 340 H1040" stroke="var(--dg-rule)" stroke-width="1"/>
+<rect x="140" y="120" width="420" height="190" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1.2"/>
+<text class="dg-nm" x="164" y="164" font-size="17" fill="var(--dg-ink)">Catch it — do not miss</text>
+<text class="dg-mono" x="164" y="198" font-size="11" fill="var(--dg-soft)">optimize: sensitivity</text>
+<text class="dg-mono" x="164" y="220" font-size="11" fill="var(--dg-soft)">at a stated specificity floor</text>
+
+<rect x="600" y="120" width="420" height="190" rx="6" fill="var(--dg-tint)" stroke="var(--dg-accent)" stroke-width="1.2"/>
+<text class="dg-nm" x="624" y="164" font-size="17" fill="var(--dg-ink)">Rare + cannot miss</text>
+<text class="dg-mono" x="624" y="198" font-size="11" fill="var(--dg-soft)">optimize: sensitivity + AUPRC</text>
+<text class="dg-mono" x="624" y="220" font-size="11" fill="var(--dg-soft)">report absolute numbers</text>
+
+<rect x="140" y="350" width="420" height="190" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1.2"/>
+<text class="dg-nm" x="164" y="394" font-size="17" fill="var(--dg-ink)">Rule out safely</text>
+<text class="dg-mono" x="164" y="428" font-size="11" fill="var(--dg-soft)">optimize: specificity · NPV</text>
+<text class="dg-mono" x="164" y="450" font-size="11" fill="var(--dg-soft)">protect the healthy</text>
+
+<rect x="600" y="350" width="420" height="190" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1.2"/>
+<text class="dg-nm" x="624" y="394" font-size="17" fill="var(--dg-ink)">Rare + costly follow-up</text>
+<text class="dg-mono" x="624" y="428" font-size="11" fill="var(--dg-soft)">optimize: AUPRC · precision@k</text>
+<text class="dg-mono" x="624" y="450" font-size="11" fill="var(--dg-soft)">the base-rate trap lives here</text>
+
+<text class="dg-mono" x="120" y="640" font-size="11" fill="var(--dg-soft)">ALWAYS ADD: calibration curves · per-subgroup breakdowns · the confusion matrix at the chosen operating point.</text>
+</svg>

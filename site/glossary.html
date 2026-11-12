@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossary — Healthcare AI</title>
+  <meta name="description" content="Glossary of key terms for Healthcare AI.">
+  <meta name="color-scheme" content="light dark">
+  <script>
+  (function(){try{var t=localStorage.getItem('healthai:theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  
+</head>
+<body data-page="glossary">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="banner" id="siteBanner">
+    <div class="banner__inner">
+      <strong>First edition · 2026</strong>
+      <span><span class="banner__lead">Five units, thirty-six chapters, a full question bank with model answers.</span> <a href="index.html#preface">Read the preface</a> or <a href="read/ch-01.html">start with Chapter 1</a>.</span>
+    </div>
+    <button class="banner__close" id="bannerClose" type="button" aria-label="Dismiss the announcement">×</button>
+  </div>
+  <header class="site-header" id="siteHeader">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="Healthcare AI, home">
+        <span class="brand__mark">HEALTH<span>/</span>CARE&nbsp;AI</span>
+        <span class="brand__tag">A complete<br>textbook</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="contents.html">Contents</a>
+        <a href="index.html#units">Units</a>
+        <a href="labs.html">Labs</a>
+        <a href="glossary.html" aria-current="page">Glossary</a>
+        <a href="reading.html">Reading</a>
+        <a href="question-bank.html">Questions</a>
+      </nav>
+      <div class="header-tools">
+        <button class="search-trigger" type="button" aria-label="Search the textbook (Command K)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+          <span>Search</span>
+          <kbd>⌘K</kbd>
+        </button>
+        <div class="theme-wrap">
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"></path></svg>
+          </button>
+          <div class="theme-menu" id="themeMenu" role="menu" aria-label="Theme" hidden>
+            <div class="theme-menu__label">Appearance</div>
+            <button type="button" role="menuitemradio" data-mode="system" aria-checked="true">System</button>
+            <button type="button" role="menuitemradio" data-mode="light" aria-checked="false">Light</button>
+            <button type="button" role="menuitemradio" data-mode="dark" aria-checked="false">Dark</button>
+          </div>
+        </div>
+        <a class="btn btn--primary btn--sm header-cta" href="read/ch-01.html">Start reading</a>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="contents.html">Contents <span>36 chapters</span></a>
+    <a href="index.html#units">Units <span>5 units</span></a>
+    <a href="labs.html">Labs <span>8 exercises</span></a>
+    <a href="glossary.html">Glossary <span>key terms</span></a>
+    <a href="reading.html">Reading list <span>appendix C</span></a>
+    <a href="question-bank.html">Question bank <span>appendix D</span></a>
+    <div class="mobile-nav__tools">
+      <a class="btn btn--primary btn--sm" href="read/ch-01.html">Start reading</a>
+      <a class="btn btn--ghost btn--sm" href="contents.html">Open contents</a>
+    </div>
+  </div>
+  <main id="main">
+    <div class="container">
+      <header class="page-head">
+        <div class="fig-tag">Appendix A · Reference</div>
+        <h1>Glossary</h1>
+        <p>107 entries grouped by theme. Chapter references point back to the argument where the term is defined.</p>
+      </header>
+      <div class="glossary-layout">
+        <aside class="glossary-side"><a href="#g-foundations-and-clinical-systems">A.1 · Foundations and Clinical Systems</a><a href="#g-data-standards-and-coding">A.2 · Data, Standards, and Coding</a><a href="#g-preprocessing-and-features">A.3 · Preprocessing and Features</a><a href="#g-modeling-and-evaluation">A.4 · Modeling and Evaluation</a><a href="#g-imaging-signals-and-genomics">A.5 · Imaging, Signals, and Genomics</a><a href="#g-ethics-regulation-and-trust">A.6 · Ethics, Regulation, and Trust</a></aside>
+        <div><section class="glossary-group" id="g-foundations-and-clinical-systems">
+      <h2>A.1 · Foundations and Clinical Systems</h2>
+      <dl>
+        <div class="glossary-entry" id="g-ai-in-healthcare">
+            <dt>AI in Healthcare</dt>
+            <dd>computational systems that learn from clinical data to support medical decisions.</dd>
+          </div><div class="glossary-entry" id="g-machine-learning-ml">
+            <dt>Machine learning (ML)</dt>
+            <dd>algorithms that infer patterns from data rather than following hand-coded rules.</dd>
+          </div><div class="glossary-entry" id="g-deep-learning">
+            <dt>Deep learning</dt>
+            <dd>multi-layer neural networks that learn features from raw data such as pixels, waveforms, or text.</dd>
+          </div><div class="glossary-entry" id="g-cdss">
+            <dt>CDSS</dt>
+            <dd>clinical decision support system: software combining patient data and medical knowledge into point-of-care advice.</dd>
+          </div><div class="glossary-entry" id="g-knowledge-base">
+            <dt>Knowledge base</dt>
+            <dd>the computable medical knowledge inside a CDSS: rules, drug tables, or learned model parameters.</dd>
+          </div><div class="glossary-entry" id="g-inference-engine">
+            <dt>Inference engine</dt>
+            <dd>the CDSS component that applies the knowledge base to a specific patient&#39;s data.</dd>
+          </div><div class="glossary-entry" id="g-five-rights-of-cds">
+            <dt>Five rights of CDS</dt>
+            <dd>right information, person, format, channel, and time for decision support.</dd>
+          </div><div class="glossary-entry" id="g-alert-fatigue">
+            <dt>Alert fatigue</dt>
+            <dd>desensitization caused by excessive low-value alerts.</dd>
+          </div><div class="glossary-entry" id="g-mycin">
+            <dt>MYCIN</dt>
+            <dd>the 1970s rule-based expert system for antibiotic selection; accurate but never deployed.</dd>
+          </div><div class="glossary-entry" id="g-idx-dr">
+            <dt>IDx-DR</dt>
+            <dd>the first FDA-authorized autonomous diagnostic AI (diabetic retinopathy, 2018).</dd>
+          </div><div class="glossary-entry" id="g-telemedicine">
+            <dt>Telemedicine</dt>
+            <dd>remote clinical care via telecommunications, synchronous or store-and-forward.</dd>
+          </div><div class="glossary-entry" id="g-rpm">
+            <dt>RPM</dt>
+            <dd>remote patient monitoring: device-streamed vitals with algorithmic escalation.</dd>
+          </div><div class="glossary-entry" id="g-ambient-documentation">
+            <dt>Ambient documentation</dt>
+            <dd>AI-generated visit notes drafted from the consultation audio.</dd>
+          </div>
+      </dl>
+    </section><section class="glossary-group" id="g-data-standards-and-coding">
+      <h2>A.2 · Data, Standards, and Coding</h2>
+      <dl>
+        <div class="glossary-entry" id="g-ehr">
+            <dt>EHR</dt>
+            <dd>longitudinal, computable digital record of patient encounters, orders, results, and medications.</dd>
+          </div><div class="glossary-entry" id="g-computability">
+            <dt>Computability</dt>
+            <dd>the property that data can be queried and processed algorithmically, not just read.</dd>
+          </div><div class="glossary-entry" id="g-copy-forward">
+            <dt>Copy-forward</dt>
+            <dd>copying prior note text forward, propagating stale information.</dd>
+          </div><div class="glossary-entry" id="g-hl7-fhir">
+            <dt>HL7 FHIR</dt>
+            <dd>modern web-style clinical data exchange standard built on discrete resources.</dd>
+          </div><div class="glossary-entry" id="g-dicom">
+            <dt>DICOM</dt>
+            <dd>the medical imaging data standard: pixels plus a rich metadata header.</dd>
+          </div><div class="glossary-entry" id="g-pacs">
+            <dt>PACS</dt>
+            <dd>picture archiving and communication system; the imaging archive.</dd>
+          </div><div class="glossary-entry" id="g-fastq">
+            <dt>FASTQ</dt>
+            <dd>raw sequencing reads with per-base quality scores.</dd>
+          </div><div class="glossary-entry" id="g-vcf">
+            <dt>VCF</dt>
+            <dd>variant call format: called genomic variants per patient.</dd>
+          </div><div class="glossary-entry" id="g-ecg-eeg-ppg">
+            <dt>ECG / EEG / PPG</dt>
+            <dd>heart electrical, brain electrical, and pulse waveform signals.</dd>
+          </div><div class="glossary-entry" id="g-icd-10-cm">
+            <dt>ICD-10-CM</dt>
+            <dd>diagnostic classification system (WHO standard, national clinical modification).</dd>
+          </div><div class="glossary-entry" id="g-cpt">
+            <dt>CPT</dt>
+            <dd>AMA-maintained terminology for procedures and services.</dd>
+          </div><div class="glossary-entry" id="g-snomed-ct-loinc-rxnorm">
+            <dt>SNOMED CT / LOINC / RxNorm</dt>
+            <dd>terminologies for clinical terms, lab observations, and medications.</dd>
+          </div><div class="glossary-entry" id="g-code-as-proxy">
+            <dt>Code as proxy</dt>
+            <dd>using billing codes as ML labels despite their coding-practice bias.</dd>
+          </div>
+      </dl>
+    </section><section class="glossary-group" id="g-preprocessing-and-features">
+      <h2>A.3 · Preprocessing and Features</h2>
+      <dl>
+        <div class="glossary-entry" id="g-data-cleaning">
+            <dt>Data cleaning</dt>
+            <dd>detecting and correcting errors and inconsistencies so records reflect clinical reality.</dd>
+          </div><div class="glossary-entry" id="g-normalization">
+            <dt>Normalization</dt>
+            <dd>rescaling features to a bounded range (min–max).</dd>
+          </div><div class="glossary-entry" id="g-standardization">
+            <dt>Standardization</dt>
+            <dd>rescaling to zero mean and unit variance (z-score).</dd>
+          </div><div class="glossary-entry" id="g-mcar-mar-mnar">
+            <dt>MCAR / MAR / MNAR</dt>
+            <dd>missingness mechanisms: unrelated, explained by observed data, or tied to the missing value itself.</dd>
+          </div><div class="glossary-entry" id="g-imputation">
+            <dt>Imputation</dt>
+            <dd>filling missing values with estimates (median, KNN, MICE).</dd>
+          </div><div class="glossary-entry" id="g-mice">
+            <dt>MICE</dt>
+            <dd>multiple imputation by chained equations; the principled MAR method.</dd>
+          </div><div class="glossary-entry" id="g-missingness-indicator">
+            <dt>Missingness indicator</dt>
+            <dd>a binary feature recording that a value was absent.</dd>
+          </div><div class="glossary-entry" id="g-selection-bias">
+            <dt>Selection bias</dt>
+            <dd>a training sample differing systematically from the target population.</dd>
+          </div><div class="glossary-entry" id="g-feature-engineering">
+            <dt>Feature engineering</dt>
+            <dd>constructing model inputs that encode clinical meaning.</dd>
+          </div><div class="glossary-entry" id="g-comorbidity-index">
+            <dt>Comorbidity index</dt>
+            <dd>a validated summary of disease burden (Charlson, Elixhauser).</dd>
+          </div><div class="glossary-entry" id="g-observation-window">
+            <dt>Observation window</dt>
+            <dd>the time interval whose data is allowed into features.</dd>
+          </div><div class="glossary-entry" id="g-leakage">
+            <dt>Leakage</dt>
+            <dd>information in training features that would not be available at prediction time.</dd>
+          </div><div class="glossary-entry" id="g-hrv">
+            <dt>HRV</dt>
+            <dd>heart-rate variability features (RMSSD, SDNN) reflecting autonomic state.</dd>
+          </div><div class="glossary-entry" id="g-morphology-features">
+            <dt>Morphology features</dt>
+            <dd>shape descriptors of a waveform (intervals, amplitudes, band powers).</dd>
+          </div><div class="glossary-entry" id="g-lasso">
+            <dt>LASSO</dt>
+            <dd>L1-regularized regression performing embedded feature selection.</dd>
+          </div><div class="glossary-entry" id="g-pca">
+            <dt>PCA</dt>
+            <dd>linear projection maximizing retained variance.</dd>
+          </div><div class="glossary-entry" id="g-ner">
+            <dt>NER</dt>
+            <dd>named entity recognition: tagging clinical concepts in text.</dd>
+          </div><div class="glossary-entry" id="g-negation-assertion-detection">
+            <dt>Negation/assertion detection</dt>
+            <dd>deciding whether an extracted concept is present, absent, or uncertain.</dd>
+          </div><div class="glossary-entry" id="g-umls">
+            <dt>UMLS</dt>
+            <dd>the Unified Medical Language System metathesaurus linking clinical vocabularies.</dd>
+          </div><div class="glossary-entry" id="g-auto-coding">
+            <dt>Auto-coding</dt>
+            <dd>NLP-driven assignment of billing/diagnosis codes from clinical text.</dd>
+          </div>
+      </dl>
+    </section><section class="glossary-group" id="g-modeling-and-evaluation">
+      <h2>A.4 · Modeling and Evaluation</h2>
+      <dl>
+        <div class="glossary-entry" id="g-supervised-learning">
+            <dt>Supervised learning</dt>
+            <dd>learning from labeled examples to predict defined targets.</dd>
+          </div><div class="glossary-entry" id="g-unsupervised-learning">
+            <dt>Unsupervised learning</dt>
+            <dd>discovering structure (clusters, anomalies) without labels.</dd>
+          </div><div class="glossary-entry" id="g-phenotyping">
+            <dt>Phenotyping</dt>
+            <dd>deriving patient subtypes from data.</dd>
+          </div><div class="glossary-entry" id="g-risk-prediction">
+            <dt>Risk prediction</dt>
+            <dd>supervised prediction of a future clinical event.</dd>
+          </div><div class="glossary-entry" id="g-time-zero">
+            <dt>Time-zero</dt>
+            <dd>the defined moment from which features are measured.</dd>
+          </div><div class="glossary-entry" id="g-calibration">
+            <dt>Calibration</dt>
+            <dd>agreement between predicted probabilities and observed frequencies.</dd>
+          </div><div class="glossary-entry" id="g-sensitivity-specificity">
+            <dt>Sensitivity / specificity</dt>
+            <dd>recall on positives / recall on negatives.</dd>
+          </div><div class="glossary-entry" id="g-ppv-npv">
+            <dt>PPV / NPV</dt>
+            <dd>positive and negative predictive values; prevalence-dependent.</dd>
+          </div><div class="glossary-entry" id="g-auc-roc-auprc">
+            <dt>AUC-ROC / AUPRC</dt>
+            <dd>area under the ROC curve / precision-recall curve.</dd>
+          </div><div class="glossary-entry" id="g-base-rate-trap">
+            <dt>Base-rate trap</dt>
+            <dd>ROC-AUC flattering a model at low prevalence.</dd>
+          </div><div class="glossary-entry" id="g-operating-point">
+            <dt>Operating point</dt>
+            <dd>the threshold chosen for deployment by clinical cost.</dd>
+          </div><div class="glossary-entry" id="g-class-imbalance">
+            <dt>Class imbalance</dt>
+            <dd>positive prevalence far below 50%.</dd>
+          </div><div class="glossary-entry" id="g-smote">
+            <dt>SMOTE</dt>
+            <dd>synthetic minority oversampling by interpolation.</dd>
+          </div><div class="glossary-entry" id="g-focal-loss">
+            <dt>Focal loss</dt>
+            <dd>loss down-weighting easy examples to focus on hard ones.</dd>
+          </div><div class="glossary-entry" id="g-lime">
+            <dt>LIME</dt>
+            <dd>local surrogate explanation by perturbation.</dd>
+          </div><div class="glossary-entry" id="g-shap-shapley-value">
+            <dt>SHAP / Shapley value</dt>
+            <dd>game-theoretic average marginal contribution per feature.</dd>
+          </div><div class="glossary-entry" id="g-treeshap">
+            <dt>TreeSHAP</dt>
+            <dd>exact, fast SHAP for tree ensembles.</dd>
+          </div><div class="glossary-entry" id="g-grad-cam">
+            <dt>Grad-CAM</dt>
+            <dd>class-activation map showing where an imaging model looked.</dd>
+          </div><div class="glossary-entry" id="g-cnn">
+            <dt>CNN</dt>
+            <dd>convolutional neural network; learned local filters for images.</dd>
+          </div><div class="glossary-entry" id="g-transfer-learning">
+            <dt>Transfer learning</dt>
+            <dd>reusing pretrained representations for a new task.</dd>
+          </div><div class="glossary-entry" id="g-lstm-gru">
+            <dt>LSTM / GRU</dt>
+            <dd>gated recurrent architectures for sequences.</dd>
+          </div><div class="glossary-entry" id="g-u-net">
+            <dt>U-Net</dt>
+            <dd>encoder–decoder segmentation network with skip connections.</dd>
+          </div><div class="glossary-entry" id="g-dice-coefficient">
+            <dt>Dice coefficient</dt>
+            <dd>segmentation overlap metric: 2|A∩B|/(|A|+|B|).</dd>
+          </div><div class="glossary-entry" id="g-external-validation">
+            <dt>External validation</dt>
+            <dd>evaluation on data from a different population or institution.</dd>
+          </div><div class="glossary-entry" id="g-mimic-iii-iv">
+            <dt>MIMIC-III/IV</dt>
+            <dd>de-identified critical-care benchmark datasets.</dd>
+          </div>
+      </dl>
+    </section><section class="glossary-group" id="g-imaging-signals-and-genomics">
+      <h2>A.5 · Imaging, Signals, and Genomics</h2>
+      <dl>
+        <div class="glossary-entry" id="g-wsi">
+            <dt>WSI</dt>
+            <dd>whole-slide imaging: gigapixel digital scan of a pathology slide.</dd>
+          </div><div class="glossary-entry" id="g-gleason-grading">
+            <dt>Gleason grading</dt>
+            <dd>prostate cancer aggressiveness grading from tissue architecture.</dd>
+          </div><div class="glossary-entry" id="g-cade-cadx">
+            <dt>CADe / CADx</dt>
+            <dd>computer-aided detection / diagnosis.</dd>
+          </div><div class="glossary-entry" id="g-segmentation">
+            <dt>Segmentation</dt>
+            <dd>pixel- or voxel-level delineation of a structure.</dd>
+          </div><div class="glossary-entry" id="g-multi-modal-fusion">
+            <dt>Multi-modal fusion</dt>
+            <dd>combining imaging, labs, notes, and signals in one model.</dd>
+          </div><div class="glossary-entry" id="g-polygenic-risk-score-prs">
+            <dt>Polygenic risk score (PRS)</dt>
+            <dd>weighted aggregate of common-variant genetic risk.</dd>
+          </div><div class="glossary-entry" id="g-pharmacogenomics">
+            <dt>Pharmacogenomics</dt>
+            <dd>genotype-guided drug selection and dosing.</dd>
+          </div><div class="glossary-entry" id="g-precision-oncology">
+            <dt>Precision oncology</dt>
+            <dd>therapy selection driven by a tumor&#39;s molecular profile.</dd>
+          </div><div class="glossary-entry" id="g-virtual-screening">
+            <dt>Virtual screening</dt>
+            <dd>ML-predicted prioritization of compound libraries.</dd>
+          </div><div class="glossary-entry" id="g-qsar">
+            <dt>QSAR</dt>
+            <dd>quantitative structure–activity relationship: property prediction from molecular structure.</dd>
+          </div><div class="glossary-entry" id="g-drug-repurposing">
+            <dt>Drug repurposing</dt>
+            <dd>finding new uses for approved drugs (signature reversal, knowledge graphs).</dd>
+          </div><div class="glossary-entry" id="g-cgm">
+            <dt>CGM</dt>
+            <dd>continuous glucose monitoring.</dd>
+          </div>
+      </dl>
+    </section><section class="glossary-group" id="g-ethics-regulation-and-trust">
+      <h2>A.6 · Ethics, Regulation, and Trust</h2>
+      <dl>
+        <div class="glossary-entry" id="g-bioethical-principles">
+            <dt>Bioethical principles</dt>
+            <dd>autonomy, beneficence, non-maleficence, justice.</dd>
+          </div><div class="glossary-entry" id="g-accountability-gap">
+            <dt>Accountability gap</dt>
+            <dd>diffusion of responsibility for AI-influenced harm.</dd>
+          </div><div class="glossary-entry" id="g-automation-bias">
+            <dt>Automation bias</dt>
+            <dd>over-trusting machine output and stopping independent checking.</dd>
+          </div><div class="glossary-entry" id="g-demographic-parity-equalized-odds-calibration-wi">
+            <dt>Demographic parity / equalized odds / calibration within groups</dt>
+            <dd>canonical group-fairness definitions.</dd>
+          </div><div class="glossary-entry" id="g-fairness-audit">
+            <dt>Fairness audit</dt>
+            <dd>documented, disaggregated evaluation shipped with a model.</dd>
+          </div><div class="glossary-entry" id="g-samd">
+            <dt>SaMD</dt>
+            <dd>software as a medical device: software with a medical purpose, not part of a hardware device.</dd>
+          </div><div class="glossary-entry" id="g-510-k-de-novo-pma">
+            <dt>510(k) / De Novo / PMA</dt>
+            <dd>the FDA&#39;s main approval pathways.</dd>
+          </div><div class="glossary-entry" id="g-pccp">
+            <dt>PCCP</dt>
+            <dd>predetermined change control plan: pre-authorized protocol for model updates.</dd>
+          </div><div class="glossary-entry" id="g-ce-marking-mdr">
+            <dt>CE marking / MDR</dt>
+            <dd>the EU conformity regime for medical devices.</dd>
+          </div><div class="glossary-entry" id="g-intended-use">
+            <dt>Intended use</dt>
+            <dd>the claim an authorization covers; the boundary of lawful deployment.</dd>
+          </div><div class="glossary-entry" id="g-local-validation">
+            <dt>Local validation</dt>
+            <dd>re-evaluation of a model on the deploying institution&#39;s data.</dd>
+          </div><div class="glossary-entry" id="g-shadow-mode">
+            <dt>Shadow mode</dt>
+            <dd>silent parallel running of a model before live use.</dd>
+          </div><div class="glossary-entry" id="g-data-drift-concept-drift">
+            <dt>Data drift / concept drift</dt>
+            <dd>input-distribution shift / outcome-relationship shift.</dd>
+          </div><div class="glossary-entry" id="g-model-card">
+            <dt>Model card</dt>
+            <dd>standardized documentation of intended use, data, performance, and limitations.</dd>
+          </div><div class="glossary-entry" id="g-calibrated-trust">
+            <dt>Calibrated trust</dt>
+            <dd>trust matched to measured, local, per-subgroup reliability.</dd>
+          </div><div class="glossary-entry" id="g-federated-learning-fedavg">
+            <dt>Federated learning / FedAvg</dt>
+            <dd>decentralized training / weighted averaging of local model updates.</dd>
+          </div><div class="glossary-entry" id="g-cross-silo-cross-device">
+            <dt>Cross-silo / cross-device</dt>
+            <dd>federation across a few institutions / many unreliable endpoints.</dd>
+          </div><div class="glossary-entry" id="g-secure-aggregation">
+            <dt>Secure aggregation</dt>
+            <dd>protocol where the server sees only the sum of updates.</dd>
+          </div><div class="glossary-entry" id="g-differential-privacy">
+            <dt>Differential privacy (ε)</dt>
+            <dd>bounded influence of any one patient, bought with noise.</dd>
+          </div><div class="glossary-entry" id="g-phi">
+            <dt>PHI</dt>
+            <dd>protected health information; health data linked to identifiers.</dd>
+          </div><div class="glossary-entry" id="g-baa">
+            <dt>BAA</dt>
+            <dd>business associate agreement with any vendor processing PHI.</dd>
+          </div><div class="glossary-entry" id="g-safe-harbor-expert-determination">
+            <dt>Safe Harbor / Expert Determination</dt>
+            <dd>HIPAA&#39;s two de-identification standards.</dd>
+          </div><div class="glossary-entry" id="g-endpoint-claim-match">
+            <dt>Endpoint–claim match</dt>
+            <dd>the trial must test the specific claim being made.</dd>
+          </div><div class="glossary-entry" id="g-cluster-randomization">
+            <dt>Cluster randomization</dt>
+            <dd>randomizing by clinician or unit to avoid contamination in AI trials.</dd>
+          </div>
+      </dl>
+    </section></div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><span class="brand__mark">HEALTH<span>/</span>CARE&nbsp;AI</span></a>
+          <p>Healthcare AI (23A133403c) — from the clinical data ecosystem to the ethics and regulation that decide whether a model reaches a patient.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Read</h4>
+          <a href="contents.html">Contents</a>
+          <a href="read/ch-01.html">Chapter 1</a>
+          <a href="reading.html">Reading list</a>
+          <a href="question-bank.html">Question bank</a>
+        </div>
+        <div class="footer-col">
+          <h4>Practice</h4>
+          <a href="labs.html">Lab manual</a>
+          <a href="glossary.html">Glossary</a>
+          <a href="contents.html#unit-3">ML &amp; deep learning</a>
+          <a href="contents.html#unit-5">Ethics &amp; future</a>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="index.html#preface">Preface</a>
+          <a href="index.html#colophon">Colophon</a>
+          <a href="index.html#reading-paths">Reading paths</a>
+          <a href="index.html#units">Units</a>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>First edition · 2026 · Static site · Progress stays in your browser</span>
+        <span>Design language inspired by <a href="https://aiengineeringfromscratch.com/" rel="noopener">AI Engineering from Scratch</a> (MIT)</span>
+      </div>
+    </div>
+  </footer>
+  <div class="cp" id="cmdPalette" role="dialog" aria-modal="true" aria-label="Search the textbook" aria-hidden="true">
+    <div class="cp__panel">
+      <div class="cp__head">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+        <input class="cp__input" id="cpInput" type="text" placeholder="Search chapters, sections, glossary, labs…" autocomplete="off" spellcheck="false" aria-controls="cpResults" aria-expanded="true">
+        <span class="cp__esc">ESC</span>
+        <button class="icon-btn cp__close" type="button" aria-label="Close search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+        </button>
+      </div>
+      <div class="cp__body" id="cpResults" role="listbox" aria-label="Search results"></div>
+      <div class="cp__foot">
+        <span id="cpSummary">Search 36 chapters, 200+ sections, glossary, labs, and the question bank.</span>
+        <span><kbd>↑</kbd> <kbd>↓</kbd> to move · <kbd>enter</kbd> to open · <kbd>esc</kbd> to close</span>
+      </div>
+    </div>
+  </div>
+  
+  <script src="assets/search-index.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

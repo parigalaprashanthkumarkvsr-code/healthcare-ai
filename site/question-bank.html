@@ -1,0 +1,2830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question Bank with Model Answers — Healthcare AI</title>
+  <meta name="description" content="Question Bank with Model Answers — Healthcare AI.">
+  <meta name="color-scheme" content="light dark">
+  <script>
+  (function(){try{var t=localStorage.getItem('healthai:theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  
+</head>
+<body data-page="question-bank">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="banner" id="siteBanner">
+    <div class="banner__inner">
+      <strong>First edition · 2026</strong>
+      <span><span class="banner__lead">Five units, thirty-six chapters, a full question bank with model answers.</span> <a href="index.html#preface">Read the preface</a> or <a href="read/ch-01.html">start with Chapter 1</a>.</span>
+    </div>
+    <button class="banner__close" id="bannerClose" type="button" aria-label="Dismiss the announcement">×</button>
+  </div>
+  <header class="site-header" id="siteHeader">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="Healthcare AI, home">
+        <span class="brand__mark">HEALTH<span>/</span>CARE&nbsp;AI</span>
+        <span class="brand__tag">A complete<br>textbook</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="contents.html">Contents</a>
+        <a href="index.html#units">Units</a>
+        <a href="labs.html">Labs</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="reading.html">Reading</a>
+        <a href="question-bank.html" aria-current="page">Questions</a>
+      </nav>
+      <div class="header-tools">
+        <button class="search-trigger" type="button" aria-label="Search the textbook (Command K)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+          <span>Search</span>
+          <kbd>⌘K</kbd>
+        </button>
+        <div class="theme-wrap">
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"></path></svg>
+          </button>
+          <div class="theme-menu" id="themeMenu" role="menu" aria-label="Theme" hidden>
+            <div class="theme-menu__label">Appearance</div>
+            <button type="button" role="menuitemradio" data-mode="system" aria-checked="true">System</button>
+            <button type="button" role="menuitemradio" data-mode="light" aria-checked="false">Light</button>
+            <button type="button" role="menuitemradio" data-mode="dark" aria-checked="false">Dark</button>
+          </div>
+        </div>
+        <a class="btn btn--primary btn--sm header-cta" href="read/ch-01.html">Start reading</a>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="contents.html">Contents <span>36 chapters</span></a>
+    <a href="index.html#units">Units <span>5 units</span></a>
+    <a href="labs.html">Labs <span>8 exercises</span></a>
+    <a href="glossary.html">Glossary <span>key terms</span></a>
+    <a href="reading.html">Reading list <span>appendix C</span></a>
+    <a href="question-bank.html">Question bank <span>appendix D</span></a>
+    <div class="mobile-nav__tools">
+      <a class="btn btn--primary btn--sm" href="read/ch-01.html">Start reading</a>
+      <a class="btn btn--ghost btn--sm" href="contents.html">Open contents</a>
+    </div>
+  </div>
+  <main id="main">
+    <div class="container">
+      <header class="page-head">
+        <div class="fig-tag">Appendix D · Reference</div>
+        <h1>Question Bank with Model Answers</h1>
+        <p>The official question bank by unit and tier — 2, 3, 5, and 10 marks — every question with a full model answer.</p>
+      </header>
+      <div class="appendix-layout">
+        <div class="appendix-body">
+          <div class="chapter-body">
+            <p>This appendix is the assessment layer of the book: the official question bank of the Healthcare AI course — five units × eighteen questions (5 × 2-mark, 5 × 3-mark, 5 × 5-mark, 3 × 10-mark = <strong>90 questions</strong>) — with a full model answer for every question. Every answer is presented in <strong>structured form</strong>: a one-line <em>key point</em> for the whole answer, then numbered <strong>sub-topics</strong>, each carrying its own key point and short bullet points or a comparison table — no paragraph walls.</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Marks</th>
+<th>Cognitive demand</th>
+<th>Shape of the structured answer</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T1</td>
+<td>2</td>
+<td>Recall / understanding</td>
+<td>Key point + 2–4 labelled bullet points</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>3</td>
+<td>Short comparison or list</td>
+<td>Key point + sub-topics, or a comparison table</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>5</td>
+<td>Structured explanation</td>
+<td>4–6 sub-topics, each with key point + bullets, ending in a takeaway</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>10</td>
+<td>Integrated essay / design</td>
+<td>Parts (A)–(F), each with key point + bullets, ending in a synthesis</td>
+</tr>
+</tbody></table>
+<p><strong>Study discipline:</strong> read the key point first, cover the rest, and attempt to rebuild the sub-topics from memory. The 10-mark answers double as condensed summaries of each unit; if you can reconstruct their parts, you know the unit.</p>
+
+            <section class="chapter-section" id="s-d-1-unit-i-2-mark-questions-t1-recall" data-section="D.1 Unit I — 2-Mark Questions (T1 · recall)"><h2>D.1 Unit I — 2-Mark Questions (T1 · recall)</h2>
+<p><strong>Q1. What is AI in Healthcare?</strong></p>
+<p><em>Key point — AI in Healthcare is the application of computational systems that perceive clinical data, learn patterns, and support or perform tasks normally requiring human medical intelligence.</em></p>
+<ul>
+<li><strong>Definition:</strong> Computational systems that perceive clinical data, learn patterns from it, and support or perform tasks that normally require human medical intelligence.</li>
+<li><strong>Scope:</strong> Diagnosis, prognosis, monitoring, and treatment planning.</li>
+<li><strong>Example:</strong> A CNN that screens retinal photographs for diabetic retinopathy.</li>
+</ul>
+<p><strong>Q2. Define Clinical Decision Support System (CDSS).</strong></p>
+<p><em>Key point — A CDSS is computer-based software that combines patient-specific data with computable medical knowledge to present patient-specific advice at the point of care.</em></p>
+<ul>
+<li><strong>Definition:</strong> Computer-based software that assists clinical decision-making by combining patient-specific data with computable medical knowledge.</li>
+<li><strong>Knowledge sources:</strong> Guideline rules, drug databases, or learned models.</li>
+<li><strong>Examples:</strong> A drug–drug interaction alert; an ML sepsis early-warning score delivered at the point of care.</li>
+</ul>
+<p><strong>Q3. What is an Electronic Health Record (EHR)?</strong></p>
+<p><em>Key point — An EHR is a longitudinal, computable digital record of a patient&#39;s health information shared across care settings.</em></p>
+<ul>
+<li><strong>Definition:</strong> A longitudinal digital record of a patient&#39;s health information stored in computable form and shared across care settings.</li>
+<li><strong>Contents:</strong> Demographics, encounters, diagnoses, medications, laboratory results, imaging links, and notes.</li>
+<li><strong>Significance:</strong> Computability (not merely digital storage) is what makes healthcare AI possible.</li>
+</ul>
+<p><strong>Q4. List any four types of medical data used in healthcare AI.</strong></p>
+<p><em>Key point — Healthcare AI draws on structured EHR data, lab/vital time series, medical images, and physiological signals (plus genomics, notes, claims, wearables).</em></p>
+<ul>
+<li><strong>Structured EHR data:</strong> Demographics, diagnoses, medications.</li>
+<li><strong>Laboratory/vitals:</strong> Numeric results and vital-sign time series.</li>
+<li><strong>Medical images:</strong> X-ray, CT, MRI (DICOM), whole-slide pathology.</li>
+<li><strong>Physiological signals:</strong> ECG, EEG, PPG. <em>(Also acceptable: genomic sequences (FASTQ/VCF), unstructured notes, claims data, wearable streams.)</em></li>
+</ul>
+<p><strong>Q5. What is telemedicine?</strong></p>
+<p><em>Key point — Telemedicine delivers clinical care at a distance, synchronously or asynchronously, over telecommunications.</em></p>
+<ul>
+<li><strong>Definition:</strong> Delivery of clinical care at a distance using telecommunications.</li>
+<li><strong>Modes:</strong> Synchronous (video consultation) or asynchronous (store-and-forward, where a captured image or signal is read later).</li>
+<li><strong>Example:</strong> A remotely captured retinal photograph read by a screening AI, with positives referred to an ophthalmologist.</li>
+</ul>
+</section>
+<section class="chapter-section" id="s-d-2-unit-i-3-mark-questions-t2-application" data-section="D.2 Unit I — 3-Mark Questions (T2 · application)"><h2>D.2 Unit I — 3-Mark Questions (T2 · application)</h2>
+<p><strong>Q1. State the role of AI in Clinical Decision Support Systems (CDSS).</strong></p>
+<p><em>Key point — AI is the newest inference engine inside the CDSS architecture, extending it from known-rule support to learned-pattern support while inheriting CDSS discipline.</em></p>
+<p><strong>1. AI as the inference engine</strong></p>
+<ul>
+<li><em>Key point:</em> In a knowledge-based CDSS the inference engine matches hand-coded rules against patient data; AI replaces or augments this with models learned from data.</li>
+<li>Knowledge-based CDSS: matches guideline rules and drug-interaction tables against patient data.</li>
+<li>AI: predicts risk (sepsis hours before criteria are met), recommends order sets, triages worklists, drafts documentation.</li>
+</ul>
+<p><strong>2. Output and presentation</strong></p>
+<ul>
+<li><em>Key point:</em> The AI component outputs a patient-specific score or suggestion which the interface layer presents to the clinician.</li>
+<li>The clinician remains accountable for the decision.</li>
+</ul>
+<p><strong>3. What AI adds</strong></p>
+<ul>
+<li><em>Key point:</em> AI extends CDSS from <em>known-rule</em> support to <em>learned-pattern</em> support — patterns nobody hand-coded.</li>
+</ul>
+<p><strong>4. Inherited discipline — the five rights</strong></p>
+<ul>
+<li><em>Key point:</em> AI inherits CDSS discipline: right information, person, format, channel, time still decide whether the support is usable.</li>
+</ul>
+<p><strong>Q2. List the major types of medical data used in healthcare AI.</strong></p>
+<p><em>Key point — Eight major data types, each with a different structure, standard, and AI use.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Structured EHR</td>
+<td>Demographics, ICD diagnoses, RxNorm meds, orders</td>
+</tr>
+<tr>
+<td>Lab &amp; vital signs</td>
+<td>Numeric time series with reference ranges</td>
+</tr>
+<tr>
+<td>Medical imaging</td>
+<td>X-ray/CT/MRI/ultrasound in DICOM; whole-slide pathology</td>
+</tr>
+<tr>
+<td>Physiological signals</td>
+<td>ECG, EEG, PPG waveforms</td>
+</tr>
+<tr>
+<td>Genomic data</td>
+<td>Sequencing reads (FASTQ), variant calls (VCF)</td>
+</tr>
+<tr>
+<td>Unstructured notes</td>
+<td>Discharge summaries, radiology/progress reports</td>
+</tr>
+<tr>
+<td>Administrative/claims</td>
+<td>Billing-coded episodes</td>
+</tr>
+<tr>
+<td>Wearable/mHealth</td>
+<td>Consumer device streams</td>
+</tr>
+</tbody></table></div>
+<p><strong>Q3. Differentiate an Electronic Health Record (EHR) from traditional patient records.</strong></p>
+<p><em>Key point — The decisive difference is computability: an EHR&#39;s structured, timestamped data can train models and trigger decision support; a paper chart cannot.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Paper record</th>
+<th>EHR</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Accessibility</td>
+<td>Single physical copy, one site</td>
+<td>Multi-user, multi-site, backed up</td>
+</tr>
+<tr>
+<td>Legibility/structure</td>
+<td>Handwriting; prose only</td>
+<td>Coded structured fields + typed notes</td>
+</tr>
+<tr>
+<td>Computability</td>
+<td>Readable only by humans</td>
+<td>Queryable — substrate of ML and CDSS</td>
+</tr>
+<tr>
+<td>Coordination</td>
+<td>Slow transfer between providers</td>
+<td>Real-time sharing via HL7/FHIR</td>
+</tr>
+<tr>
+<td>Decision support</td>
+<td>Impossible</td>
+<td>Integrated alerts and order sets</td>
+</tr>
+<tr>
+<td>New risks</td>
+<td>Loss/fire/theft</td>
+<td>Breaches, cyberattacks, usability burden</td>
+</tr>
+</tbody></table></div>
+<p><strong>Q4. State any three applications of AI in healthcare.</strong></p>
+<p><em>Key point — Three flagship applications: diagnostic imaging, predictive monitoring, and clinical operations/documentation (also acceptable: drug discovery, genomic interpretation, telemedicine triage).</em></p>
+<p><strong>1. Diagnostic imaging</strong></p>
+<ul>
+<li><em>Key point:</em> CNNs detect disease at specialist-level performance across modalities.</li>
+<li>Pneumonia on chest X-rays; intracranial hemorrhage on CT; diabetic retinopathy on retinal photographs.</li>
+</ul>
+<p><strong>2. Predictive monitoring</strong></p>
+<ul>
+<li><em>Key point:</em> Models score ICU patients hourly from vitals and labs.</li>
+<li>Warn of deterioration hours in advance.</li>
+</ul>
+<p><strong>3. Clinical operations and documentation</strong></p>
+<ul>
+<li><em>Key point:</em> AI automates coding, drafting, and risk targeting.</li>
+<li>Automated ICD coding of notes; ambient drafting of visit notes; readmission-risk prediction targeting post-discharge care.</li>
+</ul>
+<p><strong>Q5. List any three challenges of AI in healthcare.</strong></p>
+<p><em>Key point — Three core challenges: fragile data, protected and regulated data, and the trust/interpretability gap (plus imbalance, generalizability, workflow, equity).</em></p>
+<p><strong>1. Data quality and fragmentation</strong></p>
+<ul>
+<li><em>Key point:</em> Missing values, unit inconsistencies, copy-forward errors, and silos across institutions make models fragile (Unit II).</li>
+</ul>
+<p><strong>2. Privacy and regulation</strong></p>
+<ul>
+<li><em>Key point:</em> Health data is legally protected (HIPAA/GDPR); diagnostic AI may need FDA/CE approval before clinical use (Units III, V).</li>
+</ul>
+<p><strong>3. Trust and interpretability</strong></p>
+<ul>
+<li><em>Key point:</em> Clinicians need to see <em>why</em> a model recommends an action; black-box predictions are resisted, and automation bias is a safety hazard (Unit V).</li>
+</ul>
+<p><strong>Also acceptable:</strong> class imbalance for rare diseases, generalizability across hospitals, workflow integration, equity and bias.</p>
+</section>
+<section class="chapter-section" id="s-d-3-unit-i-5-mark-questions-t3-structured-explanation" data-section="D.3 Unit I — 5-Mark Questions (T3 · structured explanation)"><h2>D.3 Unit I — 5-Mark Questions (T3 · structured explanation)</h2>
+<p><strong>Q1. Explain the healthcare systems and data ecosystem used in AI-based healthcare applications.</strong></p>
+<p><em>Key point — The ecosystem is a four-layer stack of sources, standards, infrastructure, and consumers whose defining properties are heterogeneity and privacy, with AI value coming from joining sources on the right entity.</em></p>
+<p><strong>1. Sources</strong></p>
+<ul>
+<li><em>Key point:</em> The raw feeds from which clinical AI learns, each differing in structure and reliability.</li>
+<li>EHRs (structured: demographics, coded diagnoses, medications, orders; narrative: notes); lab and vital-sign streams; imaging in DICOM held in PACS.</li>
+<li>Physiological signals (ECG/EEG/PPG); genomics (FASTQ→VCF); claims (ICD/CPT-coded); consumer/wearable streams.</li>
+</ul>
+<p><strong>2. Standards and terminologies</strong></p>
+<ul>
+<li><em>Key point:</em> Standards make records computable and linkable across systems.</li>
+<li>HL7/FHIR for exchange; DICOM for imaging.</li>
+<li>ICD/SNOMED CT/LOINC/RxNorm for vocabulary.</li>
+</ul>
+<p><strong>3. Infrastructure</strong></p>
+<ul>
+<li><em>Key point:</em> Warehouses/lakes where data is joined on patient identifiers, with governance for access and privacy.</li>
+</ul>
+<p><strong>4. Consumers</strong></p>
+<ul>
+<li><em>Key point:</em> Where the joined data delivers value.</li>
+<li>CDSS at the bedside; population dashboards; ML training pipelines.</li>
+</ul>
+<p><strong>5. Defining properties</strong></p>
+<ul>
+<li><em>Key point:</em> Heterogeneity and privacy shape all real work.</li>
+<li>Heterogeneity: each source differs in structure, frequency, reliability — preprocessing (Unit II) and entity linkage dominate real projects.</li>
+<li>Privacy: data cannot move freely — shapes de-identification practice and federated architectures.</li>
+</ul>
+<p><em>Takeaway — AI value comes from joining sources on the right entity, such as linking a rising lactate trajectory to a deterioration prediction, not from any single feed alone.</em></p>
+<p><strong>Q2. Describe the role of AI in Clinical Decision Support Systems (CDSS) with suitable examples.</strong></p>
+<p><em>Key point — AI powers the CDSS inference engine with learned patterns across sepsis warning, drug safety, imaging triage, and guideline adherence, but adoption is decided by the five rights, and the clinician remains the decision-maker.</em></p>
+<p><strong>1. CDSS architecture</strong></p>
+<ul>
+<li><em>Key point:</em> A CDSS has four components: patient data, knowledge base, inference engine, and interface.</li>
+<li>AI&#39;s role: power the inference engine with learned patterns rather than only hand-coded rules.</li>
+</ul>
+<p><strong>2. Sepsis early warning</strong></p>
+<ul>
+<li><em>Key point:</em> An ML model scores every admitted patient hourly from vitals, labs, and demographics.</li>
+<li>A rising score alerts a rapid-response team hours before clinical criteria.</li>
+<li>Delivers the <em>right information at the right time</em>.</li>
+</ul>
+<p><strong>3. Drug safety</strong></p>
+<ul>
+<li><em>Key point:</em> Beyond static interaction rules, ML predicts patient-specific adverse-drug-event risk.</li>
+<li>Inputs: renal function and co-medications.</li>
+</ul>
+<p><strong>4. Imaging triage and guideline adherence</strong></p>
+<ul>
+<li><em>Key point:</em> AI prioritizes work and surfaces guideline-concordant care.</li>
+<li>Imaging: a hemorrhage-detection model reorders the radiology worklist so likely-positives are read first.</li>
+<li>Guidelines: models surface guideline-concordant order sets and flag deviations.</li>
+</ul>
+<p><strong>5. Adoption discipline</strong></p>
+<ul>
+<li><em>Key point:</em> The five rights decide adoption — an accurate model presented as 200 daily interruptive alerts is operationally worthless.</li>
+<li>AI extends CDSS coverage to patterns nobody encoded.</li>
+<li>The clinician remains the decision-maker; AI supplies patient-specific, learned, timely evidence.</li>
+</ul>
+<p><em>Takeaway — AI supplies learned, patient-specific, timely evidence inside the CDSS, but interface design and the five rights decide whether it is actually used.</em></p>
+<p><strong>Q3. Explain the different types of medical data used in healthcare AI.</strong></p>
+<p><em>Key point — Seven data types, each implying different preprocessing, models, and privacy handling — which is why the data ecosystem is taught before the models.</em></p>
+<p><strong>1. Structured EHR data</strong></p>
+<ul>
+<li><em>Key point:</em> Relational rows used for risk prediction and phenotyping.</li>
+<li>Patients, encounters, coded diagnoses (ICD), medications (RxNorm).</li>
+</ul>
+<p><strong>2. Laboratory and vital data</strong></p>
+<ul>
+<li><em>Key point:</em> Numeric time series where trajectories matter more than single values.</li>
+<li>Example: hemoglobin over 48 hours; used for deterioration and sepsis prediction.</li>
+</ul>
+<p><strong>3. Medical imaging</strong></p>
+<ul>
+<li><em>Key point:</em> Pixel data plus acquisition metadata, used for detection, classification, segmentation.</li>
+<li>X-ray, CT, MRI, ultrasound (DICOM); whole-slide pathology images.</li>
+</ul>
+<p><strong>4. Physiological signals</strong></p>
+<ul>
+<li><em>Key point:</em> Waveform data for continuous physiology.</li>
+<li>ECG, EEG, PPG; used for arrhythmia detection, sleep staging, seizure prediction.</li>
+</ul>
+<p><strong>5. Genomic data</strong></p>
+<ul>
+<li><em>Key point:</em> Sequencing outputs used for variant interpretation and precision oncology.</li>
+<li>FASTQ reads and VCF variant calls.</li>
+</ul>
+<p><strong>6. Unstructured notes</strong></p>
+<ul>
+<li><em>Key point:</em> Free text needing NLP for extraction and auto-coding.</li>
+<li>Abbreviations and negation complicate processing.</li>
+</ul>
+<p><strong>7. Claims data</strong></p>
+<ul>
+<li><em>Key point:</em> Billing-coded episodes used for population health and cost models.</li>
+</ul>
+<p><em>Takeaway — Each data type implies different preprocessing, models, and privacy handling.</em></p>
+<p><strong>Q4. Discuss the applications of AI in diagnosis, prognosis, and patient monitoring.</strong></p>
+<p><em>Key point — The three verbs cover what the patient has (diagnosis), what will happen (prognosis), and what is changing now (monitoring), each with its own data, evaluation, and failure mode.</em></p>
+<p><strong>1. Diagnosis</strong></p>
+<ul>
+<li><em>Key point:</em> Classifies the present state, evaluated per-finding at clinically chosen thresholds.</li>
+<li>CNNs read chest X-rays for pneumonia, CT for hemorrhage, retinal photos for retinopathy; ECG models classify rhythms; lab-pattern models flag sepsis.</li>
+<li>Evaluation: per-finding sensitivity/specificity — a missed cancer and a false positive carry very different costs.</li>
+</ul>
+<p><strong>2. Prognosis</strong></p>
+<ul>
+<li><em>Key point:</em> Predicts future outcomes from longitudinal data, blending classical survival analysis with deep survival models.</li>
+<li>Outcomes: mortality, readmission, recurrence.</li>
+<li>Difficulty: censoring and delayed labels; danger: feedback — high-risk labeling changes care, which changes the outcome being predicted.</li>
+</ul>
+<p><strong>3. Monitoring</strong></p>
+<ul>
+<li><em>Key point:</em> Runs the prediction logic continuously — AI&#39;s largest scale advantage and its alarm-burden failure mode.</li>
+<li>ICU deterioration prediction gives hours of warning; ward early-warning augments scores like NEWS.</li>
+<li>Wearables screen for atrial fibrillation from PPG; CGM forecasts glucose for insulin dosing.</li>
+<li>Scale advantage: watching every patient every minute versus a clinician sampling twice daily.</li>
+</ul>
+<p><em>Takeaway — Together the three verbs cover what the patient has, what will happen, and what is changing now.</em></p>
+<p><strong>Q5. Explain the use of AI in Radiology, Pathology, Oncology, and Cardiology.</strong></p>
+<p><em>Key point — Each specialty&#39;s AI is shaped by its data substrate, its evaluation method, and its distinctive barrier: liability (radiology), stain variability (pathology), slow labels (oncology), and consumer-device validation (cardiology).</em></p>
+<p><strong>1. Radiology</strong></p>
+<ul>
+<li><em>Key point:</em> AI detects and triages on DICOM pixels, deployed as worklist triage or second-reader with the radiologist accountable.</li>
+<li>Chest X-ray findings; CT intracranial hemorrhage; lung-nodule screening; mammography support (AI-supported reading has matched double-reading workload reduction with comparable detection in large trials).</li>
+</ul>
+<p><strong>2. Pathology</strong></p>
+<ul>
+<li><em>Key point:</em> Whole-slide imaging turns slides into gigapixel images; staining/scanner variability is the central engineering problem.</li>
+<li>Mitosis detection, Gleason grading, lymph-node metastasis detection (CAMELYON16), biomarker quantification.</li>
+</ul>
+<p><strong>3. Oncology</strong></p>
+<ul>
+<li><em>Key point:</em> AI supports detection, prognosis, precision treatment, radiotherapy, and trials — with slow ground truth shaping evaluation.</li>
+<li>Prognosis via survival models; matching tumor genomics to targeted therapy; radiotherapy auto-contouring of organs at risk; trial matching; ground truth is slow (years to recurrence).</li>
+</ul>
+<p><strong>4. Cardiology</strong></p>
+<ul>
+<li><em>Key point:</em> Deep models read ECGs at cardiologist level and consumer devices screen continuously.</li>
+<li>12-lead ECG classification across dozens of rhythms at cardiologist level.</li>
+<li>Wearables screen for AF from single-lead PPG (Apple Heart Study); echo AI estimates ejection fraction.</li>
+</ul>
+<p><em>Takeaway — Each specialty&#39;s AI is shaped by its data substrate, evaluation method, and barrier: liability in radiology, stain variability in pathology, slow labels in oncology, consumer-device validation in cardiology.</em></p>
+</section>
+<section class="chapter-section" id="s-d-4-unit-i-10-mark-questions-t3-integrated-essay-design" data-section="D.4 Unit I — 10-Mark Questions (T3 · integrated essay/design)"><h2>D.4 Unit I — 10-Mark Questions (T3 · integrated essay/design)</h2>
+<p><strong>Q1. Discuss the healthcare systems and data ecosystem used in AI-based healthcare applications, including the role of AI in Clinical Decision Support Systems (CDSS).</strong></p>
+<p><em>Key point — The heterogeneous data ecosystem, its standards, AI-powered CDSS, and shared challenges form one continuous chain from data to decision.</em></p>
+<p><strong>A. The data ecosystem</strong></p>
+<ul>
+<li><em>Key point:</em> AI-based healthcare applications sit downstream of a heterogeneous data ecosystem of eight source types.</li>
+<li><strong>EHRs</strong> — the longitudinal computable record: demographics, encounters, coded diagnoses (ICD), medications (RxNorm), orders, narrative notes.</li>
+<li><strong>Lab and vital-sign streams</strong> — numeric time series with timestamps and reference ranges; the trajectories (not single values) carry most predictive signal.</li>
+<li><strong>Medical imaging</strong> — X-ray, CT, MRI, ultrasound as DICOM objects (pixels + rich metadata) in PACS.</li>
+<li><strong>Physiological signals</strong> — ECG, EEG, PPG waveforms from bedside monitors and wearables.</li>
+<li><strong>Genomics</strong> — sequencing reads (FASTQ) aligned (BAM) and called into variants (VCF).</li>
+<li><strong>Unstructured notes, claims, wearables</strong> — discharge summaries/radiology reports; billing-coded episodes (ICD/CPT); consumer mHealth streams.</li>
+</ul>
+<p><strong>B. Standards make it computable</strong></p>
+<ul>
+<li><em>Key point:</em> Shared standards turn a set of silos into one joinable patient story, with privacy law governing every movement.</li>
+<li>HL7 v2 and FHIR model clinical data as exchangeable messages and API resources; DICOM standardizes imaging.</li>
+<li>ICD, SNOMED CT, LOINC, RxNorm provide the vocabularies that turn prose into codes.</li>
+<li>With standards, one patient&#39;s story can be joined across institutions and modalities.</li>
+<li>Privacy law (HIPAA/GDPR) governs every movement — motivating de-identification and, increasingly, federated architectures where data never leaves the hospital.</li>
+</ul>
+<p><strong>C. AI inside CDSS</strong></p>
+<ul>
+<li><em>Key point:</em> AI supplies a learned inference engine in a four-part CDSS, but interface design (alert burden) decides adoption more than model accuracy does.</li>
+<li>CDSS components: patient data, knowledge base, inference engine, interface at the point of care.</li>
+<li>Traditional inference: rule-based (drug–drug interaction tables, guideline order sets) — transparent but brittle.</li>
+<li>Learned inference: sepsis models scoring every patient hourly from vitals and labs; readmission models targeting post-discharge care; imaging models reordering worklists; documentation models drafting notes.</li>
+<li>The system still obeys the five rights of CDS — right information, person, format, channel, time; the clinician remains accountable.</li>
+</ul>
+<p><strong>D. Challenges</strong></p>
+<ul>
+<li><em>Key point:</em> Data, silo, label, privacy, and trust problems span the whole pipeline.</li>
+<li>Data quality: missingness, unit chaos, copy-forward; silos and interoperability; sparsity of rare-disease labels.</li>
+<li>Privacy and security; interpretability; generalizability across hospitals.</li>
+<li>Workflow integration, equity, and reimbursement.</li>
+</ul>
+<p><strong>E. Conclusion</strong></p>
+<ul>
+<li><em>Key point:</em> Data engineering, modeling, and delivery are one system, not three subjects.</li>
+<li>The ecosystem determines what AI can learn.</li>
+<li>The standards determine what it can join.</li>
+<li>The CDSS determines whether the learned pattern reaches a decision at the right moment.</li>
+</ul>
+<p><strong>Synthesis</strong></p>
+<ul>
+<li>Ecosystem → standards → CDSS form one continuous chain from data to decision.</li>
+<li>Standards enable joining; CDSS discipline (five rights, clinician accountability) enables delivery.</li>
+<li>Treating data engineering, modeling, and delivery as one system is the central lesson.</li>
+</ul>
+<p><strong>Q2. Explain the different types of medical data used in healthcare AI and discuss their applications in diagnosis, prognosis, and patient monitoring.</strong></p>
+<p><em>Key point — Eight data types map onto three clinical verbs — diagnosis (cross-sectional), prognosis (longitudinal), monitoring (continuous) — under shared constraints of missingness, privacy, and entity linkage.</em></p>
+<p><strong>A. Data types</strong></p>
+<ul>
+<li><em>Key point:</em> Eight data types, each with distinct structure, scale, and analysis needs.</li>
+<li><strong>Structured EHR</strong> — relational tables of patients, encounters, ICD-coded diagnoses, RxNorm medications, orders; longitudinal by nature.</li>
+<li><strong>Lab results and vitals</strong> — numeric time series; the trajectory of a value (rising lactate, falling hemoglobin) is the clinical signal.</li>
+<li><strong>Medical imaging</strong> — DICOM pixels from X-ray, CT, MRI, ultrasound; whole-slide pathology scans at gigapixel scale; each image carries acquisition metadata that itself matters for models.</li>
+<li><strong>Physiological signals</strong> — ECG (millivolts over seconds), EEG, PPG; high-frequency, waveform-native.</li>
+<li><strong>Genomics</strong> — ~3 billion base pairs per genome; analyzed as variants (VCF) per patient and tumor.</li>
+<li><strong>Notes, claims, wearables</strong> — the majority of clinical knowledge in prose (needs NLP); billing-complete but clinically shallow; continuous consumer-grade streams.</li>
+</ul>
+<p><strong>B. Mapping to applications</strong></p>
+<ul>
+<li><em>Key point:</em> Each clinical verb consumes a different kind of data — cross-sectional for diagnosis, longitudinal for prognosis, continuous for monitoring.</li>
+<li><strong>Diagnosis</strong> consumes cross-sectional evidence at a decision point: imaging and signals dominate (CNN pneumonia detection, ECG rhythm classification, retinopathy screening), supported by structured EHR context and note-extracted history.</li>
+<li><strong>Prognosis</strong> consumes longitudinal records: EHR trajectories, labs, comorbidities, utilization history feed survival and deterioration models (mortality, readmission, recurrence); genomics adds molecular prognosis in oncology; labels arrive late and censored.</li>
+<li><strong>Monitoring</strong> consumes continuous streams: vitals plus labs scored hourly for ICU deterioration; wearables screening continuously for AF; CGM forecasting glucose minutes ahead.</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Verb</th>
+<th>Dominant data</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Diagnosis</td>
+<td>Cross-sectional imaging/signals</td>
+<td>CNN pneumonia detection</td>
+</tr>
+<tr>
+<td>Prognosis</td>
+<td>Longitudinal EHR/labs</td>
+<td>Survival models</td>
+</tr>
+<tr>
+<td>Monitoring</td>
+<td>Continuous streams</td>
+<td>CGM glucose forecast</td>
+</tr>
+</tbody></table></div>
+<p><strong>C. Cross-cutting constraints</strong></p>
+<ul>
+<li><em>Key point:</em> Every data type raises the same issues, and type + verb together determine whether AI helps.</li>
+<li>Missingness is informative — an un-ordered lab is not random.</li>
+<li>Privacy governs all movement of the data; labels are imperfect gold standards.</li>
+<li>Joining sources on the right entity is where most real value (and most real bugs) live.</li>
+</ul>
+<p><strong>Synthesis</strong></p>
+<ul>
+<li>The data type determines the model family; the clinical verb determines the evaluation.</li>
+<li>The same patient may pass through all three verbs: diagnosed with sepsis from a monitored trajectory, prognosed for ICU length of stay, monitored for recovery.</li>
+<li>Integration of data type and clinical verb determines whether AI helps.</li>
+</ul>
+<p><strong>Q3. Compare traditional healthcare systems with AI-enabled healthcare systems, highlighting applications, limitations, and challenges.</strong></p>
+<p><em>Key point — AI-enabled systems change speed, breadth, consistency, and reach at every care stage, but the goal is disciplined augmentation, not replacement, with accountability kept human.</em></p>
+<p><strong>A. Stage-by-stage comparison</strong></p>
+<ul>
+<li><em>Key point:</em> Each care stage shifts from human-variable to AI-consistent execution.</li>
+<li><strong>History taking:</strong> clinician interview with variable completeness vs structured intake and chatbot triage with consistent but context-poor capture.</li>
+<li><strong>Investigation:</strong> experience-guided ordering vs CDSS-suggested evidence-based order sets.</li>
+<li><strong>Diagnosis:</strong> expert pattern recognition with inter-observer variability vs model-assisted reading with consistent first-pass interpretation.</li>
+<li><strong>Prognosis:</strong> clinical gestalt plus static scores vs learned models on full EHR trajectories.</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Traditional</th>
+<th>AI-enabled</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Monitoring</td>
+<td>Periodic observation, threshold alarms</td>
+<td>Continuous learned early-warning</td>
+</tr>
+<tr>
+<td>Administration</td>
+<td>Manual notes and coding</td>
+<td>Automated drafting/coding assistance</td>
+</tr>
+</tbody></table></div>
+<p><strong>B. What AI changes</strong></p>
+<ul>
+<li><em>Key point:</em> The deepest gain is distributional — every patient gets the <em>median expert</em> everywhere.</li>
+<li>Speed: milliseconds per study; breadth: every patient, every hour, no fatigue.</li>
+<li>Consistency: no inter-observer drift.</li>
+<li>Reach: expert-level first-pass reading where experts are scarce.</li>
+</ul>
+<p><strong>C. What must not change</strong></p>
+<ul>
+<li><em>Key point:</em> Accountability and human oversight — regulation is written around the clinician signing the decision.</li>
+<li>Safe default: <em>AI proposes, human disposes</em>.</li>
+<li>Autonomy only in narrow, validated, low-blast-radius tasks (autonomous retinopathy screening triggering a referral).</li>
+</ul>
+<p><strong>D. Limitations of each</strong></p>
+<ul>
+<li><em>Key point:</em> Traditional systems fail through human limits; AI systems fail through data and deployment drift.</li>
+<li><strong>Traditional:</strong> knowledge decay, fatigue, variability, access inequity, no continuous vigilance.</li>
+<li><strong>AI-enabled:</strong> dataset shift (models tuned to one hospital&#39;s population and practice), automation bias, alert fatigue, silent data-quality failures, opaque reasoning, performance decay after deployment.</li>
+</ul>
+<p><strong>E. Challenges of the hybrid</strong></p>
+<ul>
+<li><em>Key point:</em> Most hybrid failures are workflow, not accuracy.</li>
+<li>Integration into workflows; validation and regulation (FDA/CE pathways for SaMD).</li>
+<li>Privacy (HIPAA-compliant pipelines); equity (device and data gaps).</li>
+<li>Liability allocation; local monitoring with drift detection after go-live.</li>
+</ul>
+<p><strong>F. Verdict</strong></p>
+<ul>
+<li><em>Key point:</em> Not replacement but augmentation with discipline.</li>
+<li>AI supplies tireless, consistent, broad first-pass intelligence.</li>
+<li>The traditional system supplies context, accountability, and the human relationship care depends on.</li>
+</ul>
+<p><strong>Synthesis</strong></p>
+<ul>
+<li>The engineering challenge is to compose the two systems so each compensates for the other&#39;s failure mode.</li>
+<li>Traditional strengths (context, accountability, relationship) cover AI weaknesses (drift, opacity, bias); AI strengths (speed, consistency, reach) cover human limits (fatigue, variability, scarce expertise).</li>
+<li>That composition is exactly what Units II–V of this book are about.</li>
+</ul>
+</section>
+<section class="chapter-section" id="s-d-5-unit-ii-2-mark-questions-t1-recall" data-section="D.5 Unit II — 2-Mark Questions (T1 · recall)"><h2>D.5 Unit II — 2-Mark Questions (T1 · recall)</h2>
+<p><strong>Q1. What is data cleaning?</strong></p>
+<p><em>Key point — Data cleaning detects and corrects errors and inconsistencies so the dataset accurately reflects clinical reality.</em></p>
+<ul>
+<li><strong>Definition:</strong> Detecting and correcting errors and inconsistencies in a dataset so it accurately reflects clinical reality.</li>
+<li><strong>Clinical operations:</strong> De-duplicating encounters; harmonizing units (mg/dL ↔ mmol/L); plausibility checks (heart rate 900 bpm); date-chronology checks; mapping free text to standard codes.</li>
+</ul>
+<p><strong>Q2. Define data normalization.</strong></p>
+<p><em>Key point — Normalization rescales numeric features to a common bounded scale so differently measured features contribute comparably.</em></p>
+<ul>
+<li><strong>Definition/formula:</strong> Rescaling numeric features to a common, bounded scale — typically min–max to [0,1]: <code>x&#39; = (x − min)/(max − min)</code>.</li>
+<li><strong>Purpose:</strong> Features in different units (heart rate vs cholesterol) contribute comparably to distance-based models and neural networks.</li>
+<li><strong>Caveat:</strong> Sensitive to outliers, so clinical data often uses robust variants instead.</li>
+</ul>
+<p><strong>Q3. What are missing values in clinical data?</strong></p>
+<p><em>Key point — Missing values are absent expected measurements whose absence pattern is often clinically informative.</em></p>
+<ul>
+<li><strong>Definition:</strong> Absent measurements for features the schema expects — a lab test not drawn, a field left blank.</li>
+<li><strong>Causes:</strong> Selective test ordering, device gaps, documentation habits.</li>
+<li><strong>Clinical meaning:</strong> The absence pattern is often informative (a test not ordered because the clinician expected normality).</li>
+<li><strong>Classification/handling:</strong> Classified as MCAR, MAR, or MNAR; handled by deletion or imputation.</li>
+</ul>
+<p><strong>Q4. What is feature engineering?</strong></p>
+<p><em>Key point — Feature engineering constructs model inputs that encode clinical meaning, often mattering more than model choice.</em></p>
+<ul>
+<li><strong>Definition:</strong> Constructing model inputs that encode clinical meaning from raw data.</li>
+<li><strong>Example:</strong> A raw creatinine series → the features {last value, 24-h slope, days since last measurement, abnormal-count}.</li>
+<li><strong>Significance:</strong> Good features express clinical concepts (trajectory, rarity, comorbidity burden) and often matter more to performance than the choice of model.</li>
+</ul>
+<p><strong>Q5. Expand ICD and CPT.</strong></p>
+<p><em>Key point — ICD classifies diagnoses (WHO-maintained); CPT classifies procedures and services (AMA-maintained).</em></p>
+<ul>
+<li><strong>ICD:</strong> International Classification of Diseases (WHO-maintained; ICD-10/10-CM clinically modified; ICD-11 emerging) — classifies <em>diagnoses</em> (why the patient was seen).</li>
+<li><strong>CPT:</strong> Current Procedural Terminology (AMA-maintained) — classifies <em>procedures and services</em> (what was done), e.g., <code>99213</code> = established-patient office visit.</li>
+</ul>
+</section>
+<section class="chapter-section" id="s-d-6-unit-ii-3-mark-questions-t2-application" data-section="D.6 Unit II — 3-Mark Questions (T2 · application)"><h2>D.6 Unit II — 3-Mark Questions (T2 · application)</h2>
+<p><strong>Q1. Explain the need for data cleaning in clinical datasets.</strong></p>
+<p><em>Key point — Human, heterogeneous, time-pressured recording creates five defect classes, and uncleaned data corrupts every downstream step.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Defect</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Duplicates</td>
+<td>Repeated encounters; one patient under multiple identifiers</td>
+</tr>
+<tr>
+<td>Unit inconsistency</td>
+<td>Glucose in mg/dL vs mmol/L; aggregates become meaningless</td>
+</tr>
+<tr>
+<td>Impossible values</td>
+<td>Data-entry errors, e.g., heart rate 900 bpm</td>
+</tr>
+<tr>
+<td>Chronology errors</td>
+<td>Discharge recorded before admission</td>
+</tr>
+<tr>
+<td>Text–code mismatch</td>
+<td>Same drug spelled six ways vs the coded form</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li><strong>Downstream damage:</strong> outliers dominate scaled models; means computed across mixed units; labels are wrong.</li>
+<li><strong>Leverage:</strong> cleaning is the first and highest-leverage step of any healthcare ML pipeline.</li>
+</ul>
+<p><strong>Q2. Differentiate data normalization and data imputation.</strong></p>
+<p><em>Key point — Normalization is a scaling operation on complete values; imputation is a completion operation on missing ones; apply clean → impute → scale.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Normalization</th>
+<th>Imputation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Operation type</td>
+<td>Scaling</td>
+<td>Completion</td>
+</tr>
+<tr>
+<td>Acts on</td>
+<td>Complete numeric values</td>
+<td>Missing values</td>
+</tr>
+<tr>
+<td>Changes</td>
+<td>Magnitude, never existence</td>
+<td>Existence, not (primarily) scale</td>
+</tr>
+<tr>
+<td>Methods</td>
+<td>Min–max to [0,1]; z-score (mean 0, variance 1)</td>
+<td>Mean/median, KNN, MICE, LOCF</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>Creatinine 4.2 mg/dL gets standardized</td>
+<td>Other patients&#39; creatinines get estimated</td>
+</tr>
+</tbody></table></div>
+<p><strong>Q3. State methods for handling missing values in healthcare datasets.</strong></p>
+<p><em>Key point — Choice depends on the missingness mechanism (MCAR/MAR/MNAR) and on the downstream model.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>When / note</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Deletion (rows/columns)</td>
+<td>Only when missingness is tiny and plausibly MCAR</td>
+</tr>
+<tr>
+<td>Simple imputation</td>
+<td>Mean/median/mode; LOCF for short gaps in dense vitals</td>
+</tr>
+<tr>
+<td>KNN</td>
+<td>Imputes from similar patients</td>
+</tr>
+<tr>
+<td>MICE</td>
+<td>Iterative chained regressions; the principled MAR method</td>
+</tr>
+<tr>
+<td>NaN-aware learners</td>
+<td>LightGBM/XGBoost split on missingness directly</td>
+</tr>
+<tr>
+<td>Missingness indicators</td>
+<td>&quot;Was this measured?&quot; — selective ordering is clinical information</td>
+</tr>
+<tr>
+<td>MNAR strategy</td>
+<td>Model the missingness mechanism itself or fix data collection</td>
+</tr>
+</tbody></table></div>
+<p><strong>Q4. List the major steps in feature engineering for EHR data.</strong></p>
+<p><em>Key point — Eight ordered steps, ending in leakage validation: everything must be computable at prediction time.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. Time-zero &amp; window</td>
+<td>Define the observation window (e.g., first 24 h predicts rest of stay)</td>
+</tr>
+<tr>
+<td>2. Aggregate sources</td>
+<td>Labs (last/min/max/mean/slope/abnormal count), vitals, medications</td>
+</tr>
+<tr>
+<td>3. Diagnoses</td>
+<td>ICD indicators; comorbidity indices (Charlson)</td>
+</tr>
+<tr>
+<td>4. Utilization</td>
+<td>Prior admissions, ED visits, LOS so far</td>
+</tr>
+<tr>
+<td>5. Temporal</td>
+<td>Time since event, measurement frequency, seasonality</td>
+</tr>
+<tr>
+<td>6. Text-derived</td>
+<td>NLP features: smoking status, symptom mentions</td>
+</tr>
+<tr>
+<td>7. Missingness &amp; encoding</td>
+<td>Indicators; one-hot (low cardinality), embedding/frequency (high)</td>
+</tr>
+<tr>
+<td>8. Leakage validation</td>
+<td>Everything must be computable at prediction time</td>
+</tr>
+</tbody></table></div>
+<p><strong>Q5. State the significance of ICD and CPT coding systems in healthcare AI.</strong></p>
+<p><em>Key point — ICD and CPT make records computable and interoperable, but code-based labels carry coding-practice bias.</em></p>
+<p><strong>1. ICD — diagnostic labels</strong></p>
+<p><em>Key point:</em> ICD supplies the diagnostic labels that are the backbone of supervised learning in healthcare.</p>
+<ul>
+<li>Cohorts (heart-failure = I50.x)</li>
+<li>Outcome definitions (readmission via a return admission&#39;s codes)</li>
+<li>Phenotype definitions</li>
+</ul>
+<p><strong>2. CPT — procedure labels</strong></p>
+<p><em>Key point:</em> CPT records which interventions occurred, enabling intervention-aware models.</p>
+<ul>
+<li>Interventions (echo, catheterization)</li>
+<li>Utilization features</li>
+</ul>
+<p><strong>3. Computability, interoperability, billing</strong></p>
+<p><em>Key point:</em> Shared vocabularies make records computable across institutions and drive billing.</p>
+<ul>
+<li>Same vocabulary across institutions → interoperable data</li>
+<li>They drive billing → claims data available at scale</li>
+</ul>
+<p><strong>4. Caveat</strong></p>
+<p><em>Key point:</em> Codes are assigned for documentation/payment as much as truth.</p>
+<ul>
+<li>They carry coding-practice bias</li>
+<li>Must be stated as proxies, not ground truth</li>
+</ul>
+</section>
+<section class="chapter-section" id="s-d-7-unit-ii-5-mark-questions-t3-structured-explanation" data-section="D.7 Unit II — 5-Mark Questions (T3 · structured explanation)"><h2>D.7 Unit II — 5-Mark Questions (T3 · structured explanation)</h2>
+<p><strong>Q1. Explain data cleaning, imputation, and normalization techniques used in clinical data.</strong></p>
+<p><em>Key point — Cleaning makes data correct, imputation makes it complete, normalization makes it comparable; run clean → impute → scale.</em></p>
+<p><strong>1. Cleaning — make data correct</strong></p>
+<p><em>Key point:</em> Cleaning makes the record reflect clinical reality.</p>
+<ul>
+<li>De-duplication of encounters and patients (entity resolution)</li>
+<li>Unit harmonization (glucose mg/dL↔mmol/L ÷/× 18)</li>
+<li>Plausibility rules (physiologic bounds; dates ordered); free text → LOINC/RxNorm; fix chronology across systems</li>
+</ul>
+<p><strong>2. Imputation — classify the mechanism first</strong></p>
+<p><em>Key point:</em> The missingness mechanism determines the method.</p>
+<ul>
+<li><strong>MCAR:</strong> deletion acceptable</li>
+<li><strong>MAR:</strong> explained by observed data → KNN or MICE (iterative chained-equation method)</li>
+<li><strong>MNAR:</strong> depends on the unobserved value itself → model the mechanism (a test not ordered because expected normal)</li>
+</ul>
+<p><strong>3. Imputation — indicators and evaluation</strong></p>
+<p><em>Key point:</em> Selective ordering is clinical signal; evaluate by downstream performance.</p>
+<ul>
+<li>Add missingness indicators (&quot;was this measured?&quot;)</li>
+<li>Evaluate imputation by downstream task performance</li>
+</ul>
+<p><strong>4. Normalization — make data comparable</strong></p>
+<p><em>Key point:</em> Choose the scaler by data shape and model.</p>
+<ul>
+<li><strong>Min–max</strong> to [0,1]: bounded inputs (NNs); sensitive to outliers</li>
+<li><strong>Z-score</strong> standardization: mean 0/variance 1 — default for SVM/PCA/regularized models</li>
+<li><strong>Robust scaling</strong> (median/IQR) for skewed labs</li>
+</ul>
+<p><strong>5. Sequence and leakage</strong></p>
+<p><em>Key point:</em> Sequence matters, and scalers must be fit on training data only.</p>
+<ul>
+<li>Order: clean → impute → scale</li>
+<li>Fit scalers on training data only to avoid leakage</li>
+<li>Retain the raw clinical value alongside the scaled one for interpretability</li>
+</ul>
+<p><em>Takeaway — The three techniques compose as clean → impute → scale, with leakage control and raw-value retention throughout.</em></p>
+<p><strong>Q2. Describe methods for handling missing values, outliers, and bias in healthcare datasets.</strong></p>
+<p><em>Key point — Classify before acting on each problem: mechanism, origin, and bias type determine the fix, and each must be audited.</em></p>
+<p><strong>1. Missing values — mechanisms and methods</strong></p>
+<p><em>Key point:</em> Classify MCAR/MAR/MNAR, then match the method.</p>
+<ul>
+<li>Deletion (rare, tiny fraction); simple fills (median; LOCF only for short vitals gaps)</li>
+<li>Model-based: KNN; MICE for MAR; NaN-aware learners (LightGBM splits on missingness natively)</li>
+<li>Missingness indicators everywhere; for MNAR, model collection or fix it — don&#39;t impute blindly</li>
+</ul>
+<p><strong>2. Outliers — detect, then classify</strong></p>
+<p><em>Key point:</em> Detect with statistical and clinical rules, then classify before acting.</p>
+<ul>
+<li>Detect: z-score/IQR rules, isolation forests, physiologic plausibility ranges</li>
+<li>Data-entry errors → correct; physiologically real extremes (heart rate 220 in documented arrhythmia) → keep</li>
+<li>Robust options (RobustScaler, Huber loss) tame the rest; never delete silently without a documented rule</li>
+</ul>
+<p><strong>3. Bias — types</strong></p>
+<p><em>Key point:</em> Bias arises when the training sample differs from the target or measurement differs by group.</p>
+<ul>
+<li>Selection bias: tertiary-hospital sickest vs primary-care target population</li>
+<li>Measurement/collection bias: instruments or practice differ by site, time, or demographic group (pulse oximetry overreading in darker skin)</li>
+</ul>
+<p><strong>4. Bias — mitigations</strong></p>
+<p><em>Key point:</em> Mitigate by design, subgroup evaluation, and documentation.</p>
+<ul>
+<li>Explicit sampling design; stratified subgroup evaluation</li>
+<li>External validation across sites; document the source population in the model card</li>
+</ul>
+<p><strong>5. Interaction and audit</strong></p>
+<p><em>Key point:</em> The three problems interact, so each must be audited, not just automated.</p>
+<ul>
+<li>Bias can hide inside &quot;missingness&quot;</li>
+<li>An outlier rule can itself encode bias</li>
+</ul>
+<p><em>Takeaway — Mechanism-aware imputation, classified outliers, and bias-audited sampling together make a healthcare dataset trustworthy for ML.</em></p>
+<p><strong>Q3. Explain feature engineering techniques for EHR and time-series clinical data.</strong></p>
+<p><em>Key point — Engineer clinically meaningful features over an observation window ending before prediction time, with time-zero identical in training and deployment.</em></p>
+<p><strong>1. EHR feature families</strong></p>
+<p><em>Key point:</em> Encode demographics, diagnoses, labs, medications, utilization, and text.</p>
+<ul>
+<li>Demographics/admission context (age, sex, admission type); ICD indicators; validated comorbidity summaries (Charlson, Elixhauser)</li>
+<li>Labs: last value, window min/max/mean/std, abnormal counts, slope (rate of change), time-since-last-measurement, missingness indicators</li>
+<li>Medications (high-risk drug indicators, dose, duration); utilization (prior admissions, ED visits, LOS-so-far); NLP text features (smoking status, symptom flags)</li>
+</ul>
+<p><strong>2. Observation window</strong></p>
+<p><em>Key point:</em> All features are computed over a window ending strictly before prediction time.</p>
+<ul>
+<li>Example: first 24 h of data → predict the rest of the stay</li>
+<li>All sources aggregated over the same window</li>
+</ul>
+<p><strong>3. Time-series features</strong></p>
+<p><em>Key point:</em> Summarize dynamics: statistics, variability, trend, morphology, sampling, ratios.</p>
+<ul>
+<li>Window statistics (1 h/6 h/24 h); variability (std, coefficient of variation; <strong>HRV</strong>: RMSSD/SDNN)</li>
+<li>Trends (slope, delta-from-baseline, time-above-threshold); waveform morphology (ECG intervals, EEG band powers)</li>
+<li>Sampling frequency itself; cross-signal ratios (shock index = HR/SBP)</li>
+</ul>
+<p><strong>4. Representation choice</strong></p>
+<p><em>Key point:</em> Choose the representation by data volume and horizon.</p>
+<ul>
+<li>Engineered features + gradient-boosted trees: the robust default</li>
+<li>Raw-sequence RNN/LSTM models: win with abundance and long horizons</li>
+</ul>
+<p><strong>5. Time-zero and leakage</strong></p>
+<p><em>Key point:</em> Define time-zero identically in training and deployment, and audit for leakage.</p>
+<ul>
+<li>Identical time-zero definition in training and deployment</li>
+<li>Every feature must be computable at prediction time</li>
+</ul>
+<p><em>Takeaway — Feature quality hinges on clinical meaning, a strictly pre-prediction window, and leakage-free time-zero discipline.</em></p>
+<p><strong>Q4. Discuss text mining for medical notes using Natural Language Processing (NLP).</strong></p>
+<p><em>Key point — Clinical notes hold most clinical knowledge but need a staged pipeline — preprocess, extract, assert, relate, structure — to become usable.</em></p>
+<p><strong>1. Why notes are hard</strong></p>
+<p><em>Key point:</em> Notes are written for humans, so keyword search matches a diagnosis&#39;s own denial.</p>
+<ul>
+<li>Abbreviations (SOB, NSTEMI); hedging (&quot;cannot exclude&quot;); family-history confusion; imprecise dates; copy-forward bloat</li>
+<li><strong>Negation:</strong> &quot;no evidence of pneumonia&quot; — a keyword search matches the denial itself</li>
+</ul>
+<p><strong>2. Preprocessing</strong></p>
+<p><em>Key point:</em> Section segmentation matters because assertion differs by section.</p>
+<ul>
+<li>Section segmentation (History/Meds/Assessment/Plan)</li>
+<li>Sentence splitting; abbreviation expansion</li>
+</ul>
+<p><strong>3. Entity extraction (NER)</strong></p>
+<p><em>Key point:</em> Tag clinical concepts with dictionaries or clinical transformers.</p>
+<ul>
+<li>Dictionary/ontology approaches (UMLS, SNOMED)</li>
+<li>Clinical transformers (scispaCy, clinical BERT) for medications, problems, procedures</li>
+</ul>
+<p><strong>4. Assertion detection — the defining step</strong></p>
+<p><em>Key point:</em> Classify each finding as present/absent/possible/historical using context.</p>
+<ul>
+<li>Negation algorithms (NegEx) plus section context</li>
+<li>This is clinical NLP&#39;s defining step</li>
+</ul>
+<p><strong>5. Relations, time, and structured output</strong></p>
+<p><em>Key point:</em> Extract relations and timelines, then produce structured outputs.</p>
+<ul>
+<li>Finding-to-anatomy and timeline extraction</li>
+<li>Features (smoking status), codes (ICD auto-assignment), cohort definitions, summaries</li>
+</ul>
+<p><strong>6. Applications and the LLM caveat</strong></p>
+<p><em>Key point:</em> LLMs excel at extraction/summarization but need grounding and PHI safeguards.</p>
+<ul>
+<li>Applications: auto-coding, trial cohort identification, quality measures, feature engineering, report summarization</li>
+<li>LLMs require citable source spans (grounding) and PHI safeguards before hospital deployment</li>
+</ul>
+<p><em>Takeaway — NLP turns human-facing notes into computable features, with assertion detection as the step that separates presence from mere mention.</em></p>
+<p><strong>Q5. Explain ICD and CPT coding systems with their significance in healthcare AI.</strong></p>
+<p><em>Key point — ICD and CPT provide the labels, interoperable vocabularies, and claims data behind healthcare ML — but inherit coding-practice bias.</em></p>
+<p><strong>1. ICD — structure and uses</strong></p>
+<p><em>Key point:</em> WHO-maintained diagnosis classification serving statistics, reimbursement, epidemiology, and ML labels.</p>
+<ul>
+<li>National clinical modifications (ICD-10-CM) and ICD-11; structure: category code + detail</li>
+<li>Examples: <code>E11.9</code> = type 2 diabetes without complications; <code>I21.4</code> = acute subendocardial MI</li>
+<li>Serves morbidity/mortality statistics, reimbursement grouping, epidemiology; ML cohorts, outcome labels, phenotype definitions</li>
+</ul>
+<p><strong>2. CPT — structure and uses</strong></p>
+<p><em>Key point:</em> AMA-maintained five-character codes for procedures and services.</p>
+<ul>
+<li>Examples: <code>99213</code> office visit, <code>93306</code> echocardiogram, <code>66984</code> cataract surgery</li>
+<li>Serves billing and utilization analysis; ML procedure labels and intervention features</li>
+</ul>
+<p><strong>3. Significance for AI</strong></p>
+<p><em>Key point:</em> Codes make supervised learning possible at scale and generate healthcare&#39;s largest computable dataset.</p>
+<ul>
+<li>The labels that make supervised learning possible; interoperable vocabularies shared across institutions</li>
+<li>They generate the claims data — healthcare&#39;s largest computable dataset</li>
+<li>NLP auto-coding turns notes into codes, creating consistent labels cheaply</li>
+</ul>
+<p><strong>4. Significance caveat</strong></p>
+<p><em>Key point:</em> Codes are assigned under documentation and payment incentives.</p>
+<ul>
+<li>Code-based labels carry coding-practice bias</li>
+<li>A model trained on them learns billing behavior alongside biology</li>
+</ul>
+<p><strong>5. Related systems</strong></p>
+<p><em>Key point:</em> ICD/CPT sit inside a family of clinical vocabularies.</p>
+<ul>
+<li>SNOMED CT (findings), LOINC (labs), RxNorm (medications), DRG (payment groups)</li>
+</ul>
+<p><em>Takeaway — ICD and CPT turn clinical activity into computable labels, and models built on them must be read through the lens of coding-practice bias.</em></p>
+</section>
+<section class="chapter-section" id="s-d-8-unit-ii-10-mark-questions-t3-integrated-essay-design" data-section="D.8 Unit II — 10-Mark Questions (T3 · integrated essay/design)"><h2>D.8 Unit II — 10-Mark Questions (T3 · integrated essay/design)</h2>
+<p><strong>Q1. Explain data cleaning, imputation, normalization, and feature engineering techniques used in clinical data, with suitable examples.</strong></p>
+<p><em>Key point — A leakage-guarded pipeline of clean → impute → engineer → scale turns messy clinical records into trustworthy model inputs.</em></p>
+<p><strong>A. Cleaning</strong></p>
+<p><em>Key point:</em> Make the record reflect clinical reality.</p>
+<ul>
+<li>De-duplication: same encounter twice; entity resolution for patients under multiple IDs</li>
+<li>Unit harmonization: glucose mg/dL↔mmol/L; creatinine mg/dL↔µmol/L</li>
+<li>Plausibility checks: heart rate 900 bpm → data-entry error; discharge before admission → chronology error</li>
+<li>Vocabulary reconciliation: free-text drugs → RxNorm, labs → LOINC; timeline integrity across systems; copy-forward hygiene</li>
+<li><strong>Example:</strong> a mean glucose computed over mixed units is meaningless until harmonization</li>
+</ul>
+<p><strong>B. Imputation</strong></p>
+<p><em>Key point:</em> Classify the missingness mechanism, then impute accordingly.</p>
+<ul>
+<li><strong>MCAR:</strong> unrelated to anything — deletion nearly unbiased</li>
+<li><strong>MAR:</strong> explained by observed variables (sicker patients get more labs)</li>
+<li><strong>MNAR:</strong> depends on the missing value itself (a test not ordered because expected normal)</li>
+<li>Methods: median/mode fills (baseline); LOCF (short gaps in dense vitals only); KNN (similar patients); MICE (chained regressions — the principled MAR method); NaN-aware learners (LightGBM/XGBoost split on missingness); missingness indicators as features everywhere</li>
+<li>Evaluate imputation by downstream task performance; <strong>example:</strong> absent creatinine in a sepsis model — add &quot;creatinine not drawn in 24 h&quot; as a feature before imputing</li>
+</ul>
+<p><strong>C. Normalization / standardization</strong></p>
+<p><em>Key point:</em> Match the scaler to the model and the data&#39;s shape.</p>
+<ul>
+<li>Min–max to [0,1]: bounded inputs (NNs); outlier-sensitive</li>
+<li>Z-score standardization: default for SVM, PCA, regularized regression</li>
+<li>Robust scaling (median/IQR) for skewed clinical labs; clinically meaningful transforms (log for creatinine)</li>
+<li>Fit on training data only</li>
+<li><strong>Example:</strong> heart rate (60–100) and cholesterol (150–300) need common scaling before k-NN</li>
+</ul>
+<p><strong>D. Feature engineering</strong></p>
+<p><em>Key point:</em> Build clinically meaningful feature families over a pre-prediction observation window.</p>
+<ul>
+<li>EHR families: demographics/admission context; diagnosis features (ICD indicators; Charlson/Elixhauser comorbidity indices)</li>
+<li>Labs: last, min/max/mean/std over window, <strong>slope</strong>, abnormal count, time-since, missingness indicators</li>
+<li>Medications (indicators, dose, duration); utilization (prior admissions, ED visits, LOS-so-far); text-derived (NLP smoking status)</li>
+<li>Time-series families: window statistics; variability (HRV: RMSSD, SDNN); trend (slope, delta-from-baseline); morphology (ECG intervals, EEG band power); sampling frequency; cross-signal ratios (shock index)</li>
+<li>All computed over an observation window ending strictly before prediction time, with time-zero defined identically in training and deployment</li>
+</ul>
+<p><strong>E. Composition</strong></p>
+<p><em>Key point:</em> The pipeline is ordered and leakage-guarded — each stage feeds the next and can silently destroy validity.</p>
+<ul>
+<li>Order: clean → impute (+indicators) → engineer → scale → split by <em>patient</em></li>
+<li>Each stage&#39;s output is the next stage&#39;s raw material</li>
+<li>Silent failures: fitting a scaler on all data; including a post-decision lab draw</li>
+<li>Every stage needs an explicit leakage audit, not just good intentions</li>
+</ul>
+<p><strong>Synthesis</strong></p>
+<ul>
+<li>Cleaning, imputation, normalization, and engineering form one ordered pipeline, not four independent chores</li>
+<li>Each technique fixes a concrete clinical failure: mixed-unit glucose, missing creatinine, unscaled vitals, raw signal series</li>
+<li>The pipeline is valid only if leakage-audited at every stage and split by patient</li>
+</ul>
+<p><strong>Q2. Discuss methods for handling missing values, outliers, and bias in healthcare datasets and explain their importance in machine learning.</strong></p>
+<p><em>Key point — Mechanism-aware missingness handling, classified outliers, and audited bias are what make a reported AUC mean anything.</em></p>
+<p><strong>A. Missing values</strong></p>
+<p><em>Key point:</em> Classify the mechanism, then choose the method.</p>
+<ul>
+<li><strong>MCAR:</strong> random dropout — deletion acceptable</li>
+<li><strong>MAR:</strong> explained by observed data — use MICE/KNN</li>
+<li><strong>MNAR:</strong> the unobserved value causes the missingness (a drug-abuse field empty <em>because</em> it is positive)</li>
+<li>Methods: deletion (tiny fractions only); simple fills (median; LOCF for short dense gaps); model-based imputation (KNN, MICE chained equations); NaN-aware learners (LightGBM handles missingness natively); missingness indicators — in the EHR, <em>what was not measured</em> is a clinical decision</li>
+<li>Importance: imputation chosen wrongly biases the model; missingness itself often predicts the outcome better than the imputed value</li>
+</ul>
+<p><strong>B. Outliers</strong></p>
+<p><em>Key point:</em> Detect statistically, then act by classification, not reflex.</p>
+<ul>
+<li>Detect: z-score/IQR, isolation forests, physiologic plausibility ranges</li>
+<li>Data-entry errors → correct; true clinical extremes (heart rate 220 in documented SVT; SpO₂ 70 in a coded event) → keep — they are the signal being modeled</li>
+<li>Otherwise: robust scaling/losses</li>
+<li>Importance: outliers dominate variance-based scaling and squared-error training; deleting real extremes removes exactly the cases the model must learn</li>
+</ul>
+<p><strong>C. Bias</strong></p>
+<p><em>Key point:</em> Name the bias type, then mitigate by design, evaluation, and documentation.</p>
+<ul>
+<li>Selection bias: training population ≠ target (tertiary ICU data applied to primary care)</li>
+<li>Measurement bias: instruments/practice differ by group (pulse oximetry overreading SpO₂ in darker skin)</li>
+<li>Label bias: ICD labels shaped by coding practice</li>
+<li>Mitigations: documented sampling design; stratified subgroup evaluation (sensitivity/specificity per demographic); external multi-site validation; model-card documentation of source population</li>
+<li>Importance: bias turns a <em>statistically</em> accurate model into an <em>ethically and legally</em> defective one (Unit V)</li>
+</ul>
+<p><strong>D. Why this matters for ML</strong></p>
+<p><em>Key point:</em> Every downstream guarantee is conditional on preprocessing.</p>
+<ul>
+<li>Calibration, fairness, and generalizability are all conditional on preprocessing</li>
+<li>A leakage-free, mechanism-aware, bias-audited pipeline is what makes a reported AUC <em>mean</em> something</li>
+</ul>
+<p><strong>E. Audit discipline</strong></p>
+<p><em>Key point:</em> Preprocessing deserves the same rigor as modeling — and more.</p>
+<ul>
+<li>For each stage: write the rule, version the dataset</li>
+<li>Test for leakage (time-aware, patient-aware splits)</li>
+<li>Preprocessing is engineering with clinical consequences</li>
+</ul>
+<p><strong>Synthesis</strong></p>
+<ul>
+<li>The three problems interact: bias can hide inside &quot;missingness&quot;, and an outlier rule can encode bias</li>
+<li>Each requires classification before correction, plus documented, auditable rules</li>
+<li>Preprocessing quality — not model choice — underwrites every reported clinical metric</li>
+</ul>
+<p><strong>Q3. Explain data privacy, anonymization, and HIPAA compliance in healthcare AI, and discuss their significance in preprocessing and deployment.</strong></p>
+<p><em>Key point — Privacy is engineered across the pipeline: de-identify before data leaves the clinical system and treat every data movement as a compliance decision.</em></p>
+<p><strong>A. HIPAA essentials</strong></p>
+<p><em>Key point:</em> HIPAA governs PHI and imposes Privacy, Security, and vendor-agreement duties.</p>
+<ul>
+<li>Health Insurance Portability and Accountability Act (US, 1996); <strong>PHI</strong> = any health data linked to an identifier</li>
+<li><strong>Privacy Rule:</strong> who may use/disclose PHI; minimum-necessary principle</li>
+<li><strong>Security Rule:</strong> administrative/physical/technical safeguards for electronic PHI</li>
+<li><strong>Business Associate Agreements (BAAs)</strong> required with any vendor processing PHI — a cloud ML provider is a legal relationship, not just a service</li>
+<li>GDPR imposes analogous duties in Europe: lawful basis, data-subject rights, DPIAs for high-risk processing</li>
+</ul>
+<p><strong>B. De-identification standards</strong></p>
+<p><em>Key point:</em> HIPAA offers two de-identification routes with a utility–privacy trade-off.</p>
+<ul>
+<li><strong>Safe Harbor:</strong> remove 18 identifier categories (names, dates finer than year, geography finer than state, contact data, SSN/MRN/device IDs, photos, etc.) with no actual knowledge of re-identification</li>
+<li><strong>Expert Determination:</strong> a statistician certifies very small re-identification risk; allows keeping more utility (e.g., shifted dates)</li>
+<li>De-identification (identifiers removed, still regulated in some uses) ≠ anonymization (re-identification risk negligible)</li>
+</ul>
+<p><strong>C. Anonymization in pipelines</strong></p>
+<p><em>Key point:</em> Layer practical techniques from pseudonymization to differential privacy.</p>
+<ul>
+<li>Pseudonymization: salted hashes for patient keys, key held separately</li>
+<li>Date-shifting per patient (preserve intervals, obscure absolute dates); k-anonymization for released cohorts (each record indistinguishable from k−1 others on quasi-identifiers like age+zip)</li>
+<li>Suppression/generalization of rare values; free-text scrubbing (NLP-based PHI redaction — names also hide in notes)</li>
+<li><strong>Differential privacy</strong> for aggregate statistics; federated training at fleet scale (Unit V)</li>
+</ul>
+<p><strong>D. Significance in preprocessing</strong></p>
+<p><em>Key point:</em> Privacy constraints shape what features may exist — design pseudonymization in, don&#39;t bolt it on.</p>
+<ul>
+<li>Raw notes scrubbed before feature extraction; dates may only enter as intervals; geography only as state; device identifiers excluded</li>
+<li>De-identification must happen <em>before</em> data leaves the clinical system</li>
+<li>Re-identification risk lives in <em>combinations</em> of innocuous features (rare diagnosis + age + zip)</li>
+</ul>
+<p><strong>E. Significance in deployment</strong></p>
+<p><em>Key point:</em> Deployment decisions are compliance decisions.</p>
+<ul>
+<li>Where the model runs: on-prem vs cloud + BAA</li>
+<li>What the vendor may retain (model-change and data-retention clauses); access logging; breach notification readiness; retention/deletion policy per data type</li>
+<li>EU: high-risk clinical AI additionally requires transparency, human oversight, and documented governance</li>
+</ul>
+<p><strong>F. Limits</strong></p>
+<p><em>Key point:</em> De-identification trades utility for privacy, and some data cannot be anonymized.</p>
+<ul>
+<li>Strong anonymization can degrade rare-disease models</li>
+<li>Genomic data is inherently identifying — &quot;anonymous genomes&quot; is not a real category</li>
+<li>Durable principle: <strong>minimize, pseudonymize by design, audit re-identification risk, treat every data movement as a compliance decision</strong></li>
+</ul>
+<p><strong>Synthesis</strong></p>
+<ul>
+<li>Privacy engineering spans the full lifecycle: collection → de-identification → feature design → deployment contracts</li>
+<li>HIPAA&#39;s Safe Harbor / Expert Determination set the floor; GDPR and EU high-risk duties raise the bar for clinical AI</li>
+<li>Audit re-identification risk continuously — risk hides in feature combinations, not single fields</li>
+</ul>
+</section>
+<section class="chapter-section" id="s-d-9-unit-iii-2-mark-questions-t1-recall" data-section="D.9 Unit III — 2-Mark Questions (T1 · recall)"><h2>D.9 Unit III — 2-Mark Questions (T1 · recall)</h2>
+<p><strong>Q1. What is supervised learning?</strong></p>
+<p><em>Key point — Supervised learning trains a model on labeled input–output pairs so it can predict labels for new, unseen inputs.</em></p>
+<ul>
+<li><strong>Definition:</strong> Trains on labeled examples (inputs X with known outputs y) to predict labels for new, unseen inputs.</li>
+<li><strong>Healthcare examples:</strong> Predicting 30-day readmission risk; classifying pneumonia vs normal on X-ray.</li>
+<li><strong>Defining requirement:</strong> A trustworthy label — and in medicine, labels are themselves imperfect measurements.</li>
+</ul>
+<p><strong>Q2. Define unsupervised learning.</strong></p>
+<p><em>Key point — Unsupervised learning discovers structure (clusters, densities, anomalies) in unlabeled data without a target variable.</em></p>
+<ul>
+<li><strong>Definition:</strong> Discovers structure in unlabeled data — clusters, densities, anomalies — with no target variable.</li>
+<li><strong>Healthcare examples:</strong> Clustering diabetes subtypes; detecting anomalous lab patterns; dimensionality reduction for visualization.</li>
+<li><strong>Role:</strong> Generates hypotheses (patient subtypes) that must then be validated against outcomes.</li>
+</ul>
+<p><strong>Q3. What is a Convolutional Neural Network (CNN)?</strong></p>
+<p><em>Key point — A CNN applies learned convolutional filters across an image, building a hierarchy from local patterns to whole-object concepts, matching medical imaging.</em></p>
+<ul>
+<li><strong>Definition:</strong> A deep network applying learned convolutional filters across an image.</li>
+<li><strong>Mechanism:</strong> Builds a hierarchy from local patterns (edges, textures) to whole objects (lesions, organs); pooling gives spatial summarization.</li>
+<li><strong>Fit:</strong> Its inductive biases (local patterns matter, translation robustness) match medical imaging — the standard for X-ray/CT/MRI/pathology.</li>
+</ul>
+<p><strong>Q4. What is transfer learning?</strong></p>
+<p><em>Key point — Transfer learning reuses representations from a large source task to bootstrap a smaller target task, compensating for medicine&#39;s small labeled datasets.</em></p>
+<ul>
+<li><strong>Definition:</strong> Reuses representations learned on a large source task (e.g., ImageNet) as the start for a smaller target task (chest X-ray classification).</li>
+<li><strong>Mechanism:</strong> Typically replaces the final layer and fine-tunes with a small learning rate.</li>
+<li><strong>Purpose:</strong> Compensates for medicine&#39;s small labeled datasets and speeds convergence; medical-specific pretraining when the domain gap is large.</li>
+</ul>
+<p><strong>Q5. Define sensitivity and specificity.</strong></p>
+<p><em>Key point — Sensitivity is the fraction of truly diseased correctly flagged; specificity is the fraction of truly healthy correctly cleared.</em></p>
+<ul>
+<li><strong>Sensitivity (recall, TPR):</strong> TP/(TP+FN) — fraction of truly diseased correctly flagged; the metric when missing disease is the dominant cost.</li>
+<li><strong>Specificity (TNR):</strong> TN/(TN+FP) — fraction of truly healthy correctly cleared; the metric for avoiding unnecessary follow-up.</li>
+<li><strong>Example:</strong> Sensitivity 0.95 / specificity 0.90 → 5% of the diseased missed; 10% of the healthy falsely flagged.</li>
+</ul>
+</section>
+<section class="chapter-section" id="s-d-10-unit-iii-3-mark-questions-t2-application" data-section="D.10 Unit III — 3-Mark Questions (T2 · application)"><h2>D.10 Unit III — 3-Mark Questions (T2 · application)</h2>
+<p><strong>Q1. Differentiate supervised and unsupervised learning in healthcare.</strong></p>
+<p><em>Key point — Supervised predicts defined targets from labeled data; unsupervised discovers structure without labels and its outputs are hypotheses to validate.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Point</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Supervised</td>
+<td>Learns from labeled data to predict known targets</td>
+</tr>
+<tr>
+<td>Supervised tasks</td>
+<td>Diagnostic classification (X-ray → pneumonia); risk prediction (→ 30-day readmission)</td>
+</tr>
+<tr>
+<td>Supervised dependence</td>
+<td>Power depends on label quality and prevalence</td>
+</tr>
+<tr>
+<td>Supervised evaluation</td>
+<td>Sensitivity, specificity, AUC</td>
+</tr>
+<tr>
+<td>Unsupervised</td>
+<td>Finds structure without labels: phenotyping, anomaly detection, dimensionality reduction</td>
+</tr>
+<tr>
+<td>Unsupervised output</td>
+<td>A hypothesis — subtypes must be validated against outcomes unused in clustering</td>
+</tr>
+<tr>
+<td>Relationship</td>
+<td>Unsupervised often generates the labels supervised methods then exploit (phenotype → targeted risk model)</td>
+</tr>
+<tr>
+<td>When unsupervised first</td>
+<td>Labels scarce: rare diseases, new syndromes</td>
+</tr>
+</tbody></table></div>
+<p><strong>Q2. State the role of CNNs in medical image analysis.</strong></p>
+<p><em>Key point — CNNs are the standard imaging architecture, serving classification, detection, segmentation, triage, and quantification roles.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Point</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Standard architecture</td>
+<td>Learned local filters match radiological content</td>
+</tr>
+<tr>
+<td>(1) Classification</td>
+<td>Pneumonia on chest X-ray; arrhythmia as signal-as-image; lesion class in dermoscopy</td>
+</tr>
+<tr>
+<td>(2) Detection</td>
+<td>Localizing nodules, hemorrhages, fractures</td>
+</tr>
+<tr>
+<td>(3) Segmentation</td>
+<td>Tumor/organ outlines (U-Net family) for radiotherapy planning and volumetry</td>
+</tr>
+<tr>
+<td>(4) Triage</td>
+<td>Reprioritizing worklists for studies likely positive</td>
+</tr>
+<tr>
+<td>(5) Quantification</td>
+<td>Biomarker scoring (e.g., coronary calcium)</td>
+</tr>
+<tr>
+<td>Enabling trick</td>
+<td>With transfer learning, specialist-level performance on datasets of thousands</td>
+</tr>
+</tbody></table></div>
+<p><strong>Q3. Explain the purpose of transfer learning in healthcare AI.</strong></p>
+<p><em>Key point — Transfer learning imports a pretrained backbone and adapts it, because medical labeled datasets are too small to train deep networks from scratch.</em></p>
+<p><strong>1. The problem it solves</strong></p>
+<p><em>Key point:</em> Medical labeled datasets are small, expensive, and privacy-constrained.</p>
+<ul>
+<li>Thousands, not millions, of examples; training from scratch overfits and wastes the representation.</li>
+</ul>
+<p><strong>2. Mechanism</strong></p>
+<p><em>Key point:</em> Import a pretrained backbone, add a task head, and fine-tune gently.</p>
+<ul>
+<li>Backbone: ImageNet or medical-image self-supervised pretraining; low-level filters (edges, textures) are universal across imaging domains.</li>
+<li>Add task-specific head; fine-tune with a small learning rate, optionally unfreezing deeper layers as data allows.</li>
+</ul>
+<p><strong>3. Benefits</strong></p>
+<p><em>Key point:</em> Better performance with far less data.</p>
+<ul>
+<li>Higher accuracy at small n; faster convergence; less overfitting.</li>
+</ul>
+<p><strong>4. Limits</strong></p>
+<p><em>Key point:</em> Domain gap and validation obligations remain.</p>
+<ul>
+<li>Domain gap: photographs ≠ radiographs; natural images ≠ whole-slide pathology stains.</li>
+<li>Does not substitute for external validation of the fine-tuned model.</li>
+</ul>
+<p><strong>Q4. Define sensitivity, specificity, and AUC.</strong></p>
+<p><em>Key point — Sensitivity and specificity are threshold-dependent confusion-matrix rates; AUC-ROC is a threshold-independent ranking summary.</em></p>
+<p><strong>1. Sensitivity</strong></p>
+<p><em>Key point:</em> How many of the truly positive are detected.</p>
+<ul>
+<li>TP/(TP+FN) — recall on the diseased.</li>
+</ul>
+<p><strong>2. Specificity</strong></p>
+<p><em>Key point:</em> How many of the truly negative are correctly cleared.</p>
+<ul>
+<li>TN/(TN+FP); both rates depend on the chosen threshold.</li>
+</ul>
+<p><strong>3. AUC (AUC-ROC)</strong></p>
+<p><em>Key point:</em> Area under the ROC curve — threshold-independent.</p>
+<ul>
+<li>ROC plots sensitivity vs 1−specificity across all thresholds.</li>
+<li>Equals P(random positive ranked above random negative).</li>
+</ul>
+<p><strong>4. Caveat</strong></p>
+<p><em>Key point:</em> At low prevalence, AUC-ROC flatters — AUPRC is more honest (Ch. 19).</p>
+<p><strong>Q5. State two techniques for handling imbalanced healthcare datasets.</strong></p>
+<p><em>Key point — Cost-sensitive learning and resampling rebalance the minority class, with real-data collection as the clinically strongest fix.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Technique</th>
+<th>Point</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(1) Cost-sensitive learning</td>
+<td>Weight minority class (<code>class_weight</code>/<code>scale_pos_weight</code> ≈ N_neg/N_pos) or focal loss</td>
+</tr>
+<tr>
+<td>Threshold move</td>
+<td>Shift decision threshold by clinical cost, not F1</td>
+</tr>
+<tr>
+<td>(2) Resampling</td>
+<td>Undersample majority, or oversample/SMOTE minority</td>
+</tr>
+<tr>
+<td>Clinical caveat</td>
+<td>Interpolated SMOTE &quot;patients&quot; may be implausible</td>
+</tr>
+<tr>
+<td>Stronger fix</td>
+<td>Real-data collection: registries, multi-site pooling, active learning</td>
+</tr>
+<tr>
+<td>Also acceptable</td>
+<td>Anomaly pre-screening + supervised classification; evaluate via AUPRC/precision@k</td>
+</tr>
+</tbody></table></div>
+</section>
+<section class="chapter-section" id="s-d-11-unit-iii-5-mark-questions-t3-structured-explanation" data-section="D.11 Unit III — 5-Mark Questions (T3 · structured explanation)"><h2>D.11 Unit III — 5-Mark Questions (T3 · structured explanation)</h2>
+<p><strong>Q1. Explain supervised and unsupervised learning techniques used in healthcare.</strong></p>
+<p><em>Key point — Supervised learning predicts defined targets under label-quality and leakage discipline; unsupervised learning discovers subtypes and anomalies whose outputs are hypotheses validated against outcomes.</em></p>
+<p><strong>1. Supervised — diagnostic classification</strong></p>
+<p><em>Key point:</em> Learn patient/image → condition from labeled cases.</p>
+<ul>
+<li>Model ladder: logistic regression baselines (interpretable, calibrated); gradient-boosted trees on tabular EHR features (strong default); CNNs on images; sequence models on signals.</li>
+</ul>
+<p><strong>2. Supervised — risk prediction</strong></p>
+<p><em>Key point:</em> Define time-zero, build leakage-free features, and evaluate at the operating point.</p>
+<ul>
+<li>Time-zero defined (admission; first abnormal vital); features over an observation window ending before prediction time.</li>
+<li>Patient-level splits; labels from ICD/clinical criteria.</li>
+<li>Evaluation: AUROC/AUPRC + calibration at the operating point.</li>
+<li>Dominated by label quality and leakage discipline.</li>
+</ul>
+<p><strong>3. Unsupervised — clustering / phenotyping</strong></p>
+<p><em>Key point:</em> Discover patient subtypes as hypotheses validated against unused outcomes.</p>
+<ul>
+<li>Methods: k-means, hierarchical, GMM on engineered features.</li>
+<li>Example: the five-type diabetes clustering validated on future complications.</li>
+<li>Validation criteria: unused outcomes and clinical actionability.</li>
+</ul>
+<p><strong>4. Unsupervised — anomaly detection and dimensionality reduction</strong></p>
+<p><em>Key point:</em> Score distance from normal; novelty is not pathology.</p>
+<ul>
+<li>Isolation forests/autoencoders for data-quality surveillance and unusual-pattern flagging.</li>
+<li>Triage of flags is mandatory.</li>
+<li>PCA/UMAP for visualization and preprocessing.</li>
+</ul>
+<p><strong>5. Relationship and choice</strong></p>
+<p><em>Key point:</em> Supervised answers &quot;predict this defined y&quot;; unsupervised answers &quot;what structure exists&quot;.</p>
+<ul>
+<li>Rare diseases and new syndromes → unsupervised first.</li>
+<li>Well-defined targets with adequate labels → supervised directly.</li>
+</ul>
+<p><em>Takeaway — Choose by the question: defined targets with labels go supervised; scarce labels and unknown structure go unsupervised, with validation discipline either way.</em></p>
+<p><strong>Q2. Describe CNNs and transfer learning for medical image analysis.</strong></p>
+<p><em>Key point — CNNs match medical imaging via local-filter and translation biases, and transfer learning makes them feasible on small clinical datasets — with external validation and attention checks required.</em></p>
+<p><strong>1. CNN mechanics</strong></p>
+<p><em>Key point:</em> Stacked conv+pooling layers build a feature hierarchy matched to radiological content.</p>
+<ul>
+<li>Filters slide across the image producing feature maps: edges → textures → structures → findings.</li>
+<li>Inductive bias: local patterns matter; position matters less — a nodule can be anywhere.</li>
+</ul>
+<p><strong>2. Task heads</strong></p>
+<p><em>Key point:</em> The head determines the imaging task.</p>
+<ul>
+<li>Softmax classification; object-detection heads for localization.</li>
+<li>Encoder–decoder (U-Net) for segmentation.</li>
+</ul>
+<p><strong>3. Transfer learning recipe</strong></p>
+<p><em>Key point:</em> Pretrain on a large source, re-head, then fine-tune gently.</p>
+<ul>
+<li>(1) Pretrained backbone (ResNet/EfficientNet/ViT on ImageNet, or self-supervised medical pretraining when the domain gap is large); (2) replace head for the clinical task.</li>
+<li>(3) Fine-tune with a small learning rate, progressively unfreezing deeper layers.</li>
+<li>(4) Augment with clinically valid invariances only — never laterality-changing flips.</li>
+<li>(5) Evaluate per-finding with AUPRC at clinically chosen operating points.</li>
+<li>Rationale: medical datasets are small and privacy-bound; training from scratch overfits.</li>
+</ul>
+<p><strong>4. Examples</strong></p>
+<p><em>Key point:</em> Transfer learning enabled landmark clinical imaging systems.</p>
+<ul>
+<li><strong>Example:</strong> Dermatologist-level lesion classification (Esteva 2017).</li>
+<li><strong>Example:</strong> CheXNet-style pneumonia detection; IDx-DR autonomous retinopathy screening (FDA-authorized 2018).</li>
+</ul>
+<p><strong>5. Honesty requirements</strong></p>
+<p><em>Key point:</em> Prove the model works beyond its training setting and looks at the right things.</p>
+<ul>
+<li>External validation on a different hospital/scanner population.</li>
+<li>Per-subgroup metrics.</li>
+<li>Grad-CAM attention checks — model looks at the lesion, not pacemakers or lateral markers.</li>
+</ul>
+<p><em>Takeaway — CNN architecture plus transfer learning delivers clinical imaging AI, but only with external validation, subgroup metrics, and attention verification.</em></p>
+<p><strong>Q3. Explain Recurrent Neural Networks (RNNs) for time-series clinical data.</strong></p>
+<p><em>Key point — Gated recurrent architectures (LSTM/GRU) model irregular clinical sequences for deterioration prediction and anomaly scoring, provided time-aware, leak-free discipline is maintained.</em></p>
+<p><strong>1. Clinical data setting</strong></p>
+<p><em>Key point:</em> Clinical data is sequential and irregular.</p>
+<ul>
+<li>Vitals, labs, medications, and events over hours.</li>
+</ul>
+<p><strong>2. Plain RNNs</strong></p>
+<p><em>Key point:</em> They carry a hidden state forward but forget.</p>
+<ul>
+<li>Vanishing gradients limit long-range memory.</li>
+</ul>
+<p><strong>3. LSTMs and GRUs</strong></p>
+<p><em>Key point:</em> Gated cell states preserve long trajectories; GRUs are the compute-friendly simplification.</p>
+<ul>
+<li>Forget gate drops stale context; input gate writes new evidence; output gate exposes what matters now.</li>
+<li>Example: a 36-hour rising creatinine trajectory stays in memory long enough to matter.</li>
+<li>GRU: two gates.</li>
+</ul>
+<p><strong>4. Task patterns</strong></p>
+<p><em>Key point:</em> Three recurrent task families cover most clinical uses.</p>
+<ul>
+<li>(1) Sequence classification: first-N-hours window → deterioration/sepsis probability, using time-since-last-measurement inputs and channel masks for absent streams.</li>
+<li>(2) Next-step prediction: trained on benign trajectories, surprise = −log P(next value) yields unsupervised anomaly scores.</li>
+<li>(3) Waveform modeling.</li>
+</ul>
+<p><strong>5. Practical discipline</strong></p>
+<p><em>Key point:</em> Prevent temporal leakage and handle irregularity explicitly.</p>
+<ul>
+<li>Pad/pack sequences; out-of-time validation splits.</li>
+<li>Unidirectional models in deployment — no future peeking.</li>
+<li>Watch for the model keying on absolute timestamps.</li>
+</ul>
+<p><strong>6. Transformers vs recurrence</strong></p>
+<p><em>Key point:</em> Attention replaces recurrence and wins with abundant data, but small recurrent baselines stay competitive.</p>
+<ul>
+<li>Transformers: stronger long-range modeling with data.</li>
+<li>Start recurrent, escalate deliberately.</li>
+</ul>
+<p><em>Takeaway — LSTMs/GRUs remain the pragmatic default for irregular clinical time series, with time-aware encodings and out-of-time validation as non-negotiable discipline.</em></p>
+<p><strong>Q4. Explain model evaluation metrics such as sensitivity, specificity, and AUC.</strong></p>
+<p><em>Key point — Confusion-matrix rates, threshold-independent curves, and calibration each answer a different clinical question: choose the metric the decision needs.</em></p>
+<p><strong>1. Confusion-matrix rates</strong></p>
+<p><em>Key point:</em> Sensitivity, specificity, precision, and NPV each condition on a different row.</p>
+<ul>
+<li>Sensitivity (recall, TPR) = TP/(TP+FN) — of the diseased, fraction caught; the screening-critical metric.</li>
+<li>Specificity (TNR) = TN/(TN+FP) — of the healthy, fraction correctly cleared.</li>
+<li>Precision (PPV) = TP/(TP+FP) — of the flagged, fraction truly positive; prevalence-dependent, decisive when follow-up is costly.</li>
+<li>NPV = TN/(TN+FN) — reliability of a negative.</li>
+</ul>
+<p><strong>2. Summaries and their limits</strong></p>
+<p><em>Key point:</em> F1 balances precision and recall; accuracy fails under imbalance.</p>
+<ul>
+<li>F1: harmonic mean of precision and recall — report with its pair.</li>
+<li>Accuracy is misleading when classes are imbalanced.</li>
+</ul>
+<p><strong>3. ROC and AUC-ROC</strong></p>
+<p><em>Key point:</em> Threshold-independent ranking summary.</p>
+<ul>
+<li>ROC curve: TPR vs FPR over thresholds.</li>
+<li>AUC-ROC = P(random positive ranked above random negative).</li>
+</ul>
+<p><strong>4. PR curve and AUPRC</strong></p>
+<p><em>Key point:</em> The honest ranking metric at low prevalence.</p>
+<ul>
+<li>The base-rate trap: ROC 0.999 at 0.1% prevalence can still drown the clinic in false positives.</li>
+</ul>
+<p><strong>5. Deployment reporting</strong></p>
+<p><em>Key point:</em> Deploy on more than a headline metric.</p>
+<ul>
+<li>Confusion matrix at the clinically chosen operating point.</li>
+<li>Calibration (predicted vs observed frequencies); per-subgroup metrics.</li>
+</ul>
+<p><strong>6. Choosing the metric</strong></p>
+<p><em>Key point:</em> Match the metric to the decision.</p>
+<ul>
+<li>Sensitivity for screening; PPV for follow-up burden; calibration for automated action.</li>
+</ul>
+<p><em>Takeaway — No single metric suffices: screening wants sensitivity, follow-up economics want PPV, automated action wants calibration, and low prevalence demands AUPRC.</em></p>
+<p><strong>Q5. Describe techniques for handling imbalanced healthcare datasets.</strong></p>
+<p><em>Key point — Attack imbalance at the data, cost, algorithm, and evaluation levels, and report prevalence, operating point, and absolute numbers so fragility is visible.</em></p>
+<p><strong>1. Quantify first</strong></p>
+<p><em>Key point:</em> Know the base rate before choosing tactics.</p>
+<ul>
+<li>Rare diseases run 1:1,000–1:100,000; accuracy is meaningless.</li>
+<li>Plain losses make &quot;all negative&quot; optimal.</li>
+</ul>
+<p><strong>2. Data-level</strong></p>
+<p><em>Key point:</em> Resample — but real positives beat synthetic ones.</p>
+<ul>
+<li>Undersample the majority; oversample the minority; SMOTE (interpolated synthetic patients — sometimes clinically implausible; caution).</li>
+<li>Strongest fix: more true positives — registries, multi-site pooling, active learning on the uncertain band.</li>
+</ul>
+<p><strong>3. Cost-level</strong></p>
+<p><em>Key point:</em> Rebalance the loss and set the threshold by clinical cost.</p>
+<ul>
+<li>Class weights (pos_weight ≈ N_neg/N_pos); focal loss ((1−p_t)^γ focusing on hard cases).</li>
+<li>Threshold selection by clinical cost — pick the operating point from the clinic&#39;s false-alert budget; usually the highest-ROI intervention.</li>
+</ul>
+<p><strong>4. Algorithm-level</strong></p>
+<p><em>Key point:</em> Use imbalance-aware architectures and pipelines.</p>
+<ul>
+<li>Balanced ensembles.</li>
+<li>Anomaly pre-screening → supervised classification on flagged cases.</li>
+</ul>
+<p><strong>5. Evaluation-level</strong></p>
+<p><em>Key point:</em> Rank and report with imbalance-appropriate metrics.</p>
+<ul>
+<li>AUPRC and precision@k instead of ROC/accuracy.</li>
+<li>Confusion matrix at the chosen operating point with absolute numbers (small-denominator fragility: &quot;1 of 3 positives caught at 500 FP per 10,000&quot;).</li>
+<li>Per-subgroup metrics; calibration.</li>
+</ul>
+<p><strong>6. Reporting discipline</strong></p>
+<p><em>Key point:</em> Publish prevalence, operating point, and uncertainty.</p>
+<ul>
+<li>Proportions alone hide fragility on small positive counts.</li>
+</ul>
+<p><em>Takeaway — Imbalance is a lifecycle problem: collect real positives, weight the loss, choose the operating point by clinical cost, and report absolute numbers.</em></p>
+</section>
+<section class="chapter-section" id="s-d-12-unit-iii-10-mark-questions-t3-integrated-essay-design" data-section="D.12 Unit III — 10-Mark Questions (T3 · integrated essay/design)"><h2>D.12 Unit III — 10-Mark Questions (T3 · integrated essay/design)</h2>
+<p><strong>Q1. Explain supervised and unsupervised learning techniques used in healthcare and compare their applications.</strong></p>
+<p><em>Key point — Supervised learning delivers predictions under label and leakage discipline, unsupervised learning delivers understanding under validation discipline, and mature healthcare ML chains the two.</em></p>
+<p><strong>A. Supervised learning</strong></p>
+<p><em>Key point:</em> Two canonical tasks — present-state classification and future-event prediction — governed by clinical pipeline discipline.</p>
+<ul>
+<li>Tasks: <strong>diagnostic classification</strong> (pneumonia on X-ray; rhythm on ECG); <strong>risk prediction</strong> (30-day readmission; 12-hour deterioration).</li>
+<li>Pipeline discipline: define cohort and <strong>time-zero</strong>; labels from ICD/clinical criteria with audited gold standard; features over an observation window ending <em>before</em> prediction time (Unit II); <strong>split by patient</strong>.</li>
+<li>Model ladder: logistic regression (interpretable, calibrated baseline) → gradient-boosted trees (tabular default) → deep nets (raw images/signals).</li>
+<li>Evaluate: AUROC/AUPRC, calibration curves, per-subgroup breakdowns; calibrate (isotonic/Platt) before the score drives action.</li>
+<li>Failure modes: leakage (post-decision labs/codes; all-data scaling), dataset shift across hospitals, label noise.</li>
+</ul>
+<p><strong>B. Unsupervised learning</strong></p>
+<p><em>Key point:</em> Structure from X alone — phenotyping, anomaly detection, and dimensionality reduction — with outputs treated as hypotheses.</p>
+<ul>
+<li>Clustering/phenotyping: k-means, hierarchical, GMM on engineered features; landmark example — five-subtype clustering of new-onset diabetes with different complication trajectories, validated against outcomes <em>not used in clustering</em>.</li>
+<li>Anomaly detection: isolation forests, one-class SVMs, autoencoders scoring distance-from-normal; data-quality surveillance and unusual-pattern flagging.</li>
+<li>Standing caveat: novelty ≠ pathology — benign newness (new protocols, devices) dominates false alarms; flags go to clinical triage.</li>
+<li>Dimensionality reduction: PCA for preprocessing/visualization; UMAP for structure display.</li>
+<li>Output discipline: unsupervised results are <em>hypotheses</em> requiring outcome-based validation.</li>
+</ul>
+<p><strong>C. Comparison</strong></p>
+<p><em>Key point — The paradigms differ in requirements, tasks, evaluation, applications, and risks.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Supervised</th>
+<th>Unsupervised</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Requires</td>
+<td>Trustworthy labels</td>
+<td>Only features (+ careful validation)</td>
+</tr>
+<tr>
+<td>Typical task</td>
+<td>Diagnose / predict defined event</td>
+<td>Discover subtypes / flag anomalies</td>
+</tr>
+<tr>
+<td>Evaluation</td>
+<td>Sens/spec/AUC/calibration vs truth</td>
+<td>Cluster validity vs unused outcomes; actionability</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>Readmission, sepsis, retinopathy screening</td>
+<td>Diabetes phenotypes, ICU data-quality surveillance</td>
+</tr>
+<tr>
+<td>Main risk</td>
+<td>Leakage, shift, label noise</td>
+<td>Interpreting artifacts as discoveries</td>
+</tr>
+</tbody></table></div>
+<p><strong>D. Composition</strong></p>
+<p><em>Key point:</em> The paradigms chain into pipelines.</p>
+<ul>
+<li>Unsupervised phenotyping defines subtypes → supervised models trained per subtype.</li>
+<li>Anomaly detection prioritizes cases → clinicians label them → supervised models learn from the labels (active learning).</li>
+<li>Rare diseases: typically unsupervised-first.</li>
+</ul>
+<p><strong>Synthesis</strong></p>
+<p><em>Key point:</em> Use both paradigms deliberately.</p>
+<ul>
+<li>Supervised delivers <em>predictions</em> under label and leakage discipline.</li>
+<li>Unsupervised delivers <em>understanding</em> under validation discipline.</li>
+<li>Know which question you are asking before choosing.</li>
+</ul>
+<p><strong>Q2. Describe CNNs, transfer learning, and RNNs for medical image analysis and time-series clinical data.</strong></p>
+<p><em>Key point — CNNs and transfer learning own spatial data, RNNs/LSTMs own temporal data, and the strongest clinical systems fuse both under shared leakage-free, calibrated, per-subgroup discipline.</em></p>
+<p><strong>A. CNNs for medical images</strong></p>
+<p><em>Key point:</em> Learned local filters and translation robustness match radiographs and histology.</p>
+<ul>
+<li>Filters learn local patterns; pooling builds spatial hierarchy.</li>
+<li>Tasks: classification (pneumonia, retinopathy grade), detection (nodules, hemorrhage), segmentation (U-Net: tumor/organs for radiotherapy), quantification (coronary calcium).</li>
+<li>Honest evaluation: per-finding AUPRC, external validation on a different scanner/hospital population, per-subgroup metrics.</li>
+<li>Grad-CAM checks that the model attends to the lesion.</li>
+</ul>
+<p><strong>B. Transfer learning</strong></p>
+<p><em>Key point:</em> Pretrained backbones make deep imaging AI feasible at clinical dataset sizes.</p>
+<ul>
+<li>Rationale: medical labels are scarce, expensive, and privacy-bound.</li>
+<li>Recipe: pretrained backbone (ImageNet ResNet/EfficientNet/ViT — low-level filters transfer; medical self-supervised pretraining where the gap is large) → new task head → fine-tune with small LR, progressively unfreezing.</li>
+<li>Clinically valid augmentation only; external validation.</li>
+<li>Examples: dermatologist-level lesion classification, CheXNet, IDx-DR (FDA-authorized autonomous screening).</li>
+</ul>
+<p><strong>C. RNNs/LSTMs for clinical time series</strong></p>
+<p><em>Key point:</em> Gated cell states preserve long, irregularly sampled trajectories.</p>
+<ul>
+<li>Vitals/labs/events arrive irregularly over hours; the gated cell state (forget/input/output) keeps e.g. a 36-hour rising creatinine in context.</li>
+<li>Sequence classification: first-N-hours → deterioration probability, with time-aware encodings and channel masks.</li>
+<li>Next-step prediction: surprise = −log P(next) for unsupervised anomaly scoring; waveform tasks.</li>
+<li>Discipline: out-of-time validation; unidirectional models in production; explicit handling of missing channels.</li>
+</ul>
+<p><strong>D. Shared discipline</strong></p>
+<p><em>Key point:</em> Both model families demand the same rigor.</p>
+<ul>
+<li>Leakage-free time-zeroed features.</li>
+<li>Patient-level (and out-of-time) splits.</li>
+<li>Calibration before scores drive actions; per-subgroup reporting.</li>
+<li>Monitoring for drift after deployment.</li>
+</ul>
+<p><strong>E. When each wins</strong></p>
+<p><em>Key point:</em> Match architecture to data geometry.</p>
+<ul>
+<li>CNNs + transfer learning own <em>spatial</em> data (images).</li>
+<li>RNN/LSTM — and increasingly transformers — own <em>temporal</em> data (trajectories, waveforms).</li>
+</ul>
+<p><strong>Synthesis</strong></p>
+<p><em>Key point:</em> The strongest clinical systems are multi-modal.</p>
+<ul>
+<li>An imaging CNN and an EHR/LSTM trajectory model fused for the same decision — multi-modal medicine (Unit IV).</li>
+<li>Shared discipline (leakage control, calibration, subgroup reporting) makes the fusion trustworthy.</li>
+</ul>
+<p><strong>Q3. Explain model evaluation metrics such as sensitivity, specificity, and AUC, and discuss techniques for handling imbalanced healthcare datasets and interpreting models using LIME and SHAP.</strong></p>
+<p><em>Key point — Metrics make the claim, imbalance handling makes the claim honest, and LIME/SHAP make the claim usable by the clinician who must act on it.</em></p>
+<p><strong>A. Metrics</strong></p>
+<p><em>Key point:</em> Confusion-matrix rates, threshold-independent curves, and calibration each serve a different clinical question.</p>
+<ul>
+<li>Sensitivity = TP/(TP+FN) — of the truly diseased, fraction flagged; screening-critical because a missed case is the dominant cost.</li>
+<li>Specificity = TN/(TN+FP) — of the healthy, fraction cleared; guards unnecessary follow-up.</li>
+<li>Precision/PPV = TP/(TP+FP) — of those flagged, fraction truly positive; prevalence-dependent. NPV = TN/(TN+FN). F1 — harmonic mean of precision and recall.</li>
+<li>ROC curve and AUC-ROC (probability a random positive outranks a random negative); PR curve and AUPRC — honest at low prevalence (base-rate trap: at 0.1% prevalence, ROC 0.999 can still mean unusable precision).</li>
+<li>For deployment: confusion matrix at the chosen operating point, calibration curves/Brier, per-subgroup metrics.</li>
+</ul>
+<p><strong>B. Imbalance handling</strong></p>
+<p><em>Key point:</em> Attack imbalance at the data, cost, algorithm, and evaluation levels.</p>
+<ul>
+<li>Rare diseases run 1:1,000–1:100,000: accuracy collapses; plain losses make &quot;all negative&quot; optimal.</li>
+<li>Data-level: undersampling, oversampling, SMOTE (clinical-plausibility caution); strongest — more <em>real</em> positives (registries, multi-site pooling, active learning).</li>
+<li>Cost-level: class weights (pos_weight ≈ N_neg/N_pos), focal loss, threshold selection by clinical cost (usually the highest-ROI fix).</li>
+<li>Algorithm-level: balanced ensembles; anomaly pre-screening → supervised classification.</li>
+<li>Evaluation-level: AUPRC/precision@k, absolute confusion-matrix numbers (small-denominator fragility), per-subgroup metrics, calibration.</li>
+</ul>
+<p><strong>C. LIME and SHAP</strong></p>
+<p><em>Key point:</em> Both explain predictions locally, with different mechanisms and guarantees — and attribution is not causation.</p>
+<ul>
+<li><strong>LIME:</strong> perturbs the instance, weights neighbors by proximity, fits a sparse linear surrogate; its coefficients are the local explanation.</li>
+<li>LIME: model-agnostic and intuitive; unstable across perturbation seeds; only locally faithful.</li>
+<li><strong>SHAP:</strong> Shapley values — each feature&#39;s average marginal contribution across coalitions; local accuracy (values sum to the prediction) and consistency.</li>
+<li>SHAP: <strong>TreeSHAP</strong> is fast/exact for tree ensembles; global summaries (mean |SHAP|) give feature importance.</li>
+<li>In imaging, Grad-CAM/saliency maps play the same role.</li>
+<li>Standing caveat: attribution is not causation — &quot;HbA1c pushed the score&quot; is not &quot;HbA1c caused the risk&quot;.</li>
+</ul>
+<p><strong>D. Integrated evaluation report for a deployed clinical model</strong></p>
+<p><em>Key point:</em> One report should combine prevalence, discrimination, calibration, subgroup performance, explanations, and external validation.</p>
+<ul>
+<li>(1) Prevalence and cohort definition; (2) AUROC + AUPRC; (3) confusion matrix at the clinical operating point with absolute numbers.</li>
+<li>(4) Calibration plot and Brier score; (5) per-subgroup sensitivity/specificity.</li>
+<li>(6) Per-patient explanation artifacts: top SHAP pushers/suppressors, similar cases, counterfactual.</li>
+<li>(7) External-validation results and stated limitations.</li>
+</ul>
+<p><strong>Synthesis</strong></p>
+<p><em>Key point:</em> The three components are complementary, not interchangeable.</p>
+<ul>
+<li>Metrics make the claim.</li>
+<li>Imbalance handling makes the claim <em>honest</em>.</li>
+<li>LIME/SHAP make the claim <em>usable</em> by the clinician who must act on it.</li>
+</ul>
+</section>
+<section class="chapter-section" id="s-d-13-unit-iv-2-mark-questions-t1-recall" data-section="D.13 Unit IV — 2-Mark Questions (T1 · recall)"><h2>D.13 Unit IV — 2-Mark Questions (T1 · recall)</h2>
+<p><strong>Q1. Name any two diseases where AI assists in diagnosis.</strong></p>
+<p><em>Key point — AI already assists diagnosis in retinopathy and heart disease, with several other accepted examples.</em></p>
+<ul>
+<li><strong>Diabetic retinopathy:</strong> CNNs grade retinal photographs; IDx-DR was the first FDA-authorized autonomous diagnostic AI (2018).</li>
+<li><strong>Coronary/heart disease:</strong> deep ECG models classify arrhythmias; AI estimates ejection fraction from echocardiography.</li>
+<li><strong>Also acceptable:</strong> cancer (mammography/lung-CT/pathology); pneumonia on chest X-ray; skin-lesion classification in dermatology.</li>
+</ul>
+<p><strong>Q2. What is predictive modelling in healthcare?</strong></p>
+<p><em>Key point — training statistical/ML models on historical patient data to predict future clinical outcomes.</em></p>
+<ul>
+<li><strong>Definition:</strong> statistical/ML models trained on historical patient data predict future outcomes — e.g., 30-day readmission, ICU deterioration within 12 h, in-hospital mortality, remaining length of stay.</li>
+<li><strong>Requirements:</strong> defined time-zero, leakage-free features (Unit II), clinically calibrated probabilities at the operating point.</li>
+</ul>
+<p><strong>Q3. What is personalized medicine?</strong></p>
+<p><em>Key point — tailoring care to each patient&#39;s molecular/genomic profile, environment, and history rather than population averages.</em></p>
+<ul>
+<li><strong>Definition:</strong> personalized (precision) medicine tailors prevention, diagnosis, and treatment to the individual patient&#39;s molecular/genomic profile, environment, and history.</li>
+<li><strong>AI enablers:</strong> interpreting genomic variants (tumor sequencing → targeted therapy); polygenic risk scores for screening stratification; predicting individual drug response (pharmacogenomics).</li>
+</ul>
+<p><strong>Q4. What is AI-based drug discovery?</strong></p>
+<p><em>Key point — applying machine learning across the drug-development pipeline to narrow the search before expensive validation.</em></p>
+<ul>
+<li><strong>Definition:</strong> machine learning applied across the drug-development pipeline.</li>
+<li><strong>Entry points:</strong> target identification from omics/literature; virtual screening of compound libraries by predicted binding; generative models proposing novel candidate molecules; QSAR property prediction (potency, solubility, toxicity).</li>
+<li><strong>Honest value:</strong> narrowing the search before expensive wet-lab and clinical validation — baricitinib&#39;s COVID-19 nomination is a real example.</li>
+</ul>
+<p><strong>Q5. Define a virtual health assistant.</strong></p>
+<p><em>Key point — a conversational AI agent for patient/clinician support that triages and routes but never diagnoses.</em></p>
+<ul>
+<li><strong>Definition:</strong> a conversational AI agent (chatbot or voice assistant) supporting patients or clinicians.</li>
+<li><strong>Functions:</strong> triage and routing, medication reminders, chronic-disease coaching, post-discharge follow-up, administrative tasks.</li>
+<li><strong>Limits:</strong> a support/triage tool — not a diagnostician; must carry conservative, rule-based escalation (&quot;red flag → seek care now&quot;) and PHI safeguards.</li>
+</ul>
+</section>
+<section class="chapter-section" id="s-d-14-unit-iv-3-mark-questions-t2-application" data-section="D.14 Unit IV — 3-Mark Questions (T2 · application)"><h2>D.14 Unit IV — 3-Mark Questions (T2 · application)</h2>
+<p><strong>Q1. State AI applications in the diagnosis of diabetes, cancer, and heart disease.</strong></p>
+<p><em>Key point — each disease has applications spanning screening, risk prediction, and treatment matching.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Disease</th>
+<th>Application</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Diabetes</td>
+<td>Retinopathy screening from retinal photographs (IDx-DR — autonomous when confident)</td>
+</tr>
+<tr>
+<td>Diabetes</td>
+<td>Nephropathy risk from EHR lab trajectories</td>
+</tr>
+<tr>
+<td>Diabetes</td>
+<td>CGM glucose forecasting for insulin management</td>
+</tr>
+<tr>
+<td>Cancer</td>
+<td>Mammography screening support; lung-CT nodule detection</td>
+</tr>
+<tr>
+<td>Cancer</td>
+<td>Whole-slide pathology — metastasis detection, Gleason grading</td>
+</tr>
+<tr>
+<td>Cancer</td>
+<td>Precision oncology: tumor genomics matched to targeted therapy</td>
+</tr>
+<tr>
+<td>Heart disease</td>
+<td>Deep 12-lead ECG rhythm classification at cardiologist level</td>
+</tr>
+<tr>
+<td>Heart disease</td>
+<td>AI estimation of ejection fraction from echo</td>
+</tr>
+<tr>
+<td>Heart disease</td>
+<td>Automated coronary calcium scoring on CT; wearable PPG AF screening</td>
+</tr>
+</tbody></table></div>
+<p><strong>Q2. List the medical imaging modalities used in AI-based analysis.</strong></p>
+<p><em>Key point — nine standard modalities feed AI analysis, all DICOM-standardized with modality-specific protocols.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Modality</th>
+<th>Typical AI use</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>X-ray/radiography</td>
+<td>Chest screening, fractures</td>
+</tr>
+<tr>
+<td>CT</td>
+<td>Hemorrhage triage, lung nodules, coronary calcium</td>
+</tr>
+<tr>
+<td>MRI</td>
+<td>Brain tumor segmentation, MS lesions</td>
+</tr>
+<tr>
+<td>Ultrasound</td>
+<td>Obstetric, cardiac/echo</td>
+</tr>
+<tr>
+<td>Whole-slide pathology</td>
+<td>Grading, metastasis detection</td>
+</tr>
+<tr>
+<td>Mammography</td>
+<td>Screening</td>
+</tr>
+<tr>
+<td>Retinal fundus photography</td>
+<td>Retinopathy</td>
+</tr>
+<tr>
+<td>OCT</td>
+<td>Retinal layers</td>
+</tr>
+<tr>
+<td>Nuclear medicine/PET</td>
+<td>Oncology</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>All are DICOM-standardized; each modality implies its own preprocessing, augmentation, and evaluation protocol.</li>
+</ul>
+<p><strong>Q3. Explain predictive modelling for ICU admission and mortality risk.</strong></p>
+<p><em>Key point — ICU admission prediction is a sensitivity-first triage task; mortality prediction pairs transparent classical scores with locally validated learned models.</em></p>
+<p><strong>1. ICU admission prediction</strong></p>
+<p><em>Key point:</em> a triage task in the emergency ward predicting who will need ICU-level care.</p>
+<ul>
+<li>Features: triage vitals, initial labs, demographics, comorbidities.</li>
+<li>Supports bed planning and escalation; operating point set by bed capacity.</li>
+<li>Evaluation favors sensitivity — missed escalations are catastrophic.</li>
+</ul>
+<p><strong>2. Mortality prediction</strong></p>
+<p><em>Key point:</em> classical severity scores versus learned trajectory models.</p>
+<ul>
+<li>Classical: APACHE II/III, SAPS II — transparent, fixed features measured in the first 24 h.</li>
+<li>Learned: GBMs/LSTMs over full trajectories — higher AUROC, but calibration and local validation are mandatory.</li>
+</ul>
+<p><strong>3. Shared discipline</strong></p>
+<p><em>Key point:</em> both tasks must respect time-zero, exclude artifacts, and report calibration.</p>
+<ul>
+<li>Time-zero = ICU admission; exclude post-death artifacts; split by patient.</li>
+<li>Report calibration — a mortality score drives goals-of-care conversations, not just alerts.</li>
+</ul>
+<p><strong>Q4. State the role of AI in genomics and personalized medicine.</strong></p>
+<p><em>Key point — AI turns each patient&#39;s molecular data into actionable clinical recommendations, within equity limits.</em></p>
+<p><strong>1. Genomics</strong></p>
+<p><em>Key point:</em> ML assists the sequencing pipeline from reads to structure.</p>
+<ul>
+<li>Variant calling from sequencing reads; pathogenic/benign classification (AlphaMissense-style conservation+structure models).</li>
+<li>Gene-expression signature interpretation; AlphaFold protein-structure prediction enables structure-based drug design.</li>
+</ul>
+<p><strong>2. Precision oncology</strong></p>
+<p><em>Key point:</em> tumor–normal sequencing identifies actionable drivers matched to targeted therapy.</p>
+<ul>
+<li>EGFR mutation → inhibitors; MSI-high → immunotherapy.</li>
+</ul>
+<p><strong>3. Pharmacogenomics</strong></p>
+<p><em>Key point:</em> genotypes guide drug choice and dosing.</p>
+<ul>
+<li>CYP2D6, CYP2C19, HLA-B*57:01 genotypes steer selection and dosing.</li>
+</ul>
+<p><strong>4. Polygenic risk scores</strong></p>
+<p><em>Key point:</em> PRSs stratify screening intensity for common diseases.</p>
+<p><strong>5. Standing limits</strong></p>
+<p><em>Key point:</em> ancestry transferability and equity remain the constraints on these tools.</p>
+<p><strong>Q5. List applications of chatbots and virtual health assistants in healthcare.</strong></p>
+<p><em>Key point — six application areas, all bounded by triage-scope, safety, and escalation constraints.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Application</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Symptom triage and routing</td>
+<td>Structured questioning directs to self-care, primary, or emergency care; conservative red-flag escalation</td>
+</tr>
+<tr>
+<td>Medication management</td>
+<td>Reminders and adherence support</td>
+</tr>
+<tr>
+<td>Chronic-disease coaching</td>
+<td>Diabetes/hypertension education, lifestyle tracking</td>
+</tr>
+<tr>
+<td>Post-discharge follow-up</td>
+<td>Check-ins that catch deterioration early</td>
+</tr>
+<tr>
+<td>Administrative support</td>
+<td>Scheduling, refills, pre-visit intake, wayfinding</td>
+</tr>
+<tr>
+<td>Clinician-facing assistants</td>
+<td>Drafting notes, answering guideline queries</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>Constraints in all cases: triage/support scope (not diagnosis), PHI-safe logging, audited escalation logic.</li>
+<li>For LLM agents: grounding plus out-of-scope refusal.</li>
+</ul>
+</section>
+<section class="chapter-section" id="s-d-15-unit-iv-5-mark-questions-t3-structured-explanation" data-section="D.15 Unit IV — 5-Mark Questions (T3 · structured explanation)"><h2>D.15 Unit IV — 5-Mark Questions (T3 · structured explanation)</h2>
+<p><strong>Q1. Explain AI applications in disease diagnosis for diabetes, cancer, and heart disease.</strong></p>
+<p><em>Key point — each disease contributes a flagship autonomous or high-throughput application, and shared design rules govern all three.</em></p>
+<p><strong>1. Diabetes — retinopathy screening flagship</strong></p>
+<p><em>Key point:</em> CNNs grade fundus photographs, and IDx-DR made the decision autonomous by staying narrow.</p>
+<ul>
+<li>IDx-DR (FDA-authorized 2018): when confidence exceeds thresholds it issues the <em>autonomous</em> referral decision without a physician reading the image.</li>
+<li>Explicit re-image/refer fallbacks — the template for narrow, conservative autonomous AI.</li>
+<li>Companion tasks: nephropathy prediction from lab trajectories; CGM-based glucose forecasting for insulin control.</li>
+</ul>
+<p><strong>2. Cancer — screening</strong></p>
+<p><em>Key point:</em> AI supports radiologist-level screening with reduced workload.</p>
+<ul>
+<li>Mammography AI (large trials: AI-supported reading matches double reading with reduced workload).</li>
+<li>Lung-CT nodule detection.</li>
+</ul>
+<p><strong>3. Cancer — pathology and treatment</strong></p>
+<p><em>Key point:</em> whole-slide analysis grades disease while precision oncology and auto-contouring plan treatment.</p>
+<ul>
+<li>Whole-slide analysis: lymph-node metastasis and Gleason grading; stain/scanner variability is the central engineering problem.</li>
+<li>Precision oncology matches tumor genomics to targeted therapy; radiotherapy auto-contouring is routinely deployed.</li>
+<li>Evaluation leans on intermediate endpoints (biopsy-confirmed detection) because recurrence ground truth takes years.</li>
+</ul>
+<p><strong>4. Heart disease</strong></p>
+<p><em>Key point:</em> deep models match cardiologists on ECG and automate cardiac imaging measurements.</p>
+<ul>
+<li>Deep 12-lead ECG models classify dozens of rhythms at cardiologist level.</li>
+<li>Echo AI estimates ejection fraction; CT coronary-calcium scoring is automated.</li>
+<li>Wearables screen for atrial fibrillation from single-lead PPG (Apple Heart Study).</li>
+</ul>
+<p><strong>5. Cross-cutting design lessons</strong></p>
+<p><em>Key point:</em> claim grade, operating point, and post-flag pathway decide clinical value.</p>
+<ul>
+<li>Define screening-grade vs diagnostic-grade claims.</li>
+<li>Choose the operating point by clinical cost.</li>
+<li>Design what happens <em>after</em> the flag.</li>
+</ul>
+<p><em>Takeaway — across diabetes, cancer, and heart disease, successful diagnostic AI pairs a narrowly defined task with conservative operating points and an explicit post-flag pathway.</em></p>
+<p><strong>Q2. Describe AI techniques used in X-ray, MRI, and CT scan analysis.</strong></p>
+<p><em>Key point — CNNs classify and detect, volumetric and multi-sequence models handle 3-D data, and shared validation disciplines make results trustworthy.</em></p>
+<p><strong>1. X-ray</strong></p>
+<p><em>Key point:</em> CNN classification/detection with worklist triage, guarded against shortcut learning.</p>
+<ul>
+<li>Tasks: pneumonia, pneumothorax, consolidation, fractures; worklist triage.</li>
+<li>Training on tens of thousands of labeled studies; per-finding AUPRC and external validation.</li>
+<li>Pitfalls: shortcut learning from lateral markers, drains, device artifacts (attention checks via Grad-CAM).</li>
+</ul>
+<p><strong>2. CT</strong></p>
+<p><em>Key point:</em> 3-D volumetric CNNs triage hemorrhage and quantify nodules, calcium, and infarcts.</p>
+<ul>
+<li>Intracranial-hemorrhage triage (reprioritizing worklists); lung-nodule detection in screening CT.</li>
+<li>Coronary-calcium quantification; stroke infarct segmentation for thrombectomy decisions.</li>
+<li>Preprocessing: windowing (bone/brain windows), slice resampling.</li>
+</ul>
+<p><strong>3. MRI</strong></p>
+<p><em>Key point:</em> multi-sequence 3-D segmentation with sequence-aware fusion and site harmonization.</p>
+<ul>
+<li>U-Net/nnU-Net segmentation: brain tumors (BraTS benchmark), MS lesion counting, cardiac structure/function.</li>
+<li>Sequences (T1, T2, FLAIR) are modalities-in-miniature requiring sequence-aware fusion.</li>
+<li>Acquisition-site variability (magnets, protocols) demands harmonization or domain adaptation.</li>
+</ul>
+<p><strong>4. Common disciplines across all three</strong></p>
+<p><em>Key point:</em> data hygiene, plausible augmentation, and external validation are universal.</p>
+<ul>
+<li>DICOM metadata hygiene; augmentation within anatomical plausibility.</li>
+<li>External validation across sites; per-finding/subgroup reporting.</li>
+</ul>
+<p><em>Takeaway — the modality changes the architecture and preprocessing, but credibility always comes from the same external-validation disciplines.</em></p>
+<p><strong>Q3. Explain predictive modeling for ICU admission and mortality risk prediction.</strong></p>
+<p><em>Key point — ICU admission prediction is sensitivity-first triage, mortality prediction layers learned models over transparent classical scores, and both demand leakage-free, calibrated deployment.</em></p>
+<p><strong>1. ICU admission prediction — task and data</strong></p>
+<p><em>Key point:</em> predict, in the ED/ward, who will need ICU-level care within a horizon.</p>
+<ul>
+<li>Data: triage vitals, initial labs, demographics, comorbidity indices, utilization history (Unit II features).</li>
+<li>Features engineered over the observation window ending at prediction time.</li>
+</ul>
+<p><strong>2. ICU admission prediction — modeling and evaluation</strong></p>
+<p><em>Key point:</em> GBMs or LSTMs on early trajectories, evaluated sensitivity-first and integrated into workflow.</p>
+<ul>
+<li>Label = ICU transfer within N hours; models: gradient-boosted trees or LSTM.</li>
+<li>Evaluation: sensitivity at capacity-relevant specificity (missed escalations dominate cost).</li>
+<li>Calibration for bed-planning use; per-shift workflow integration (Chapter 3&#39;s five rights).</li>
+</ul>
+<p><strong>3. Mortality — classical severity scores</strong></p>
+<p><em>Key point:</em> APACHE II/III and SAPS II are the transparent, externally calibrated floor.</p>
+<ul>
+<li>Fixed features measured in the first 24 h.</li>
+<li>Transparent and multi-site calibrated across ICUs.</li>
+</ul>
+<p><strong>4. Mortality — learned models</strong></p>
+<p><em>Key point:</em> GBM/LSTM trajectory models add discrimination but must prove local calibration first.</p>
+<ul>
+<li>Continuous data yields higher AUROC.</li>
+<li>Local calibration must be demonstrated before deployment.</li>
+<li>Explanation artifacts for clinicians — mortality output drives goals-of-care conversations, not merely alerts.</li>
+</ul>
+<p><strong>5. Shared discipline</strong></p>
+<p><em>Key point:</em> time-zero, artifact exclusion, patient-level splits, and calibration reporting apply to both.</p>
+<ul>
+<li>Define time-zero (ICU admission); exclude <strong>post-death artifacts</strong> (labs/vitals generated by the dying process leak the label).</li>
+<li>Split by patient; report calibration with per-subgroup breakdowns.</li>
+</ul>
+<p><strong>6. Deployment pattern</strong></p>
+<p><em>Key point:</em> scores as the transparent floor, learned models layered where locally validated.</p>
+<ul>
+<li>Classical scores anchor transparency; learned models add discrimination where validated.</li>
+</ul>
+<p><em>Takeaway — a mortality or escalation score changes conversations and beds, so transparent baselines, leakage-free labels, and proven local calibration are non-negotiable.</em></p>
+<p><strong>Q4. Discuss the role of AI in genomics and personalized medicine.</strong></p>
+<p><em>Key point — AI acts at every genomics stage from variant calling to structure prediction, then converts molecular data into actionable oncology, pharmacogenomic, and risk-stratification decisions within known limits.</em></p>
+<p><strong>1. Genomics pipeline and AI&#39;s entries</strong></p>
+<p><em>Key point:</em> sequencing → FASTQ → alignment (BAM) → variant calling (VCF), with AI entering at calling, interpretation, signatures, and structure.</p>
+<ul>
+<li><strong>Variant calling:</strong> deep-learning callers rival classical tools, especially on indels.</li>
+<li><strong>Variant interpretation:</strong> pathogenicity classified from conservation, predicted protein effect, population frequency.</li>
+<li><strong>Expression/omics signatures</strong> for disease and drug response.</li>
+<li><strong>Structure prediction:</strong> AlphaFold 2 (2021) enables structure-based drug design.</li>
+</ul>
+<p><strong>2. Precision oncology</strong></p>
+<p><em>Key point:</em> tumor–normal sequencing finds somatic drivers, matched to therapies by decision support.</p>
+<ul>
+<li>EGFR mutation → EGFR inhibitor; BRAF V600E → BRAF inhibitor; MSI-high → immunotherapy.</li>
+<li>AI adds variant prioritization, biomarker extraction from routine H&amp;E slides (predicting genotype from morphology), and trial matching.</li>
+</ul>
+<p><strong>3. Pharmacogenomics</strong></p>
+<p><em>Key point:</em> genotypes directly guide drug selection and dosing.</p>
+<ul>
+<li>CYP2D6/CYP2C19 genotypes guide clopidogrel/codeine/tamoxifen.</li>
+<li>HLA-B*57:01 screening prevents abacavir hypersensitivity.</li>
+<li>AI dosing models combine genotype with clinical covariates.</li>
+</ul>
+<p><strong>4. Polygenic risk scores</strong></p>
+<p><em>Key point:</em> weighted sums of common variants stratify screening — with an equity caveat.</p>
+<ul>
+<li>Stratify screening for common diseases.</li>
+<li>Standing problem: PRSs built on European-ancestry cohorts lose calibration elsewhere.</li>
+</ul>
+<p><strong>5. Limits</strong></p>
+<p><em>Key point:</em> interpretation depends on curated knowledge bases, ancestry transferability, and communicating uncertain results.</p>
+<ul>
+<li>Curated knowledge bases are of variable completeness.</li>
+<li>Ancestry transferability; the communication problem of returning uncertain results to patients.</li>
+<li>AI&#39;s role is to make molecular data <em>actionable</em> — and to say honestly when it is not.</li>
+</ul>
+<p><em>Takeaway — genomics AI succeeds when it converts molecular data into actionable, equitably validated clinical recommendations, and admits openly where it cannot.</em></p>
+<p><strong>Q5. Explain AI-driven drug discovery and drug repurposing techniques.</strong></p>
+<p><em>Key point — AI compresses the discovery pipeline at four entry points, repurposing exploits known safety via signature reversal and knowledge graphs, and all candidates still require wet-lab and clinical validation.</em></p>
+<p><strong>1. Classical pipeline and AI&#39;s leverage</strong></p>
+<p><em>Key point:</em> the 10–15 year, $1–2B, failure-dominated pipeline gains speed at four AI entry points.</p>
+<ul>
+<li>Classical: target → hit → lead → preclinical → clinical I–III → approval.</li>
+<li><strong>(1) Target identification:</strong> omics/network/literature mining nominates disease-relevant targets.</li>
+<li><strong>(2) Virtual screening:</strong> ML predicts binding from structure, prioritizing which of billions of compounds to test physically.</li>
+<li><strong>(4) Trial design:</strong> patient matching and site selection (Chapter 36).</li>
+</ul>
+<p><strong>2. Generative design and property prediction</strong></p>
+<p><em>Key point:</em> models propose novel molecules optimized for desired properties.</p>
+<ul>
+<li><strong>(3) Generative design:</strong> models propose novel candidates.</li>
+<li><strong>QSAR</strong> property prediction: potency, solubility, toxicity.</li>
+<li>AlphaFold structures support structure-based design.</li>
+</ul>
+<p><strong>3. Repurposing techniques</strong></p>
+<p><em>Key point:</em> approved drugs&#39; known safety makes repurposing the fastest route to patients.</p>
+<ul>
+<li><strong>Signature reversal:</strong> a drug whose gene-expression signature reverses the disease&#39;s signature is a candidate.</li>
+<li><strong>Knowledge-graph reasoning</strong> over drugs/targets/diseases/adverse-events.</li>
+<li><strong>Literature mining</strong> at scale.</li>
+</ul>
+<p><strong>4. Real example — baricitinib</strong></p>
+<p><em>Key point:</em> an AI knowledge-graph/needs-analysis pipeline nominated a JAK inhibitor for COVID-19, later validated and authorized.</p>
+<p><strong>5. Honest assessment</strong></p>
+<p><em>Key point:</em> AI narrows search — it does not skip validation.</p>
+<ul>
+<li>AI-computed candidates still require wet-lab and clinical validation.</li>
+<li>Value: fewer, better candidates entering expensive stages.</li>
+<li>&quot;AI-designed&quot; claims are pipeline claims; communicate them as such.</li>
+</ul>
+<p><em>Takeaway — AI&#39;s honest contribution to drug discovery and repurposing is narrowing the candidate set before expensive validation, never replacing it.</em></p>
+</section>
+<section class="chapter-section" id="s-d-16-unit-iv-10-mark-questions-t3-integrated-essay-design" data-section="D.16 Unit IV — 10-Mark Questions (T3 · integrated essay/design)"><h2>D.16 Unit IV — 10-Mark Questions (T3 · integrated essay/design)</h2>
+<p><strong>Q1. Explain AI applications in disease diagnosis for diabetes, cancer, and heart disease, including relevant medical imaging techniques.</strong></p>
+<p><em>Key point — each disease area has reached deployment through narrow, conservative applications, and shared imaging techniques plus design lessons explain how.</em></p>
+<p><strong>A. Diabetes</strong></p>
+<p><em>Key point:</em> autonomy in diabetic eye disease was earned through narrowness, standardization, and fallbacks.</p>
+<ul>
+<li><strong>Retinopathy screening:</strong> CNNs grade fundus photographs for more-than-mild DR; <strong>IDx-DR</strong> (FDA-authorized 2018) is the first autonomous diagnostic AI — when confidence exceeds thresholds it issues the screening decision itself, otherwise it re-images or refers.</li>
+<li>Narrow task, standardized protocol, conservative operating point, explicit fallbacks.</li>
+<li><strong>Nephropathy and foot-risk</strong> prediction from EHR lab/medication trajectories.</li>
+<li><strong>CGM forecasting:</strong> LSTM-style models predict glucose minutes-to-hours ahead for insulin dosing.</li>
+<li>Lesson: autonomy was earned by narrowness.</li>
+</ul>
+<p><strong>B. Cancer</strong></p>
+<p><em>Key point:</em> cancer AI spans screening, pathology grading, and prognosis/planning, evaluated on validated intermediate endpoints.</p>
+<ul>
+<li><strong>Screening:</strong> mammography AI supporting radiologists (large trials: AI-supported reading matches double reading with less workload); low-dose CT lung-nodule detection for high-risk screening; dermoscopy lesion classification.</li>
+<li><strong>Detection/grading on pathology:</strong> whole-slide imaging for lymph-node metastasis (CAMELYON16) and Gleason grading; stain/scanner variability handled by normalization and augmentation.</li>
+<li><strong>Prognosis and planning:</strong> survival models fusing tumor features/genomics/treatment; radiotherapy auto-contouring of tumors and organs at risk (routinely deployed, radiation-oncologist verified); precision-oncology therapy matching from tumor genomics.</li>
+<li>Lesson: ground truth is slow — evaluation leans on biopsy-confirmed intermediate endpoints, which must themselves be validated.</li>
+</ul>
+<p><strong>C. Heart disease</strong></p>
+<p><em>Key point:</em> cardiology AI delivers continuous screening and throughput, not just per-case accuracy.</p>
+<ul>
+<li><strong>ECG interpretation:</strong> deep networks classify 12-lead ECGs across dozens of rhythms at cardiologist-level performance; screening for asymptomatic AF; phenotype-from-ECG (inferring ejection fraction from the ECG).</li>
+<li><strong>Echocardiography:</strong> AI estimates EF and automates views/measurements.</li>
+<li><strong>CT coronary calcium scoring:</strong> fully automated quantification for risk stratification.</li>
+<li><strong>Wearable screening:</strong> PPG-based AF detection with ECG-patch confirmation (Apple Heart Study: PPV ≈ 0.84).</li>
+</ul>
+<p><strong>D. Imaging techniques</strong></p>
+<p><em>Key point:</em> a shared DICOM-standardized toolbox of CNNs, U-Net segmentation, and 3-D/multi-sequence methods serves all three diseases.</p>
+<ul>
+<li>Modalities: X-ray/CT/MRI/mammography/fundus/OCT/pathology — all DICOM-standardized.</li>
+<li>CNNs dominate classification/detection; U-Net family dominates segmentation; 3-D convolutions for CT/MRI volumes.</li>
+<li>Multi-sequence MRI fusion; transfer learning for the small-data reality.</li>
+<li>Grad-CAM-style attention checks for shortcut learning; external validation across scanners/sites as the credibility floor.</li>
+</ul>
+<p><strong>E. Synthesis — design lessons</strong></p>
+<p><em>Key point:</em> claim grading, earned autonomy, and post-flag design decide clinical value.</p>
+<ul>
+<li>Screening-grade vs diagnostic-grade claims — sensitivity-first triage vs precision-heavy diagnosis, each with its own operating point and regulatory pathway.</li>
+<li>Autonomy requires narrowness, standardization, and fallbacks.</li>
+<li>What happens <em>after</em> the flag (confirmatory pathway) decides clinical value.</li>
+<li>Per-subgroup and external validation are part of the diagnosis, not an appendix.</li>
+</ul>
+<p><strong>Q2. Discuss predictive modelling for ICU admission and mortality risk prediction and explain the role of AI in genomics and personalized medicine.</strong></p>
+<p><em>Key point — ICU prediction, mortality scoring, genomics, and personalized medicine are one discipline at different scales: precise questions, leakage-free features, local calibration, and explanations.</em></p>
+<p><strong>A. ICU admission prediction</strong></p>
+<p><em>Key point:</em> an ED/ward triage model predicting ICU-level need, integrated into bed management.</p>
+<ul>
+<li>Framing: will this patient need ICU-level care within N hours?</li>
+<li>Data: triage vitals, initial labs, demographics, comorbidity indices (Charlson/Elixhauser), utilization history; features engineered over the observation window ending at prediction time (Unit II).</li>
+<li>Modeling: GBMs on tabular features or LSTMs on early trajectories; labels from actual ICU transfers.</li>
+<li>Evaluation: sensitivity at capacity-relevant specificity; calibration; integration into bed-management workflow (Chapter 3&#39;s five rights).</li>
+<li>Failure mode: changed admission criteria shift the label definition — monitor drift.</li>
+</ul>
+<p><strong>B. Mortality prediction</strong></p>
+<p><em>Key point:</em> transparent classical scores are the floor; learned models must prove calibration because the output drives goals-of-care conversations.</p>
+<ul>
+<li>Classical severity scores (<strong>APACHE II/III, SAPS II</strong>): fixed features in the first 24 h, transparent, multi-site calibrated — the regulatory and clinical floor.</li>
+<li>Learned models: GBMs/LSTMs over continuous trajectories gain AUROC but must prove <strong>calibration and local validity</strong> — an over-confident score is a communication hazard, not just a statistical one.</li>
+<li>Discipline for both tasks: define time-zero (ICU admission), exclude <strong>post-death artifact leakage</strong>, split by patient, report per-subgroup metrics.</li>
+<li>Explanation artifacts (SHAP top-features) for every score presented in a family conversation.</li>
+</ul>
+<p><strong>C. AI in genomics</strong></p>
+<p><em>Key point:</em> deep learning enters the sequencing pipeline at calling, interpretation, signatures, and structure, taming genome-scale data.</p>
+<ul>
+<li>Pipeline: FASTQ → BAM → VCF.</li>
+<li><strong>Variant calling:</strong> deep callers rival GATK, notably on indels.</li>
+<li><strong>Pathogenicity classification:</strong> AlphaMissense-style conservation/structure/population-frequency models.</li>
+<li><strong>Expression/omics signatures</strong> for disease and drug response; <strong>AlphaFold 2</strong> protein-structure prediction enabling structure-based design.</li>
+<li>Data scale: ~3×10⁹ bases, millions of variants per genome — dimensionality reduction and curated knowledge bases do the heavy lifting.</li>
+</ul>
+<p><strong>D. Personalized medicine</strong></p>
+<p><em>Key point:</em> molecular data becomes actionable through oncology matching, pharmacogenomics, and PRS stratification.</p>
+<ul>
+<li><strong>Precision oncology:</strong> tumor–normal sequencing finds somatic drivers; decision support matches them to targeted therapy (EGFR → inhibitors; BRAF V600E → BRAF inhibitors; MSI-high → immunotherapy); AI adds variant prioritization, genotype-from-H&amp;E morphology prediction, and trial matching.</li>
+<li><strong>Pharmacogenomics:</strong> CYP2D6/CYP2C19 genotypes guide clopidogrel/codeine/tamoxifen selection and dosing; HLA-B*57:01 screening prevents abacavir hypersensitivity.</li>
+<li><strong>PRS stratification</strong> for common-disease screening — with ancestry-transferability equity limits.</li>
+</ul>
+<p><strong>E. Synthesis — connecting thread</strong></p>
+<p><em>Key point:</em> both domains demand the same rigor because their outputs change conversations, beds, and drugs.</p>
+<ul>
+<li>Define the question precisely; engineer leakage-free features from heterogeneous streams.</li>
+<li>Model with the simplest adequate architecture; prove calibration locally.</li>
+<li>Attach explanation artifacts — the output changes a conversation, a bed, or a drug, not just a number.</li>
+</ul>
+<p><strong>Q3. Explain AI-driven drug discovery and drug repurposing, and discuss chatbots, virtual health assistants, IoT, and wearable devices for healthcare.</strong></p>
+<p><em>Key point — AI generates candidates, molecular or digital, and only validated pathways (trials, confirmatory testing, escalation rules) convert them into clinical value.</em></p>
+<p><strong>A. Drug discovery</strong></p>
+<p><em>Key point:</em> AI compresses the 10–15 year, &gt;$1–2B pipeline by narrowing candidates before validation.</p>
+<ul>
+<li>Classical pipeline: target identification → hit discovery → lead optimization → preclinical → clinical I–III → approval (10–15 y, &gt;$1–2B).</li>
+<li><strong>Target identification:</strong> omics/network/literature mining.</li>
+<li><strong>Virtual screening:</strong> ML-predicted binding prioritizing billions of candidates.</li>
+<li><strong>Generative design:</strong> novel molecule proposal; QSAR property prediction for potency/solubility/toxicity; AlphaFold structures enabling structure-based design.</li>
+<li><strong>Trial optimization</strong> (Chapter 36).</li>
+<li>Assessment: AI narrows search before expensive validation; it does not replace wet-lab/clinical proof.</li>
+</ul>
+<p><strong>B. Repurposing</strong></p>
+<p><em>Key point:</em> approved drugs&#39; known safety makes repurposing the fastest route, with AI nominating and trials deciding.</p>
+<ul>
+<li>Approved drugs have known safety — the fastest route to patients.</li>
+<li>Techniques: <strong>signature reversal</strong> (drug expression signature vs disease signature); <strong>knowledge-graph reasoning</strong> over drugs/targets/diseases; <strong>literature mining</strong>.</li>
+<li>Example: <strong>baricitinib</strong>, nominated for COVID-19 by an AI pipeline, later authorized.</li>
+<li>Honest framing: AI nominates; trials decide.</li>
+</ul>
+<p><strong>C. Chatbots and virtual health assistants</strong></p>
+<p><em>Key point:</em> conversational agents support triage and adherence under strict scope, escalation, and safety constraints.</p>
+<ul>
+<li>Use cases: symptom triage/routing (conservative red-flag escalation), medication reminders/adherence, chronic-disease coaching, post-discharge check-ins, administrative support, clinician-facing documentation help.</li>
+<li>Safety constraints: triage/support scope (never diagnostician); rule-based escalation layer.</li>
+<li>PHI-safe logging (Unit III); audited behavior.</li>
+<li>For LLM agents: grounding, citation, and out-of-scope refusal (Unit V).</li>
+</ul>
+<p><strong>D. IoT medical devices</strong></p>
+<p><em>Key point:</em> a sensor-to-dashboard pipeline with edge, resilience, and security constraints carries safety-critical data.</p>
+<ul>
+<li>Architecture: sensors (CGM, SpO₂, BP, weight) → gateway/phone → cloud platform → ML services → clinician dashboards/alerts.</li>
+<li>ML services: artifact rejection, event detection, hypoglycemia forecasting, adherence inference, predictive maintenance.</li>
+<li>Engineering constraints: edge/battery budgets (small models, Ch. 18 discipline); connectivity outages (graceful degradation); interoperability.</li>
+<li><strong>Cybersecurity:</strong> a connected insulin pump is safety-critical networked infrastructure.</li>
+</ul>
+<p><strong>E. Wearables</strong></p>
+<p><em>Key point:</em> continuous consumer monitoring succeeds via conservative flags and a defined confirmatory pathway.</p>
+<ul>
+<li>Continuous consumer monitoring: PPG heart rate, activity/sleep, CGM integration.</li>
+<li><strong>AF screening template:</strong> flag → confirmatory ECG patch → PPV ≈ 0.84 in the Apple Heart Study.</li>
+<li>Design lessons: conservative flags; a defined confirmatory pathway (&quot;screening claims live or die after the flag&quot;).</li>
+<li>Honest communication of what a negative means; calibration equity across skin tones (PPG optics) and age.</li>
+</ul>
+<p><strong>F. Synthesis</strong></p>
+<p><em>Key point:</em> discovery and digital health are two ends of the same translation problem, governed by identical engineering discipline.</p>
+<ul>
+<li>AI generates candidates — molecules or alerts; <em>validated pathways</em> (trials; confirmatory testing; escalation rules) convert them into clinical value.</li>
+<li>The engineer&#39;s discipline is identical in both: narrow claims, conservative fallbacks, measured what-happens-next.</li>
+</ul>
+</section>
+<section class="chapter-section" id="s-d-17-unit-v-2-mark-questions-t1-recall" data-section="D.17 Unit V — 2-Mark Questions (T1 · recall)"><h2>D.17 Unit V — 2-Mark Questions (T1 · recall)</h2>
+<p><strong>Q1. What is bioethics in the context of healthcare AI?</strong></p>
+<p><em>Key point — bioethics is the moral framework deciding whether and how algorithms may touch patient care.</em></p>
+<ul>
+<li><strong>Definition:</strong> the systematic study of moral questions in medicine and life sciences, applied to AI-influenced decisions.</li>
+<li><strong>Anchor:</strong> four principles — autonomy, beneficence, non-maleficence, justice.</li>
+<li><strong>Example:</strong> choosing a sepsis model&#39;s alert threshold is a bioethical decision, not merely a statistical one.</li>
+</ul>
+<p><strong>Q2. Define Software as a Medical Device (SaMD).</strong></p>
+<p><em>Key point — SaMD is software with a medical purpose that is not part of a hardware device.</em></p>
+<ul>
+<li><strong>Definition (IMDRF, adopted by FDA/EU):</strong> software intended for diagnosis, treatment, triage, or monitoring, performing that purpose <em>without being part of a hardware medical device</em>.</li>
+<li><strong>Example:</strong> a CNN screening retinal photographs for diabetic retinopathy is SaMD; a hospital image-archiving tool is not.</li>
+</ul>
+<p><strong>Q3. What is federated learning?</strong></p>
+<p><em>Key point — train a shared model across sites without moving the underlying patient data.</em></p>
+<ul>
+<li><strong>Definition:</strong> decentralized training; each site trains locally and returns only model updates.</li>
+<li><strong>Aggregation:</strong> a coordinating server combines updates (typically FedAvg — weighted averaging).</li>
+<li><strong>Healthcare benefit:</strong> multi-institution learning under HIPAA/GDPR data-residency constraints.</li>
+</ul>
+<p><strong>Q4. What is fairness in machine learning?</strong></p>
+<p><em>Key point — fairness means no unjustified differential treatment or performance across individuals or groups.</em></p>
+<ul>
+<li><strong>Formal definitions:</strong> demographic parity (equal positive-prediction rates); equalized odds (equal TP and FP rates); calibration within groups (equal PPV).</li>
+<li><strong>Healthcare practice:</strong> per-subgroup sensitivity/specificity/calibration audits — uneven error rates become unequal care.</li>
+</ul>
+<p><strong>Q5. What is a model card?</strong></p>
+<p><em>Key point — standardized documentation that makes a model&#39;s authorization and behavior inspectable.</em></p>
+<ul>
+<li><strong>Contents:</strong> intended use, training-data provenance, evaluation (with per-subgroup breakdowns), operating point, known limitations, update history.</li>
+<li><strong>Role:</strong> the fairness-audit and governance artifact for clinicians, reviewers, and regulators (Chapter 33).</li>
+</ul>
+</section>
+<section class="chapter-section" id="s-d-18-unit-v-3-mark-questions-t2-application" data-section="D.18 Unit V — 3-Mark Questions (T2 · application)"><h2>D.18 Unit V — 3-Mark Questions (T2 · application)</h2>
+<p><strong>Q1. Explain the four bioethical principles and their application to AI in healthcare.</strong></p>
+<p><em>Key point — four principles, four AI applications, four characteristic failure modes.</em></p>
+<p><strong>1. Autonomy</strong></p>
+<ul>
+<li><em>Key point:</em> patients&#39; right to informed, uncoerced, contestable decisions.</li>
+<li>Consent must cover secondary data use; AI involvement disclosed; recommendations contestable.</li>
+<li>Failure mode: black-box recommendations patients cannot question.</li>
+</ul>
+<p><strong>2. Beneficence</strong></p>
+<ul>
+<li><em>Key point:</em> deploy only where benefit is demonstrated by local validation.</li>
+<li>Published AUROC is not benefit; earlier detection and reduced workload are.</li>
+<li>Failure mode: efficiency-first deployment that quietly degrades care.</li>
+</ul>
+<p><strong>3. Non-maleficence</strong></p>
+<ul>
+<li><em>Key point:</em> audit the harms AI uniquely creates before and after go-live.</li>
+<li>Alert fatigue, automation bias, silent degradation under drift.</li>
+<li>Failure mode: a ward flooded with alerts until clinicians stop listening.</li>
+</ul>
+<p><strong>4. Justice</strong></p>
+<ul>
+<li><em>Key point:</em> distribute benefit and burden fairly across populations.</li>
+<li>Equal performance across demographic groups; access beyond wealthy systems.</li>
+<li>Failure mode: one-population models silently serving all populations.</li>
+</ul>
+<p><strong>Q2. List the major sources of bias in healthcare AI systems.</strong></p>
+<p><em>Key point — bias enters at every lifecycle stage, so mitigation must span collection, labeling, modeling, and monitoring.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Mechanism / example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Historical</td>
+<td>data records past inequities — spending as proxy for need</td>
+</tr>
+<tr>
+<td>Representation</td>
+<td>thin subgroups — darker skin in dermatology images</td>
+</tr>
+<tr>
+<td>Measurement</td>
+<td>instruments differ across groups — pulse oximetry vs skin tone</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>ground truth shaped by coding practice and access to care</td>
+</tr>
+<tr>
+<td>Aggregation</td>
+<td>one model for all subgroups hides subgroup patterns</td>
+</tr>
+<tr>
+<td>Deployment</td>
+<td>used differently than designed across resource levels</td>
+</tr>
+</tbody></table></div>
+<p><strong>Q3. Compare FDA and CE-marking routes for AI-based medical software.</strong></p>
+<p><em>Key point — both regimes authorize a claim (population, operating point, oversight), and drifting from it is a regulatory event.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>FDA (US)</th>
+<th>CE (EU)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pathways</td>
+<td>510(k) predicate equivalence; De Novo (first-of-kind, e.g. IDx-DR); PMA (class III)</td>
+<td>MDR classes I–III via notified body</td>
+</tr>
+<tr>
+<td>Adaptation</td>
+<td>PCCP pre-authorizes planned updates</td>
+<td>change needs re-assessment</td>
+</tr>
+<tr>
+<td>Standing duties</td>
+<td>post-market surveillance; public device list</td>
+<td>clinical evaluation; vigilance; AI Act high-risk duties; GDPR</td>
+</tr>
+</tbody></table></div>
+<p><strong>Q4. State the benefits and challenges of federated learning in healthcare.</strong></p>
+<p><em>Key point — federation buys multi-institution learning under privacy law but pays in heterogeneity and leakage risk.</em></p>
+<p><strong>1. Benefits</strong></p>
+<ul>
+<li><em>Key point:</em> learning without data movement.</li>
+<li>Population diversity improves generalizability; rare-disease pooling; no central breach honeypot.</li>
+</ul>
+<p><strong>2. Challenges</strong></p>
+<ul>
+<li><em>Key point:</em> non-IID sites are the defining problem.</li>
+<li>Sites differ in population, coding, devices — naive averaging degrades performance.</li>
+<li>Updates can still leak (gradient inversion, membership inference) — needs secure aggregation + DP; report per-site results, not pooled averages.</li>
+</ul>
+<p><strong>Q5. Why is explainability important for clinical adoption of AI?</strong></p>
+<p><em>Key point — explanations let clinicians verify, calibrate trust, and stay accountable; attribution ≠ causation.</em></p>
+<ul>
+<li><strong>Verification:</strong> clinicians check recommendations against clinical reasoning before acting.</li>
+<li><strong>Calibrated trust:</strong> trust proportional to demonstrated reliability — guards against automation bias and disuse.</li>
+<li><strong>Accountability and law:</strong> recordable, reviewable decisions; EU AI Act transparency and human-oversight duties.</li>
+<li><strong>Debugging:</strong> SHAP/Grad-CAM expose shortcut learning before patients see it.</li>
+<li><strong>Caveat:</strong> attribution shows what pushed the score, not what caused the disease.</li>
+</ul>
+</section>
+<section class="chapter-section" id="s-d-19-unit-v-5-mark-questions-t3-structured-explanation" data-section="D.19 Unit V — 5-Mark Questions (T3 · structured explanation)"><h2>D.19 Unit V — 5-Mark Questions (T3 · structured explanation)</h2>
+<p><strong>Q1. Explain the bioethical principles governing AI in healthcare with suitable examples.</strong></p>
+<p><em>Key point — the four principles are the standing framework; their failure modes are decided at deployment-time choices like thresholds and oversight.</em></p>
+<p><strong>1. Autonomy</strong></p>
+<ul>
+<li><em>Key point:</em> decision-making right, extended to data and algorithms.</li>
+<li>Consent covering secondary use; disclosure of AI involvement; contestable recommendations (Chapter 34&#39;s explanation artifact).</li>
+<li>Failure: black-box recommendations patients cannot question.</li>
+</ul>
+<p><strong>2. Beneficence</strong></p>
+<ul>
+<li><em>Key point:</em> benefit must be demonstrated locally, not published remotely.</li>
+<li>Local validation before deployment; deploy only for a defined benefit — earlier sepsis detection, reduced reading workload.</li>
+<li>Failure: efficiency-first deployments that quietly degrade care quality.</li>
+</ul>
+<p><strong>3. Non-maleficence</strong></p>
+<ul>
+<li><em>Key point:</em> audit the AI-specific harms.</li>
+<li>Alert fatigue (a safety hazard itself), automation bias passing model errors through, silent drift-driven degradation.</li>
+<li>Example: a maximum-sensitivity sepsis model floods a ward until clinicians stop listening.</li>
+</ul>
+<p><strong>4. Justice</strong></p>
+<ul>
+<li><em>Key point:</em> who bears each error type is a distributive question.</li>
+<li>Per-subgroup performance audits (Chapter 31); models that work beyond wealthy institutions; thresholds chosen with awareness of error burden.</li>
+<li>Example: the Obermeyer cost model under-referring patients who historically received less care.</li>
+</ul>
+<p><strong>Takeaway — the principles collide in real settings: a sepsis threshold is simultaneously a non-maleficence and a justice decision, so threshold, oversight, and monitoring plans are ethical documents, not just engineering ones.</strong></p>
+<p><strong>Q2. Describe bias in healthcare AI, its sources, and mitigation strategies.</strong></p>
+<p><em>Key point — bias is usually a faithful copy of biased data, labels, and delivery systems; the strongest fixes are upstream.</em></p>
+<p><strong>1. Data-stage sources</strong></p>
+<ul>
+<li><em>Key point:</em> the data records a biased world.</li>
+<li>Historical: cost-as-need proxy (Obermeyer — under-estimated Black patients&#39; illness burden); representation: darker skin in dermatology corpora, women in cardiac cohorts; measurement: pulse oximetry overreading SpO₂ in darker skin.</li>
+</ul>
+<p><strong>2. Label- and model-stage sources</strong></p>
+<ul>
+<li><em>Key point:</em> ground truth inherits coding practice and access.</li>
+<li>Label bias: ICD codes reflect documentation; diagnosis requires prior access to care. Aggregation bias: one model hides subgroup patterns. Deployment bias: use differs from design across sites.</li>
+</ul>
+<p><strong>3. Mitigation by stage</strong></p>
+<ul>
+<li><em>Key point:</em> match the fix to the stage.</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Techniques</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pre-processing</td>
+<td>re-specify target (need, not cost); targeted collection; re-weighting</td>
+</tr>
+<tr>
+<td>In-processing</td>
+<td>fairness-constrained training; adversarial debiasing</td>
+</tr>
+<tr>
+<td>Post-processing</td>
+<td>group-specific thresholds (with legal/ethical review)</td>
+</tr>
+<tr>
+<td>Process</td>
+<td>disaggregated evaluation before and after deployment</td>
+</tr>
+</tbody></table></div>
+<p><strong>4. The fairness audit as deliverable</strong></p>
+<ul>
+<li><em>Key point:</em> the audit ships as the model card.</li>
+<li>Subgroup counts; per-subgroup sensitivity/specificity/PPV/calibration; the chosen fairness definition and why; limitations; monitoring plan.</li>
+<li>Remember: calibration-within-groups and equalized odds cannot both hold when base rates differ — the choice is a documented value judgment.</li>
+</ul>
+<p><strong>Takeaway — removing a protected attribute from the inputs is not mitigation: proxies (cost, zip code, utilization) re-encode what was removed.</strong></p>
+<p><strong>Q3. Explain the regulatory approval pathways for AI-based medical devices (FDA and CE).</strong></p>
+<p><em>Key point — both regimes authorize the intended use, not the model; drift from it is a regulatory event.</em></p>
+<p><strong>1. SaMD classification</strong></p>
+<ul>
+<li><em>Key point:</em> risk = situation criticality × output significance.</li>
+<li>IMDRF definition; a radiologist-facing triage tool and an autonomous diagnostic are different risk categories with different evidentiary burdens.</li>
+</ul>
+<p><strong>2. FDA pathways</strong></p>
+<ul>
+<li><em>Key point:</em> predicate-driven, risk-tiered.</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Pathway</th>
+<th>Logic</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>510(k)</td>
+<td>substantial equivalence to predicate</td>
+<td>most imaging CAD/CDS</td>
+</tr>
+<tr>
+<td>De Novo</td>
+<td>first-of-kind, low–moderate risk</td>
+<td>IDx-DR</td>
+</tr>
+<tr>
+<td>PMA</td>
+<td>class III, clinical data required</td>
+<td>high-risk diagnostics</td>
+</tr>
+</tbody></table></div>
+<p><strong>3. Predetermined Change Control Plans</strong></p>
+<ul>
+<li><em>Key point:</em> pre-authorized adaptation replaces the locked-model rule.</li>
+<li>2023+ guidance: pre-specify retraining protocol, acceptance criteria, update validation; FDA&#39;s public AI/ML device list exceeds a thousand authorizations.</li>
+</ul>
+<p><strong>4. EU: MDR + AI Act + GDPR</strong></p>
+<ul>
+<li><em>Key point:</em> class-based conformity with heavier standing duties.</li>
+<li>MDR 2017/745: classes I–III, notified-body assessment, clinical evaluation, post-market surveillance. AI Act adds high-risk duties (risk management, data governance, transparency, human oversight). GDPR governs the data.</li>
+</ul>
+<p><strong>Takeaway — post-authorization drift (new population, changed threshold, autonomous use of an assistive tool) is itself a regulatory event requiring new submission or notification.</strong></p>
+<p><strong>Q4. Explain federated learning architectures, their challenges, and privacy-preserving techniques.</strong></p>
+<p><em>Key point — bring the model to the data; secure aggregation and DP complete the honest threat model.</em></p>
+<p><strong>1. The FedAvg loop</strong></p>
+<ul>
+<li><em>Key point:</em> only parameters travel, never records.</li>
+<li>Server distributes global model → sites train locally → return updates → server aggregates (weighted by site data size) → repeat; then per-site validation and Chapter 33 governance.</li>
+</ul>
+<p><strong>2. Settings</strong></p>
+<ul>
+<li><em>Key point:</em> cross-silo is the healthcare standard.</li>
+<li>Cross-silo: few reliable hospitals/consortia. Cross-device: thousands of unreliable endpoints with tiny per-device data.</li>
+</ul>
+<p><strong>3. Challenges</strong></p>
+<ul>
+<li><em>Key point:</em> non-IID is the defining challenge.</li>
+<li>Populations, coding, devices differ — remedies: personalized layers, feature alignment, robust aggregation; straggler tolerance; orchestration cost; report per-site results on local held-out data.</li>
+</ul>
+<p><strong>4. Threat model and defenses</strong></p>
+<ul>
+<li><em>Key point:</em> updates themselves can leak.</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Attack</th>
+<th>Defense</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Gradient inversion</td>
+<td>secure aggregation — server sees sums only</td>
+</tr>
+<tr>
+<td>Membership inference</td>
+<td>differential privacy — noise bounds one patient&#39;s influence (ε)</td>
+</tr>
+<tr>
+<td>Pipeline leakage</td>
+<td>pseudonymized keys, audit logs, governance</td>
+</tr>
+</tbody></table></div>
+<p><strong>Takeaway — the honest claim is &quot;data minimization plus DP-bounded leakage&quot;, not &quot;fully private&quot;.</strong></p>
+<p><strong>Q5. Discuss explainable AI (XAI) techniques and their role in building clinical trust.</strong></p>
+<p><em>Key point — XAI supports calibrated trust through verification, anti-automation-bias design, and accountability — within its limits.</em></p>
+<p><strong>1. Techniques</strong></p>
+<ul>
+<li><em>Key point:</em> pick the tool to the question asked.</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Technique</th>
+<th>Question answered</th>
+<th>Limits</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LIME</td>
+<td>local surrogate by perturbation</td>
+<td>unstable across seeds</td>
+</tr>
+<tr>
+<td>SHAP/TreeSHAP</td>
+<td>Shapley attributions; additive, consistent</td>
+<td>attribution ≠ causation</td>
+</tr>
+<tr>
+<td>Grad-CAM/saliency</td>
+<td>where did the model look</td>
+<td>shortcut check, not proof</td>
+</tr>
+</tbody></table></div>
+<p><strong>2. Role in clinical trust</strong></p>
+<ul>
+<li><em>Key point:</em> trust must be calibrated, not felt.</li>
+<li>Verification against clinical reasoning; anti-automation-bias design (uncertainty display, mandatory confirmation); accountability for records and the EU AI Act&#39;s transparency duties.</li>
+</ul>
+<p><strong>3. The explanation artifact</strong></p>
+<ul>
+<li><em>Key point:</em> a designed package, not a decoration.</li>
+<li>Calibrated score + uncertainty; top attributions in clinical language; similar past cases; one counterfactual; stated limitations.</li>
+</ul>
+<p><strong>4. Limits and governance answer</strong></p>
+<ul>
+<li><em>Key point:</em> fluent ≠ faithful.</li>
+<li>LIME instability, gamed attributions, rationalizations feeding automation bias; governance answers with faithfulness checks and periodic review of displayed rationales (Chapter 33).</li>
+</ul>
+<p><strong>Takeaway — an explanation is part of the clinical decision only when its faithfulness is checked like any other model property.</strong></p>
+</section>
+<section class="chapter-section" id="s-d-20-unit-v-10-mark-questions-t3-integrated-essay-design" data-section="D.20 Unit V — 10-Mark Questions (T3 · integrated essay/design)"><h2>D.20 Unit V — 10-Mark Questions (T3 · integrated essay/design)</h2>
+<p><strong>Q1. Discuss bioethical principles, bias and fairness, and regulatory requirements for deploying AI in healthcare.</strong></p>
+<p><em>Key point — principles define what must hold, the bias program defines what to measure, regulation defines what must be proven; missing any one voids all three.</em></p>
+<p><strong>A. Bioethical principles</strong></p>
+<p><em>Key point:</em> autonomy, beneficence, non-maleficence, justice — applied to AI decisions.</p>
+<ul>
+<li>Autonomy: consent for secondary use; disclosed AI involvement; contestable recommendations.</li>
+<li>Beneficence: deploy on locally validated benefit, not published AUROC alone.</li>
+<li>Non-maleficence: audit alert fatigue, automation bias, silent degradation, per-subgroup error costs.</li>
+<li>Justice: equitable performance and access; thresholds chosen knowing who bears each error.</li>
+<li>Collision example: a sepsis operating point trades alert burden (non-maleficence) against missed patients (justice) — so threshold decisions belong to the governance committee, documented like a clinical policy.</li>
+</ul>
+<p><strong>B. Bias and fairness</strong></p>
+<p><em>Key point:</em> measure disaggregated performance and state the fairness definition.</p>
+<ul>
+<li>Sources: historical (cost-as-need proxy), representation (thin subgroups), measurement (pulse oximetry), label (coding practice, access), aggregation, deployment.</li>
+<li>Formal: demographic parity, equalized odds, calibration within groups — with the impossibility result making the choice a documented value judgment.</li>
+<li>Mitigation by lifecycle stage; strongest upstream: fix the target variable, collect the missing subgroup; always ship a per-subgroup fairness audit.</li>
+<li>Removing protected attributes is insufficient — proxies re-encode them.</li>
+</ul>
+<p><strong>C. Regulation</strong></p>
+<p><em>Key point:</em> authorize claims; manage adaptation.</p>
+<ul>
+<li>SaMD classification: situation criticality × output significance.</li>
+<li>FDA: 510(k) / De Novo (IDx-DR) / PMA; PCCPs pre-authorize updates; public device list &gt;1,000.</li>
+<li>EU: MDR classes I–III with notified bodies; AI Act high-risk duties; GDPR for data.</li>
+<li>Both authorize intended use — population, operating point, oversight design — so drift is a regulatory event.</li>
+</ul>
+<p><strong>D. Composition — deployment ethics as one system</strong></p>
+<p><em>Key point:</em> the three layers must all be present at go-live.</p>
+<ul>
+<li>A deployed model ships with: locally validated evidence matched to its claim; per-subgroup fairness audit with limitations; authorization with defined intended use and oversight design; monitoring and incident-reporting plan.</li>
+<li>Missing any one = operating outside ethical, scientific, and legal warrant simultaneously.</li>
+</ul>
+<p><strong>Synthesis</strong></p>
+<ul>
+<li>Principles: <em>what must hold</em>; bias program: <em>what to measure</em>; regulation: <em>what to prove and document</em>.</li>
+<li>The sharpest lesson of the unit: ethics, evidence, and law fail together, not separately.</li>
+</ul>
+<p><strong>Q2. Design a responsible deployment and governance plan for a hospital-wide AI early-warning system, covering local validation, monitoring, oversight, and accountability.</strong></p>
+<p><em>Key point — trust is operational: earned by validation, preserved by monitoring, governed by named people.</em></p>
+<p><strong>A. Pre-deployment evidence</strong></p>
+<p><em>Key point:</em> prove it works <em>here</em>, for <em>this claim</em>.</p>
+<ul>
+<li>Regulatory position: classify (SaMD triage vs diagnostic); confirm authorization matches intended use (Chapter 32).</li>
+<li>Local validation on this hospital&#39;s data: AUROC/AUPRC, calibration at candidate thresholds, per-subgroup metrics (Chapter 31 audit).</li>
+<li>Threshold selection by clinical cost with the governance committee, documenting the ethical trade-off.</li>
+<li>Model card: provenance, evaluation, operating point, limitations, update history.</li>
+</ul>
+<p><strong>B. Staged rollout</strong></p>
+<p><em>Key point:</em> silent first, narrow second, expand only on criteria.</p>
+<ul>
+<li>Shadow mode: run silently; compare to actual outcomes; test workflow fit.</li>
+<li>Pilot one unit with predefined success criteria (alert acceptance, timeliness, no outcome degradation).</li>
+<li>Incremental expansion with a rollback plan at every stage; train clinicians on what the score means and the escalation pathway.</li>
+</ul>
+<p><strong>C. Monitoring</strong></p>
+<p><em>Key point:</em> drift is not uniform — watch inputs, outcomes, and equity.</p>
+<ul>
+<li>Data drift: distribution tests on features (new analyzers, EHR upgrades, referral shifts).</li>
+<li>Concept drift: outcome-linked performance on prospectively reviewed alert samples.</li>
+<li>Equity dashboards: per-subgroup performance reviewed monthly.</li>
+<li>Incident reporting: a defined harm channel feeding pharmacovigilance-style review and regulatory vigilance.</li>
+</ul>
+<p><strong>D. Oversight and interface design</strong></p>
+<p><em>Key point:</em> apply the five rights; keep human checking alive.</p>
+<ul>
+<li>Right information (score + attributions + similar cases + limitations), person, format, channel, time (Chapter 3).</li>
+<li>Anti-automation-bias safeguards: uncertainty display, mandatory confirmation for high-stakes actions, periodic challenge audits of agreement rates.</li>
+</ul>
+<p><strong>E. Governance and accountability</strong></p>
+<p><em>Key point:</em> close the accountability gap with process, defined before go-live.</p>
+<ul>
+<li>Standing AI committee (clinical, data science, informatics, ethics, legal) owns go/no-go, thresholds, retirement.</li>
+<li>Reproducibility: every decision traceable to model version, data snapshot, code commit.</li>
+<li>Vendor contracts define update/defect/monitoring duties; clinical accountability stays with the treating team.</li>
+</ul>
+<p><strong>F. Retirement</strong></p>
+<p><em>Key point:</em> retire with the same formality as deployment.</p>
+<ul>
+<li>Trigger on unrecoverable drift, care-process change, or a better-validated replacement.</li>
+</ul>
+<p><strong>Synthesis</strong></p>
+<ul>
+<li>The plan&#39;s principle: earned by validation, preserved by monitoring, governed by people whose names are on the decision.</li>
+<li>Governance is continuous — every stage has an owner and a document.</li>
+</ul>
+<p><strong>Q3. Explain federated learning and privacy-preserving machine learning in healthcare, and discuss future directions of AI in medicine.</strong></p>
+<p><em>Key point — federation solves data movement, trials solve evidence, governance solves trust; the future is the maturing of that triad.</em></p>
+<p><strong>A. Why federation</strong></p>
+<p><em>Key point:</em> healthcare data cannot move; models can.</p>
+<ul>
+<li>HIPAA/GDPR constraints, institutional ownership, breach risk vs the need for multi-institution diversity and rare-disease pooling.</li>
+</ul>
+<p><strong>B. The FedAvg loop</strong></p>
+<p><em>Key point:</em> only parameters travel.</p>
+<ul>
+<li>Server distributes global model → sites train locally → return updates → weighted aggregation → iterate to convergence; per-site validation before deployment under Chapter 33 governance.</li>
+</ul>
+<p><strong>C. Settings and challenges</strong></p>
+<p><em>Key point:</em> non-IID defines healthcare federation.</p>
+<ul>
+<li>Cross-silo (few reliable hospitals — the standard) vs cross-device (many unreliable endpoints).</li>
+<li>Non-IID remedies: personalized layers, feature alignment, robust aggregation; straggler tolerance; evaluation honesty — per-site results, not pooled averages.</li>
+</ul>
+<p><strong>D. The privacy-preserving stack</strong></p>
+<p><em>Key point:</em> federation alone is not privacy.</p>
+<ul>
+<li>Attacks: gradient inversion reconstructs inputs; membership inference tests training membership.</li>
+<li>Defenses: secure aggregation (server sees sums only); differential privacy (noise bounds any patient&#39;s influence, budget ε); pipeline controls — pseudonymization, audit logs, governance.</li>
+<li>Honest claim: data minimization with bounded, audited leakage.</li>
+</ul>
+<p><strong>E. Future directions</strong></p>
+<p><em>Key point:</em> each direction raises a governance demand.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Direction</th>
+<th>Governance demand</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Foundation models (multimodal)</td>
+<td>validation, bias, regulation at scale</td>
+</tr>
+<tr>
+<td>Ambient documentation agents</td>
+<td>accuracy, PHI handling, note-truth drift</td>
+</tr>
+<tr>
+<td>Agentic decision support</td>
+<td>autonomy/oversight at new intensity</td>
+</tr>
+<tr>
+<td>Continuous personalized models</td>
+<td>individual baselines need monitoring</td>
+</tr>
+<tr>
+<td>Federated scale-up</td>
+<td>cross-institution governance as default</td>
+</tr>
+<tr>
+<td>Regulatory maturation</td>
+<td>PCCP-style oversight for continuously learning systems</td>
+</tr>
+<tr>
+<td>Evidence maturation</td>
+<td>RCTs with endpoint–claim match (colonoscopy CADe; MASAI)</td>
+</tr>
+</tbody></table></div>
+<p><strong>F. Synthesis</strong></p>
+<ul>
+<li>Federation and privacy-preserving ML solve the <em>data movement</em> problem; trials solve the <em>evidence</em> problem; governance solves the <em>trust</em> problem.</li>
+<li>The future is not one breakthrough — it is more institutions learning together without moving data, stronger prospective evidence for what helps, and governance that keeps every deployed model worthy of the trust placed in it.</li>
+</ul>
+
+</section>
+          </div>
+        </div>
+        <aside class="chapter-rail">
+          <div class="chapter-rail__label">On this page</div>
+          <ul class="chapter-rail__toc"><li><a href="#s-d-1-unit-i-2-mark-questions-t1-recall">D.1 Unit I — 2-Mark Questions (T1 · recall)</a></li><li><a href="#s-d-2-unit-i-3-mark-questions-t2-application">D.2 Unit I — 3-Mark Questions (T2 · application)</a></li><li><a href="#s-d-3-unit-i-5-mark-questions-t3-structured-explanation">D.3 Unit I — 5-Mark Questions (T3 · structured explanation)</a></li><li><a href="#s-d-4-unit-i-10-mark-questions-t3-integrated-essay-design">D.4 Unit I — 10-Mark Questions (T3 · integrated essay/design)</a></li><li><a href="#s-d-5-unit-ii-2-mark-questions-t1-recall">D.5 Unit II — 2-Mark Questions (T1 · recall)</a></li><li><a href="#s-d-6-unit-ii-3-mark-questions-t2-application">D.6 Unit II — 3-Mark Questions (T2 · application)</a></li><li><a href="#s-d-7-unit-ii-5-mark-questions-t3-structured-explanation">D.7 Unit II — 5-Mark Questions (T3 · structured explanation)</a></li><li><a href="#s-d-8-unit-ii-10-mark-questions-t3-integrated-essay-design">D.8 Unit II — 10-Mark Questions (T3 · integrated essay/design)</a></li><li><a href="#s-d-9-unit-iii-2-mark-questions-t1-recall">D.9 Unit III — 2-Mark Questions (T1 · recall)</a></li><li><a href="#s-d-10-unit-iii-3-mark-questions-t2-application">D.10 Unit III — 3-Mark Questions (T2 · application)</a></li><li><a href="#s-d-11-unit-iii-5-mark-questions-t3-structured-explanation">D.11 Unit III — 5-Mark Questions (T3 · structured explanation)</a></li><li><a href="#s-d-12-unit-iii-10-mark-questions-t3-integrated-essay-design">D.12 Unit III — 10-Mark Questions (T3 · integrated essay/design)</a></li><li><a href="#s-d-13-unit-iv-2-mark-questions-t1-recall">D.13 Unit IV — 2-Mark Questions (T1 · recall)</a></li><li><a href="#s-d-14-unit-iv-3-mark-questions-t2-application">D.14 Unit IV — 3-Mark Questions (T2 · application)</a></li><li><a href="#s-d-15-unit-iv-5-mark-questions-t3-structured-explanation">D.15 Unit IV — 5-Mark Questions (T3 · structured explanation)</a></li><li><a href="#s-d-16-unit-iv-10-mark-questions-t3-integrated-essay-design">D.16 Unit IV — 10-Mark Questions (T3 · integrated essay/design)</a></li><li><a href="#s-d-17-unit-v-2-mark-questions-t1-recall">D.17 Unit V — 2-Mark Questions (T1 · recall)</a></li><li><a href="#s-d-18-unit-v-3-mark-questions-t2-application">D.18 Unit V — 3-Mark Questions (T2 · application)</a></li><li><a href="#s-d-19-unit-v-5-mark-questions-t3-structured-explanation">D.19 Unit V — 5-Mark Questions (T3 · structured explanation)</a></li><li><a href="#s-d-20-unit-v-10-mark-questions-t3-integrated-essay-design">D.20 Unit V — 10-Mark Questions (T3 · integrated essay/design)</a></li></ul>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><span class="brand__mark">HEALTH<span>/</span>CARE&nbsp;AI</span></a>
+          <p>Healthcare AI (23A133403c) — from the clinical data ecosystem to the ethics and regulation that decide whether a model reaches a patient.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Read</h4>
+          <a href="contents.html">Contents</a>
+          <a href="read/ch-01.html">Chapter 1</a>
+          <a href="reading.html">Reading list</a>
+          <a href="question-bank.html">Question bank</a>
+        </div>
+        <div class="footer-col">
+          <h4>Practice</h4>
+          <a href="labs.html">Lab manual</a>
+          <a href="glossary.html">Glossary</a>
+          <a href="contents.html#unit-3">ML &amp; deep learning</a>
+          <a href="contents.html#unit-5">Ethics &amp; future</a>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="index.html#preface">Preface</a>
+          <a href="index.html#colophon">Colophon</a>
+          <a href="index.html#reading-paths">Reading paths</a>
+          <a href="index.html#units">Units</a>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>First edition · 2026 · Static site · Progress stays in your browser</span>
+        <span>Design language inspired by <a href="https://aiengineeringfromscratch.com/" rel="noopener">AI Engineering from Scratch</a> (MIT)</span>
+      </div>
+    </div>
+  </footer>
+  <div class="cp" id="cmdPalette" role="dialog" aria-modal="true" aria-label="Search the textbook" aria-hidden="true">
+    <div class="cp__panel">
+      <div class="cp__head">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+        <input class="cp__input" id="cpInput" type="text" placeholder="Search chapters, sections, glossary, labs…" autocomplete="off" spellcheck="false" aria-controls="cpResults" aria-expanded="true">
+        <span class="cp__esc">ESC</span>
+        <button class="icon-btn cp__close" type="button" aria-label="Close search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+        </button>
+      </div>
+      <div class="cp__body" id="cpResults" role="listbox" aria-label="Search results"></div>
+      <div class="cp__foot">
+        <span id="cpSummary">Search 36 chapters, 200+ sections, glossary, labs, and the question bank.</span>
+        <span><kbd>↑</kbd> <kbd>↓</kbd> to move · <kbd>enter</kbd> to open · <kbd>esc</kbd> to close</span>
+      </div>
+    </div>
+  </div>
+  
+  <script src="assets/search-index.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

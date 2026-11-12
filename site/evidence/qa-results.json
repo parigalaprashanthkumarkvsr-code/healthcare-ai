@@ -1,0 +1,117 @@
+{
+  "results": [
+    {
+      "name": "index loads",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "index hero title",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "theme switch + persist",
+      "pass": true,
+      "detail": "dark -> dark|dark"
+    },
+    {
+      "name": "cmd-K palette opens + searches",
+      "pass": true,
+      "detail": "hits=14"
+    },
+    {
+      "name": "triage drill interaction",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "carousel advance",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "unit modal opens + esc closes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "copy citation button",
+      "pass": true,
+      "detail": "clicked (clipboard requires permission; no error thrown)"
+    },
+    {
+      "name": "chapter 1 renders",
+      "pass": true,
+      "detail": "Foundations of Healthcare AI: Definition, Evolution, Scope"
+    },
+    {
+      "name": "inline figure embedded in ch-01",
+      "pass": true,
+      "detail": "count=1"
+    },
+    {
+      "name": "progress persists across reload",
+      "pass": true,
+      "detail": "{\"read\":{\"ch-01\":1794393715154},\"updatedAt\":1794393715154}"
+    },
+    {
+      "name": "next-chapter nav present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "contents lists 36 chapters",
+      "pass": true,
+      "detail": "count=36"
+    },
+    {
+      "name": "glossary renders entries",
+      "pass": true,
+      "detail": "count=113"
+    },
+    {
+      "name": "question bank D.1–D.20 sections",
+      "pass": true,
+      "detail": "count=20"
+    },
+    {
+      "name": "labs page lists 8 labs",
+      "pass": true,
+      "detail": "count=8"
+    },
+    {
+      "name": "1024 layout renders",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile nav opens",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "no horizontal overflow (390)",
+      "pass": true,
+      "detail": "overflow=0px"
+    },
+    {
+      "name": "ch-19 figure renders on mobile",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "zero console errors across 13 pages",
+      "pass": true,
+      "detail": "clean"
+    },
+    {
+      "name": "figure page is script-free",
+      "pass": true,
+      "detail": "scripts=0"
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "viewportChecks": true
+}

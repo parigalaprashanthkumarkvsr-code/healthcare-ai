@@ -1,0 +1,22 @@
+{
+  "name": "healthcare-ai-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Healthcare AI textbook site generated from Markdown",
+  "scripts": {
+    "build": "node build.js",
+    "diagrams": "python3 diagrams/build_diagrams.py",
+    "serve": "python3 -m http.server 8777 --bind 127.0.0.1"
+  },
+  "keywords": [
+    "textbook",
+    "course",
+    "static-site"
+  ],
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "dependencies": {
+    "highlight.js": "^11.12.0",
+    "marked": "^18.2.0"
+  }
+}

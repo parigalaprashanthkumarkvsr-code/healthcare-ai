@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIG_005 · The federated learning loop — Healthcare AI</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=VT323&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:var(--dg-paper);color:var(--dg-ink);}
+  .wrap{max-width:1240px;margin:0 auto;padding:48px 24px;}
+  .eyebrow{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--dg-accent);}
+  h1{font-family:'VT323',monospace;font-weight:400;font-size:clamp(40px,5vw,58px);line-height:1.05;margin:10px 0 8px;}
+  .cap{font-family:'Source Serif 4',Georgia,serif;font-size:16px;color:var(--dg-mute);max-width:62ch;margin:0;}
+  .plate{border:1px solid var(--dg-rule);margin-top:30px;background:var(--dg-paper);overflow-x:auto;}
+  .plate svg{display:block;width:100%;min-width:1120px;height:auto;}
+  .foot{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dg-mute);margin-top:18px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Healthcare AI · FIG_005</div>
+  <h1>The federated learning loop</h1>
+  <p class="cap">Data never leaves each hospital; only model updates travel, are securely aggregated, and return.</p>
+  <div class="plate">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 640" role="img" aria-labelledby="federated-loop-title federated-loop-desc">
+  <title id="federated-loop-title">The federated learning loop</title>
+  <desc id="federated-loop-desc">Hospitals train locally and share only model updates, which are securely aggregated into a new global model each round.</desc>
+  <style>
+      :root{--dg-paper:#fafaf5;--dg-surface:#f3f1e8;--dg-ink:#1a1a1a;--dg-soft:#4a4a4a;--dg-mute:#6f6f68;--dg-rule:#d9d6c8;--dg-accent:#3553ff;--dg-tint:rgba(53,83,255,0.10);}
+      :root[data-theme="dark"]{--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}
+      @media (prefers-color-scheme: dark){:root:not([data-theme="light"]):not([data-theme="dark"]){--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}}
+
+      .dg-nm{font-family:'Source Serif 4',Georgia,serif;font-weight:600;}
+      .dg-it{font-family:'Source Serif 4',Georgia,serif;font-style:italic;}
+      .dg-mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+    </style>
+  <defs>
+    <marker id="federated-loop-arw" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-mute)"/></marker>
+    <marker id="federated-loop-acc" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-accent)"/></marker>
+  </defs>
+  <rect width="1120" height="640" fill="var(--dg-paper)"/>
+<rect x="460" y="60" width="200" height="84" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-nm" x="560.0" y="90" font-size="16" text-anchor="middle" fill="var(--dg-ink)">DISTRIBUTE</text>
+<text class="dg-mono" x="560.0" y="114" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">server → global model</text>
+
+<rect x="800" y="250" width="200" height="84" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-nm" x="900.0" y="280" font-size="16" text-anchor="middle" fill="var(--dg-ink)">TRAIN LOCALLY</text>
+<text class="dg-mono" x="900.0" y="304" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">each hospital</text>
+<text class="dg-mono" x="900.0" y="320" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">data never moves</text>
+
+<rect x="640" y="440" width="200" height="84" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-nm" x="740.0" y="470" font-size="16" text-anchor="middle" fill="var(--dg-ink)">SEND UPDATES</text>
+<text class="dg-mono" x="740.0" y="494" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">weights only</text>
+<text class="dg-mono" x="740.0" y="510" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">no records</text>
+
+<rect x="280" y="440" width="200" height="84" rx="6" fill="var(--dg-tint)" stroke="var(--dg-accent)" stroke-width="1.2"/>
+<text class="dg-nm" x="380.0" y="470" font-size="16" text-anchor="middle" fill="var(--dg-ink)">AGGREGATE</text>
+<text class="dg-mono" x="380.0" y="494" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">secure sum of updates</text>
+
+<rect x="120" y="250" width="200" height="84" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-nm" x="220.0" y="280" font-size="16" text-anchor="middle" fill="var(--dg-ink)">NEW GLOBAL</text>
+<text class="dg-mono" x="220.0" y="304" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">weighted average</text>
+<text class="dg-mono" x="220.0" y="320" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">FedAvg</text>
+
+<path d="M660 102 H892 A8 8 0 0 1 900 110 V242" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#federated-loop-arw)"/>
+
+<path d="M900 334 V378 A8 8 0 0 1 892 386 H748 A8 8 0 0 0 740 394 V432" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#federated-loop-arw)"/>
+
+<path d="M640 482 H488" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#federated-loop-arw)"/>
+
+<path d="M280 482 H228 A8 8 0 0 1 220 474 V342" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#federated-loop-arw)"/>
+
+<path d="M220 250 V110 A8 8 0 0 1 228 102 H452" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#federated-loop-arw)"/>
+
+<text class="dg-it" x="560" y="296" font-size="15" text-anchor="middle" fill="var(--dg-accent)">patient data never leaves the site —</text>
+<text class="dg-it" x="560" y="320" font-size="15" text-anchor="middle" fill="var(--dg-accent)">only model updates travel.</text>
+<text class="dg-mono" x="560" y="580" font-size="10" letter-spacing="0.06em" text-anchor="middle" fill="var(--dg-mute)">STANDING CAVEATS: NON-IID SITES · GRADIENT-INVERSION ATTACKS · DIFFERENTIAL PRIVACY BUDGET ε</text>
+</svg>
+  </div>
+  <div class="foot">Healthcare AI (23A133403c) · First edition · Chapter 35</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 19. Evaluation Metrics: Sensitivity, Specificity, AUC-ROC, Precision, F1 — Healthcare AI</title>
+  <meta name="description" content="Define the confusion matrix and derive all core metrics from it.">
+  <meta name="color-scheme" content="light dark">
+  <script>
+  (function(){try{var t=localStorage.getItem('healthai:theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  
+</head>
+<body data-page="chapter" data-chapter="ch-19">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="banner" id="siteBanner">
+    <div class="banner__inner">
+      <strong>First edition · 2026</strong>
+      <span><span class="banner__lead">Five units, thirty-six chapters, a full question bank with model answers.</span> <a href="../index.html#preface">Read the preface</a> or <a href="../read/ch-01.html">start with Chapter 1</a>.</span>
+    </div>
+    <button class="banner__close" id="bannerClose" type="button" aria-label="Dismiss the announcement">×</button>
+  </div>
+  <header class="site-header" id="siteHeader">
+    <div class="site-header__inner">
+      <a class="brand" href="../index.html" aria-label="Healthcare AI, home">
+        <span class="brand__mark">HEALTH<span>/</span>CARE&nbsp;AI</span>
+        <span class="brand__tag">A complete<br>textbook</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../contents.html">Contents</a>
+        <a href="../index.html#units">Units</a>
+        <a href="../labs.html">Labs</a>
+        <a href="../glossary.html">Glossary</a>
+        <a href="../reading.html">Reading</a>
+        <a href="../question-bank.html">Questions</a>
+      </nav>
+      <div class="header-tools">
+        <button class="search-trigger" type="button" aria-label="Search the textbook (Command K)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+          <span>Search</span>
+          <kbd>⌘K</kbd>
+        </button>
+        <div class="theme-wrap">
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"></path></svg>
+          </button>
+          <div class="theme-menu" id="themeMenu" role="menu" aria-label="Theme" hidden>
+            <div class="theme-menu__label">Appearance</div>
+            <button type="button" role="menuitemradio" data-mode="system" aria-checked="true">System</button>
+            <button type="button" role="menuitemradio" data-mode="light" aria-checked="false">Light</button>
+            <button type="button" role="menuitemradio" data-mode="dark" aria-checked="false">Dark</button>
+          </div>
+        </div>
+        <a class="btn btn--primary btn--sm header-cta" href="../read/ch-01.html">Start reading</a>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="../contents.html">Contents <span>36 chapters</span></a>
+    <a href="../index.html#units">Units <span>5 units</span></a>
+    <a href="../labs.html">Labs <span>8 exercises</span></a>
+    <a href="../glossary.html">Glossary <span>key terms</span></a>
+    <a href="../reading.html">Reading list <span>appendix C</span></a>
+    <a href="../question-bank.html">Question bank <span>appendix D</span></a>
+    <div class="mobile-nav__tools">
+      <a class="btn btn--primary btn--sm" href="../read/ch-01.html">Start reading</a>
+      <a class="btn btn--ghost btn--sm" href="../contents.html">Open contents</a>
+    </div>
+  </div>
+  <div class="reader-progress" aria-hidden="true"><i id="readerBar"></i></div>
+  <div class="reader-shell">
+    <nav class="reader-nav" aria-label="Book navigation">
+    <div class="reader-nav__label">The textbook</div>
+    <div class="reader-nav__unit">
+        <a href="../contents.html#unit-1">I · Introduction to AI in Healthcare<span>8</span></a>
+        <ul class="reader-nav__chapters">
+          <li><a href="../read/ch-01.html" data-slug="ch-01" class="">
+              <span class="n">01</span><span>Foundations of Healthcare AI: Definition, Evolution, Scope</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-02.html" data-slug="ch-02" class="">
+              <span class="n">02</span><span>Traditional vs AI-Enabled Healthcare Workflows</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-03.html" data-slug="ch-03" class="">
+              <span class="n">03</span><span>Clinical Decision Support Systems (CDSS)</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-04.html" data-slug="ch-04" class="">
+              <span class="n">04</span><span>The Medical Data Ecosystem</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-05.html" data-slug="ch-05" class="">
+              <span class="n">05</span><span>EHRs vs Paper-Based Records</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-06.html" data-slug="ch-06" class="">
+              <span class="n">06</span><span>Specialty Applications: Radiology, Pathology, Oncology, Cardiology</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-07.html" data-slug="ch-07" class="">
+              <span class="n">07</span><span>Diagnosis, Prognosis, and Patient Monitoring</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-08.html" data-slug="ch-08" class="">
+              <span class="n">08</span><span>Telemedicine and Deployment Challenges</span><span class="check"></span>
+            </a></li>
+        </ul>
+      </div><div class="reader-nav__unit">
+        <a href="../contents.html#unit-2">II · Data Preprocessing and Feature Engineering in Clinical Datasets<span>6</span></a>
+        <ul class="reader-nav__chapters">
+          <li><a href="../read/ch-09.html" data-slug="ch-09" class="">
+              <span class="n">09</span><span>Clinical Data Cleaning, Normalization, and Standardization</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-10.html" data-slug="ch-10" class="">
+              <span class="n">10</span><span>Missing Values, Outliers, and Collection Bias</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-11.html" data-slug="ch-11" class="">
+              <span class="n">11</span><span>Feature Engineering for EHR Data</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-12.html" data-slug="ch-12" class="">
+              <span class="n">12</span><span>Physiological Time-Series Features and Dimensionality Reduction</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-13.html" data-slug="ch-13" class="">
+              <span class="n">13</span><span>Text Mining and NLP for Clinical Notes</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-14.html" data-slug="ch-14" class="">
+              <span class="n">14</span><span>ICD and CPT Coding Systems</span><span class="check"></span>
+            </a></li>
+        </ul>
+      </div><div class="reader-nav__unit">
+        <a href="../contents.html#unit-3">III · Machine Learning &amp; Deep Learning for Healthcare Analytics<span>8</span></a>
+        <ul class="reader-nav__chapters">
+          <li><a href="../read/ch-15.html" data-slug="ch-15" class="">
+              <span class="n">15</span><span>Supervised Learning for Risk Prediction and Diagnostic Classification</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-16.html" data-slug="ch-16" class="">
+              <span class="n">16</span><span>Unsupervised Learning: Stratification, Phenotyping, Anomaly Detection</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-17.html" data-slug="ch-17" class="">
+              <span class="n">17</span><span>CNNs and Transfer Learning for Medical Imaging</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-18.html" data-slug="ch-18" class="">
+              <span class="n">18</span><span>RNNs/LSTMs for Clinical Time Series</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-19.html" data-slug="ch-19" class="current" aria-current="page">
+              <span class="n">19</span><span>Evaluation Metrics: Sensitivity, Specificity, AUC-ROC, Precision, F1</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-20.html" data-slug="ch-20" class="">
+              <span class="n">20</span><span>Imbalanced Healthcare Datasets: Rare Disease Detection</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-21.html" data-slug="ch-21" class="">
+              <span class="n">21</span><span>Explainable AI: LIME and SHAP</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-22.html" data-slug="ch-22" class="">
+              <span class="n">22</span><span>Privacy, Anonymization, and HIPAA</span><span class="check"></span>
+            </a></li>
+        </ul>
+      </div><div class="reader-nav__unit">
+        <a href="../contents.html#unit-4">IV · Specialized AI Applications &amp; Clinical Implementation<span>7</span></a>
+        <ul class="reader-nav__chapters">
+          <li><a href="../read/ch-23.html" data-slug="ch-23" class="">
+              <span class="n">23</span><span>AI in Disease Diagnosis: Diabetes, Cancer, Heart Disease</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-24.html" data-slug="ch-24" class="">
+              <span class="n">24</span><span>Multi-Modal AI Systems</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-25.html" data-slug="ch-25" class="">
+              <span class="n">25</span><span>Advanced Medical Image Analysis: Detection and Segmentation</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-26.html" data-slug="ch-26" class="">
+              <span class="n">26</span><span>Predictive Analytics in Critical Care (ICU)</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-27.html" data-slug="ch-27" class="">
+              <span class="n">27</span><span>Genomics, Pharmacogenomics, and Personalized Medicine</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-28.html" data-slug="ch-28" class="">
+              <span class="n">28</span><span>AI-Driven Drug Discovery and Repurposing</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-29.html" data-slug="ch-29" class="">
+              <span class="n">29</span><span>Digital Health: Chatbots, Virtual Assistants, IoT, and Wearables</span><span class="check"></span>
+            </a></li>
+        </ul>
+      </div><div class="reader-nav__unit">
+        <a href="../contents.html#unit-5">V · Ethics, Governance &amp; Regulatory Landscape<span>7</span></a>
+        <ul class="reader-nav__chapters">
+          <li><a href="../read/ch-30.html" data-slug="ch-30" class="">
+              <span class="n">30</span><span>Bioethical Principles and Ethical Frameworks for Healthcare AI</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-31.html" data-slug="ch-31" class="">
+              <span class="n">31</span><span>Bias, Fairness, and Health Equity</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-32.html" data-slug="ch-32" class="">
+              <span class="n">32</span><span>Regulatory Landscape: FDA, CE Marking, and SaMD</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-33.html" data-slug="ch-33" class="">
+              <span class="n">33</span><span>Responsible Deployment and Governance</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-34.html" data-slug="ch-34" class="">
+              <span class="n">34</span><span>Explainable AI and Building Clinical Trust</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-35.html" data-slug="ch-35" class="">
+              <span class="n">35</span><span>Federated Learning and Privacy-Preserving AI</span><span class="check"></span>
+            </a></li><li><a href="../read/ch-36.html" data-slug="ch-36" class="">
+              <span class="n">36</span><span>Clinical Validation, Trials, and the Future of Healthcare AI</span><span class="check"></span>
+            </a></li>
+        </ul>
+      </div>
+    <div class="reader-nav__toc">
+      <div class="reader-nav__label">Reference</div>
+      <ul class="reader-nav__chapters">
+        <li><a href="../glossary.html"><span class="n">A</span><span>Glossary</span><span></span></a></li>
+        <li><a href="../labs.html"><span class="n">B</span><span>Lab manual</span><span></span></a></li>
+        <li><a href="../reading.html"><span class="n">C</span><span>Further reading</span><span></span></a></li>
+        <li><a href="../question-bank.html"><span class="n">D</span><span>Question bank</span><span></span></a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="chapter" id="main" data-chapter="ch-19">
+      <header class="chapter-head">
+        <div class="chapter-head__meta">
+          <span><b>Unit III</b></span><span>Chapter 19</span><span>2 min read</span><span>6 sections</span>
+        </div>
+        <h1>Evaluation Metrics: Sensitivity, Specificity, AUC-ROC, Precision, F1</h1>
+        <p class="chapter-head__dek">Define the confusion matrix and derive all core metrics from it.</p>
+        <div class="chapter-head__foot">
+          <div class="chapter-head__stats"><span><b>6</b> sections</span><span><b>2</b> min</span><span><b>Unit III</b></span></div>
+          <button class="btn btn--sm" type="button" data-read-toggle="ch-19" aria-pressed="false">Mark chapter read</button>
+        </div>
+      </header>
+      <div class="chapter-body">
+        <p>In medicine, the metrics <em>are</em> the claim. This chapter defines them precisely and shows which one answers which clinical question.</p>
+
+        <section class="chapter-section chapter-section--brief" id="s-19-1" data-section="19.1 Chapter objectives"><h2><span class="sec-num">19.1</span>Chapter objectives</h2>
+<ol>
+<li>Define the confusion matrix and derive all core metrics from it.</li>
+<li>Choose metrics by clinical question and prevalence.</li>
+<li>Read an ROC and PR curve correctly, including the base-rate trap.</li>
+</ol>
+</section>
+<section class="chapter-section" id="s-19-2" data-section="19.2 The confusion matrix and its metrics"><h2><span class="sec-num">19.2</span>The confusion matrix and its metrics</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>Predicted positive</th>
+<th>Predicted negative</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Actually positive</strong></td>
+<td>TP</td>
+<td>FN</td>
+</tr>
+<tr>
+<td><strong>Actually negative</strong></td>
+<td>FP</td>
+<td>TN</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li><strong>Sensitivity (recall, TPR)</strong> = TP/(TP+FN) — of the truly diseased, how many did we catch? The metric when <em>missing disease</em> is the dominant cost (screening).</li>
+<li><strong>Specificity (TNR)</strong> = TN/(TN+FP) — of the truly healthy, how many were correctly cleared?</li>
+<li><strong>Precision (PPV)</strong> = TP/(TP+FP) — of those we flagged, how many were real? The metric when <em>follow-up burden</em> matters (low-prevalence screening).</li>
+<li><strong>NPV</strong> = TN/(TN+FN) — how reliable is a negative result?</li>
+<li><strong>F1</strong> = harmonic mean of precision and recall — a single balanced number (arbitrary weighting; report with the pair).</li>
+<li><strong>Accuracy</strong> = (TP+TN)/N — misleading under imbalance (rare disease ⇒ &quot;all negative&quot; scores high).</li>
+</ul>
+</section>
+<section class="chapter-section" id="s-19-3" data-section="19.3 Thresholds, ROC, and PR curves"><h2><span class="sec-num">19.3</span>Thresholds, ROC, and PR curves</h2>
+<p>Metrics above depend on a threshold; curves characterize the <em>whole range</em>. <strong>ROC</strong> plots TPR vs FPR (1−specificity) across thresholds; <strong>AUC-ROC</strong> = probability a random positive ranks above a random negative. <strong>PR curves</strong> plot precision vs recall; <strong>AUPRC</strong> is far more informative at low prevalence — the base-rate trap: with 0.1% positives, an ROC-AUC of 0.999 can still mean unacceptable precision. Diagnostic relevance: <strong>likelihood ratios</strong> (sensitivity/1−specificity) update pre-test to post-test probability — the formal bridge between a model score and clinical reasoning.</p>
+
+<figure class="figure" id="fig-evaluation-quadrant">
+    <div class="figure__label"><b>FIG_004</b><span>Choosing metrics by prevalence and cost</span></div>
+    <svg class="diagram-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 680" role="img" aria-labelledby="evaluation-quadrant-title evaluation-quadrant-desc">
+  <title id="evaluation-quadrant-title">Choosing metrics by prevalence and cost</title>
+  <desc id="evaluation-quadrant-desc">The right evaluation metric depends on how rare the disease is and which error the clinic can afford.</desc>
+  <style>
+      :root{--dg-paper:#fafaf5;--dg-surface:#f3f1e8;--dg-ink:#1a1a1a;--dg-soft:#4a4a4a;--dg-mute:#6f6f68;--dg-rule:#d9d6c8;--dg-accent:#3553ff;--dg-tint:rgba(53,83,255,0.10);}
+      :root[data-theme="dark"]{--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}
+      @media (prefers-color-scheme: dark){:root:not([data-theme="light"]):not([data-theme="dark"]){--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}}
+
+      .dg-nm{font-family:'Source Serif 4',Georgia,serif;font-weight:600;}
+      .dg-it{font-family:'Source Serif 4',Georgia,serif;font-style:italic;}
+      .dg-mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+    </style>
+  <defs>
+    <marker id="evaluation-quadrant-arw" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-mute)"/></marker>
+    <marker id="evaluation-quadrant-acc" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-accent)"/></marker>
+  </defs>
+  <rect width="1120" height="680" fill="var(--dg-paper)"/>
+<path d="M120 560 H1032" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#evaluation-quadrant-arw)"/>
+<path d="M120 560 V108" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#evaluation-quadrant-arw)"/>
+<text class="dg-mono" x="580" y="600" font-size="11" letter-spacing="0.08em" text-anchor="middle" fill="var(--dg-soft)">DISEASE PREVALENCE — COMMON → RARE</text>
+<text class="dg-mono" x="120" y="84" font-size="11" letter-spacing="0.08em" fill="var(--dg-soft)">COST OF A MISS (FALSE NEGATIVE) — LOW → HIGH</text>
+<path d="M580 120 V560" stroke="var(--dg-rule)" stroke-width="1"/>
+<path d="M140 340 H1040" stroke="var(--dg-rule)" stroke-width="1"/>
+<rect x="140" y="120" width="420" height="190" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1.2"/>
+<text class="dg-nm" x="164" y="164" font-size="17" fill="var(--dg-ink)">Catch it — do not miss</text>
+<text class="dg-mono" x="164" y="198" font-size="11" fill="var(--dg-soft)">optimize: sensitivity</text>
+<text class="dg-mono" x="164" y="220" font-size="11" fill="var(--dg-soft)">at a stated specificity floor</text>
+
+<rect x="600" y="120" width="420" height="190" rx="6" fill="var(--dg-tint)" stroke="var(--dg-accent)" stroke-width="1.2"/>
+<text class="dg-nm" x="624" y="164" font-size="17" fill="var(--dg-ink)">Rare + cannot miss</text>
+<text class="dg-mono" x="624" y="198" font-size="11" fill="var(--dg-soft)">optimize: sensitivity + AUPRC</text>
+<text class="dg-mono" x="624" y="220" font-size="11" fill="var(--dg-soft)">report absolute numbers</text>
+
+<rect x="140" y="350" width="420" height="190" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1.2"/>
+<text class="dg-nm" x="164" y="394" font-size="17" fill="var(--dg-ink)">Rule out safely</text>
+<text class="dg-mono" x="164" y="428" font-size="11" fill="var(--dg-soft)">optimize: specificity · NPV</text>
+<text class="dg-mono" x="164" y="450" font-size="11" fill="var(--dg-soft)">protect the healthy</text>
+
+<rect x="600" y="350" width="420" height="190" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1.2"/>
+<text class="dg-nm" x="624" y="394" font-size="17" fill="var(--dg-ink)">Rare + costly follow-up</text>
+<text class="dg-mono" x="624" y="428" font-size="11" fill="var(--dg-soft)">optimize: AUPRC · precision@k</text>
+<text class="dg-mono" x="624" y="450" font-size="11" fill="var(--dg-soft)">the base-rate trap lives here</text>
+
+<text class="dg-mono" x="120" y="640" font-size="11" fill="var(--dg-soft)">ALWAYS ADD: calibration curves · per-subgroup breakdowns · the confusion matrix at the chosen operating point.</text>
+</svg>
+    <figcaption class="figure__caption"><b>Choosing metrics by prevalence and cost.</b> What to optimize depends on how rare the disease is and which error the clinic can afford.</figcaption>
+  </figure></section>
+<section class="chapter-section" id="s-19-4" data-section="19.4 Choosing metrics by clinical question"><h2><span class="sec-num">19.4</span>Choosing metrics by clinical question</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Clinical question</th>
+<th>Metric</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Screening: don&#39;t miss disease</td>
+<td>Sensitivity (at an acceptable specificity floor)</td>
+</tr>
+<tr>
+<td>Avoid unnecessary invasive follow-up</td>
+<td>Precision/PPV</td>
+</tr>
+<tr>
+<td>Rule out safely</td>
+<td>Specificity / NPV</td>
+</tr>
+<tr>
+<td>Rank patients for review</td>
+<td>AUC-ROC, AUPRC</td>
+</tr>
+<tr>
+<td>Automated action on the score</td>
+<td>Calibration (Brier), per-subgroup</td>
+</tr>
+</tbody></table></div>
+<p>Also report the confusion matrix <em>at the clinically chosen operating point</em>, calibration plots, and per-subgroup breakdowns (Unit V). Never report a single number as if it were the whole claim.</p>
+</section>
+<section class="chapter-section chapter-section--terms" id="s-19-5" data-section="19.5 Key terms"><h2><span class="sec-num">19.5</span>Key terms</h2>
+<div class="terms-list"><div class="terms-list__item"><div class="terms-list__term">Sensitivity / Specificity</div><div class="terms-list__def">TPR / TNR.</div></div><div class="terms-list__item"><div class="terms-list__term">PPV / NPV</div><div class="terms-list__def">predictive values; prevalence-dependent.</div></div><div class="terms-list__item"><div class="terms-list__term">AUC-ROC / AUPRC</div><div class="terms-list__def">area under ROC / precision-recall curves.</div></div><div class="terms-list__item"><div class="terms-list__term">Base-rate trap</div><div class="terms-list__def">ROC-AUC flattering a model at low prevalence.</div></div><div class="terms-list__item"><div class="terms-list__term">Operating point</div><div class="terms-list__def">the threshold chosen for deployment by clinical cost.</div></div></div>
+</section>
+<section class="chapter-section chapter-section--review" id="s-19-6" data-section="19.6 Review questions"><h2><span class="sec-num">19.6</span>Review questions</h2>
+<ol class="review-list">
+<li>Derive sensitivity, specificity, PPV, NPV from a 2×2 table with worked numbers.</li>
+<li>Why is AUPRC the better default for rare-disease screening?</li>
+<li>Two models have equal AUROC; one has far better calibration. Which deploys, and why?</li>
+</ol>
+<hr>
+
+</section>
+      </div>
+      <footer class="chapter-foot">
+        <div class="chapter-foot__label">Continue</div>
+        <div class="chapter-foot__cards">
+          <a class="chapter-foot__card" href="ch-18.html" data-prev><small>← Previous</small><span>RNNs/LSTMs for Clinical Time Series</span></a>
+          <a class="chapter-foot__card" href="ch-20.html" data-next><small>Next →</small><span>Imbalanced Healthcare Datasets: Rare Disease Detection</span></a>
+        </div>
+      </footer>
+    </main>
+    <aside class="chapter-rail">
+      <div class="chapter-rail__progress">
+        <strong data-rail-count>0%</strong>
+        <span>Scroll position</span>
+      </div>
+      <div class="chapter-rail__label">On this page</div>
+      <ul class="chapter-rail__toc"><li><a href="#s-19-1">19.1 Chapter objectives</a></li><li><a href="#s-19-2">19.2 The confusion matrix and its metrics</a></li><li><a href="#s-19-3">19.3 Thresholds, ROC, and PR curves</a></li><li><a href="#s-19-4">19.4 Choosing metrics by clinical question</a></li><li><a href="#s-19-5">19.5 Key terms</a></li><li><a href="#s-19-6">19.6 Review questions</a></li></ul>
+      <div class="chapter-rail__label">Navigate</div>
+      <div class="chapter-rail__nav">
+        <a href="ch-18.html" data-prev><small>← Previous</small>RNNs/LSTMs for Clinical Time Series</a>
+        <a href="ch-20.html" data-next><small>Next →</small>Imbalanced Healthcare Datasets: Rare Disease Detection</a>
+        <a href="../contents.html"><small>Reference</small>Full contents</a>
+      </div>
+    </aside>
+  </div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../index.html"><span class="brand__mark">HEALTH<span>/</span>CARE&nbsp;AI</span></a>
+          <p>Healthcare AI (23A133403c) — from the clinical data ecosystem to the ethics and regulation that decide whether a model reaches a patient.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Read</h4>
+          <a href="../contents.html">Contents</a>
+          <a href="../read/ch-01.html">Chapter 1</a>
+          <a href="../reading.html">Reading list</a>
+          <a href="../question-bank.html">Question bank</a>
+        </div>
+        <div class="footer-col">
+          <h4>Practice</h4>
+          <a href="../labs.html">Lab manual</a>
+          <a href="../glossary.html">Glossary</a>
+          <a href="../contents.html#unit-3">ML &amp; deep learning</a>
+          <a href="../contents.html#unit-5">Ethics &amp; future</a>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="../index.html#preface">Preface</a>
+          <a href="../index.html#colophon">Colophon</a>
+          <a href="../index.html#reading-paths">Reading paths</a>
+          <a href="../index.html#units">Units</a>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>First edition · 2026 · Static site · Progress stays in your browser</span>
+        <span>Design language inspired by <a href="https://aiengineeringfromscratch.com/" rel="noopener">AI Engineering from Scratch</a> (MIT)</span>
+      </div>
+    </div>
+  </footer>
+  <div class="cp" id="cmdPalette" role="dialog" aria-modal="true" aria-label="Search the textbook" aria-hidden="true">
+    <div class="cp__panel">
+      <div class="cp__head">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+        <input class="cp__input" id="cpInput" type="text" placeholder="Search chapters, sections, glossary, labs…" autocomplete="off" spellcheck="false" aria-controls="cpResults" aria-expanded="true">
+        <span class="cp__esc">ESC</span>
+        <button class="icon-btn cp__close" type="button" aria-label="Close search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+        </button>
+      </div>
+      <div class="cp__body" id="cpResults" role="listbox" aria-label="Search results"></div>
+      <div class="cp__foot">
+        <span id="cpSummary">Search 36 chapters, 200+ sections, glossary, labs, and the question bank.</span>
+        <span><kbd>↑</kbd> <kbd>↓</kbd> to move · <kbd>enter</kbd> to open · <kbd>esc</kbd> to close</span>
+      </div>
+    </div>
+  </div>
+  
+  <script src="../assets/search-index.js"></script>
+  <script src="../assets/app.js"></script>
+</body>
+</html>

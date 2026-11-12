@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Complete Textbook — Healthcare AI</title>
+  <meta name="description" content="Healthcare AI (23A133403c): from the clinical data ecosystem to the ethics that govern deployment. Five units, thirty-six chapters, eight labs, and a full question bank with model answers.">
+  <meta name="color-scheme" content="light dark">
+  <script>
+  (function(){try{var t=localStorage.getItem('healthai:theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Book","name":"Healthcare AI","alternateName":"Healthcare AI (23A133403c)","bookEdition":"First Edition","datePublished":"2026","numberOfPages":0,"description":"A complete textbook on artificial intelligence in healthcare: five units, thirty-six chapters, eight labs, and a question bank with model answers.","genre":"Health informatics"}</script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="banner" id="siteBanner">
+    <div class="banner__inner">
+      <strong>First edition · 2026</strong>
+      <span><span class="banner__lead">Five units, thirty-six chapters, a full question bank with model answers.</span> <a href="index.html#preface">Read the preface</a> or <a href="read/ch-01.html">start with Chapter 1</a>.</span>
+    </div>
+    <button class="banner__close" id="bannerClose" type="button" aria-label="Dismiss the announcement">×</button>
+  </div>
+  <header class="site-header" id="siteHeader">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="Healthcare AI, home">
+        <span class="brand__mark">HEALTH<span>/</span>CARE&nbsp;AI</span>
+        <span class="brand__tag">A complete<br>textbook</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="contents.html">Contents</a>
+        <a href="index.html#units">Units</a>
+        <a href="labs.html">Labs</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="reading.html">Reading</a>
+        <a href="question-bank.html">Questions</a>
+      </nav>
+      <div class="header-tools">
+        <button class="search-trigger" type="button" aria-label="Search the textbook (Command K)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+          <span>Search</span>
+          <kbd>⌘K</kbd>
+        </button>
+        <div class="theme-wrap">
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"></path></svg>
+          </button>
+          <div class="theme-menu" id="themeMenu" role="menu" aria-label="Theme" hidden>
+            <div class="theme-menu__label">Appearance</div>
+            <button type="button" role="menuitemradio" data-mode="system" aria-checked="true">System</button>
+            <button type="button" role="menuitemradio" data-mode="light" aria-checked="false">Light</button>
+            <button type="button" role="menuitemradio" data-mode="dark" aria-checked="false">Dark</button>
+          </div>
+        </div>
+        <a class="btn btn--primary btn--sm header-cta" href="read/ch-01.html">Start reading</a>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="contents.html">Contents <span>36 chapters</span></a>
+    <a href="index.html#units">Units <span>5 units</span></a>
+    <a href="labs.html">Labs <span>8 exercises</span></a>
+    <a href="glossary.html">Glossary <span>key terms</span></a>
+    <a href="reading.html">Reading list <span>appendix C</span></a>
+    <a href="question-bank.html">Question bank <span>appendix D</span></a>
+    <div class="mobile-nav__tools">
+      <a class="btn btn--primary btn--sm" href="read/ch-01.html">Start reading</a>
+      <a class="btn btn--ghost btn--sm" href="contents.html">Open contents</a>
+    </div>
+  </div>
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <div class="hero__eyebrow eyebrow">Healthcare AI · 23A133403c · A complete textbook · First edition · 2026</div>
+          <h1><span class="line">Healthcare</span><span class="line"><em>AI</em></span></h1>
+          <p class="hero__lede">From the clinical data ecosystem to the ethics that govern deployment. A structured, practical textbook in <strong>five units, thirty-six chapters</strong>, eight labs, and a full question bank with model answers.</p>
+          <div class="hero__meta">
+            <span>5 units</span><span>36 chapters</span><span>8 labs</span><span>107 glossary entries</span>
+          </div>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="read/ch-01.html">Start with Chapter 1 →</a>
+            <a class="btn" href="contents.html">Open the contents</a>
+          </div>
+        </div>
+        <aside class="dossier" aria-label="Course dossier">
+          <div class="dossier__head"><span>Course dossier</span><b>v1.0</b></div>
+          <div class="dossier__body">
+            <div class="dossier__terminal">
+              <div><span class="prompt">$</span> cat syllabus.txt</div>
+              <div class="dim">────────────────────────────</div>
+              <div class="row"><span>I · Introduction</span><b>08 ch</b></div>
+              <div class="row"><span>II · Preprocessing</span><b>06 ch</b></div>
+              <div class="row"><span>III · ML &amp; DL</span><b>08 ch</b></div>
+              <div class="row"><span>IV · Applications</span><b>07 ch</b></div>
+              <div class="row"><span>V · Ethics &amp; regulation</span><b>07 ch</b></div>
+              <div class="dim">────────────────────────────</div>
+              <div class="row"><span>labs</span><b>8</b></div>
+              <div class="row"><span>glossary</span><b>107</b></div>
+              <div class="row"><span>progress</span><b><span data-read-count>0</span> / 36</b></div>
+              <span class="bar" data-progress-total="36" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100"><i></i></span>
+            </div>
+          </div>
+          <div class="dossier__foot"><span><span class="dot">●</span> local progress</span><span>first edition / 2026</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--tight" id="triage-section">
+      <div class="container">
+        <div class="section__head section__head--stack">
+          <div class="fig-tag">01 · Triage drill</div>
+          <h2>One case. Three moves.</h2>
+          <p>Clinical AI is a decision discipline before it is a model. Read the case, pick a move, then compare your reasoning with the textbook.</p>
+        </div>
+        <div class="triage" id="triage">
+    <div class="triage__side">
+      <div class="eyebrow">60-second drill</div>
+      <div class="triage__clock" tabindex="-1">04:00</div>
+      <div class="triage__label">Case clock</div>
+      <div class="triage__score">Score <b>0 / 0</b><br><span class="muted">Three cases. One clinician.</span></div>
+    </div>
+    <div class="triage__main">
+      <div class="triage__scenario">CASE / TRIAGE</div>
+      <p class="triage__question"></p>
+      <div class="triage__options"></div>
+      <div class="triage__verdict" aria-live="polite"></div>
+      <button class="btn btn--primary btn--sm triage__next" type="button" hidden>Next case →</button>
+    </div>
+  </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" id="carousel-section">
+      <div class="container">
+        <div class="section__head section__head--stack">
+          <div class="fig-tag">02 · Three plates from the book</div>
+          <h2>The shape of the problem.</h2>
+        </div>
+        <div class="carousel" id="figureCarousel" aria-roledescription="carousel" aria-label="Three figures from the textbook">
+    <div class="carousel__stage">
+      <div class="carousel__plate is-active" data-caption="The clinical data ecosystem. Sources, standards, and infrastructure feed every clinical AI application — and privacy governs every movement." aria-hidden="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 660" role="img" aria-labelledby="clinical-data-ecosystem-carousel-title clinical-data-ecosystem-desc">
+  <title id="clinical-data-ecosystem-carousel-title">The clinical data ecosystem</title>
+  <desc id="clinical-data-ecosystem-carousel-desc">Clinical data sources flow through shared standards and governed infrastructure into decision support and machine learning.</desc>
+  <style>
+      :root{--dg-paper:#fafaf5;--dg-surface:#f3f1e8;--dg-ink:#1a1a1a;--dg-soft:#4a4a4a;--dg-mute:#6f6f68;--dg-rule:#d9d6c8;--dg-accent:#3553ff;--dg-tint:rgba(53,83,255,0.10);}
+      :root[data-theme="dark"]{--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}
+      @media (prefers-color-scheme: dark){:root:not([data-theme="light"]):not([data-theme="dark"]){--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}}
+
+      .dg-nm{font-family:'Source Serif 4',Georgia,serif;font-weight:600;}
+      .dg-it{font-family:'Source Serif 4',Georgia,serif;font-style:italic;}
+      .dg-mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+    </style>
+  <defs>
+    <marker id="clinical-data-ecosystem-carousel-arw" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-mute)"/></marker>
+    <marker id="clinical-data-ecosystem-carousel-acc" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-accent)"/></marker>
+  </defs>
+  <rect width="1120" height="660" fill="var(--dg-paper)"/>
+<text class="dg-mono" x="40" y="58" font-size="10" letter-spacing="0.14em" fill="var(--dg-accent)">01 · SOURCES — WHAT CLINICAL CARE GENERATES</text>
+<rect x="40" y="70" width="188" height="60" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1"/>
+<text class="dg-nm" x="134.0" y="96" font-size="14" text-anchor="middle" fill="var(--dg-ink)">EHR</text>
+<text class="dg-mono" x="134.0" y="116" font-size="10" text-anchor="middle" fill="var(--dg-mute)">FHIR resources</text>
+
+<rect x="248" y="70" width="188" height="60" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1"/>
+<text class="dg-nm" x="342.0" y="96" font-size="14" text-anchor="middle" fill="var(--dg-ink)">IMAGING</text>
+<text class="dg-mono" x="342.0" y="116" font-size="10" text-anchor="middle" fill="var(--dg-mute)">DICOM · PACS</text>
+
+<rect x="456" y="70" width="188" height="60" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1"/>
+<text class="dg-nm" x="550.0" y="96" font-size="14" text-anchor="middle" fill="var(--dg-ink)">SIGNALS</text>
+<text class="dg-mono" x="550.0" y="116" font-size="10" text-anchor="middle" fill="var(--dg-mute)">ECG · EEG · PPG</text>
+
+<rect x="664" y="70" width="188" height="60" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1"/>
+<text class="dg-nm" x="758.0" y="96" font-size="14" text-anchor="middle" fill="var(--dg-ink)">GENOMICS</text>
+<text class="dg-mono" x="758.0" y="116" font-size="10" text-anchor="middle" fill="var(--dg-mute)">FASTQ → VCF</text>
+
+<rect x="872" y="70" width="188" height="60" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1"/>
+<text class="dg-nm" x="966.0" y="96" font-size="14" text-anchor="middle" fill="var(--dg-ink)">NOTES</text>
+<text class="dg-mono" x="966.0" y="116" font-size="10" text-anchor="middle" fill="var(--dg-mute)">free text · NLP</text>
+
+<path d="M540 138 V204" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#clinical-data-ecosystem-carousel-arw)"/>
+<rect x="582" y="166" width="115" height="14" fill="var(--dg-paper)"/>
+<text class="dg-mono" x="640" y="177" font-size="10" letter-spacing="0.06em" text-anchor="middle" fill="var(--dg-soft)">standards apply</text>
+
+<rect x="40" y="212" width="1020" height="64" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-nm" x="64" y="240" font-size="16" fill="var(--dg-ink)">02 · STANDARDS &amp; TERMINOLOGY</text>
+<text class="dg-mono" x="64" y="262" font-size="11" fill="var(--dg-mute)">HL7 v2 · FHIR · DICOM · ICD · SNOMED CT · LOINC · RxNorm</text>
+<path d="M540 284 V328" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#clinical-data-ecosystem-carousel-arw)"/>
+<rect x="566" y="302" width="188" height="14" fill="var(--dg-paper)"/>
+<text class="dg-mono" x="660" y="313" font-size="10" letter-spacing="0.06em" text-anchor="middle" fill="var(--dg-soft)">join on patient identifier</text>
+
+<rect x="40" y="336" width="1020" height="64" rx="6" fill="var(--dg-tint)" stroke="var(--dg-accent)" stroke-width="1.2"/>
+<text class="dg-nm" x="64" y="364" font-size="16" fill="var(--dg-ink)">03 · INFRASTRUCTURE</text>
+<text class="dg-mono" x="64" y="386" font-size="11" fill="var(--dg-mute)">warehouse / lake · de-identification · access governance</text>
+<path d="M540 408 V456" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#clinical-data-ecosystem-carousel-arw)"/>
+
+<rect x="40" y="464" width="1020" height="64" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-nm" x="64" y="492" font-size="16" fill="var(--dg-ink)">04 · CONSUMERS</text>
+<text class="dg-mono" x="64" y="514" font-size="11" fill="var(--dg-mute)">CDSS at the bedside · ML training · population dashboards</text>
+<text class="dg-it" x="40" y="576" font-size="14" fill="var(--dg-soft)">Every movement of the joined data is a compliance decision — HIPAA and GDPR govern each arrow.</text>
+<rect x="40" y="610" width="18" height="12" rx="3" fill="var(--dg-surface)" stroke="var(--dg-rule)"/>
+<text class="dg-mono" x="66" y="620" font-size="10" fill="var(--dg-mute)">data source</text>
+<rect x="178.6" y="610" width="18" height="12" rx="3" fill="var(--dg-surface)" stroke="var(--dg-ink)"/>
+<text class="dg-mono" x="204.6" y="620" font-size="10" fill="var(--dg-mute)">shared layer</text>
+<rect x="323.79999999999995" y="610" width="18" height="12" rx="3" fill="var(--dg-tint)" stroke="var(--dg-accent)"/>
+<text class="dg-mono" x="349.79999999999995" y="620" font-size="10" fill="var(--dg-mute)">governed boundary</text>
+
+</svg></div>
+      <div class="carousel__plate" data-caption="CDSS architecture. Patient data and a knowledge base meet in an inference engine — rule-based or learned — and surface through the interface." aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="cdss-architecture-title cdss-architecture-desc">
+  <title id="cdss-architecture-title">CDSS architecture with an AI engine</title>
+  <desc id="cdss-architecture-desc">Patient data and a knowledge base feed an inference engine whose advice reaches the clinician through the interface layer.</desc>
+  <style>
+      :root{--dg-paper:#fafaf5;--dg-surface:#f3f1e8;--dg-ink:#1a1a1a;--dg-soft:#4a4a4a;--dg-mute:#6f6f68;--dg-rule:#d9d6c8;--dg-accent:#3553ff;--dg-tint:rgba(53,83,255,0.10);}
+      :root[data-theme="dark"]{--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}
+      @media (prefers-color-scheme: dark){:root:not([data-theme="light"]):not([data-theme="dark"]){--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}}
+
+      .dg-nm{font-family:'Source Serif 4',Georgia,serif;font-weight:600;}
+      .dg-it{font-family:'Source Serif 4',Georgia,serif;font-style:italic;}
+      .dg-mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+    </style>
+  <defs>
+    <marker id="cdss-architecture-arw" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-mute)"/></marker>
+    <marker id="cdss-architecture-acc" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-accent)"/></marker>
+  </defs>
+  <rect width="1200" height="560" fill="var(--dg-paper)"/>
+<rect x="50" y="180" width="200" height="110" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-nm" x="150.0" y="210" font-size="16" text-anchor="middle" fill="var(--dg-ink)">PATIENT DATA</text>
+<text class="dg-mono" x="150.0" y="234" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">EHR · labs · images</text>
+<text class="dg-mono" x="150.0" y="250" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">via HL7 / FHIR</text>
+
+<rect x="390" y="180" width="240" height="110" rx="6" fill="var(--dg-tint)" stroke="var(--dg-accent)" stroke-width="1.2"/>
+<text class="dg-nm" x="510.0" y="210" font-size="16" text-anchor="middle" fill="var(--dg-ink)">INFERENCE ENGINE</text>
+<text class="dg-mono" x="510.0" y="234" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">rules · statistics · ML model</text>
+
+<rect x="730" y="180" width="190" height="110" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-nm" x="825.0" y="210" font-size="16" text-anchor="middle" fill="var(--dg-ink)">INTERFACE</text>
+<text class="dg-mono" x="825.0" y="234" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">alerts · order sets</text>
+<text class="dg-mono" x="825.0" y="250" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">dashboards</text>
+
+<rect x="970" y="180" width="180" height="110" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-nm" x="1060.0" y="210" font-size="16" text-anchor="middle" fill="var(--dg-ink)">CLINICIAN</text>
+<text class="dg-mono" x="1060.0" y="234" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">decision · accountability</text>
+
+<rect x="390" y="400" width="240" height="100" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-nm" x="510.0" y="430" font-size="16" text-anchor="middle" fill="var(--dg-ink)">KNOWLEDGE BASE</text>
+<text class="dg-mono" x="510.0" y="454" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">guidelines · drug DB</text>
+<text class="dg-mono" x="510.0" y="470" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">learned parameters</text>
+
+<path d="M250 235 H378" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#cdss-architecture-arw)"/>
+<rect x="253" y="209" width="122" height="14" fill="var(--dg-paper)"/>
+<text class="dg-mono" x="314" y="220" font-size="10" letter-spacing="0.06em" text-anchor="middle" fill="var(--dg-soft)">patient-specific</text>
+
+<path d="M630 235 H718" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#cdss-architecture-arw)"/>
+<rect x="620" y="209" width="108" height="14" fill="var(--dg-paper)"/>
+<text class="dg-mono" x="674" y="220" font-size="10" letter-spacing="0.06em" text-anchor="middle" fill="var(--dg-soft)">score / advice</text>
+
+<path d="M920 235 H958" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#cdss-architecture-arw)"/>
+<rect x="895" y="209" width="89" height="14" fill="var(--dg-paper)"/>
+<text class="dg-mono" x="939" y="220" font-size="10" letter-spacing="0.06em" text-anchor="middle" fill="var(--dg-soft)">five rights</text>
+
+<path d="M470 400 V298" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#cdss-architecture-arw)"/>
+<rect x="386" y="342" width="75" height="14" fill="var(--dg-paper)"/>
+<text class="dg-mono" x="424" y="353" font-size="10" letter-spacing="0.06em" text-anchor="middle" fill="var(--dg-soft)">grounding</text>
+
+<path d="M1060 290 V370 H518 V302" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#cdss-architecture-arw)"/>
+<rect x="739" y="360" width="122" height="14" fill="var(--dg-paper)"/>
+<text class="dg-mono" x="800" y="371" font-size="10" letter-spacing="0.06em" text-anchor="middle" fill="var(--dg-soft)">override · audit</text>
+
+<text class="dg-it" x="50" y="532" font-size="14" fill="var(--dg-soft)">The five rights decide where the advice lands — most CDSS failures are interface failures, not accuracy failures.</text>
+</svg></div>
+      <div class="carousel__plate" data-caption="The federated learning loop. Data never leaves each hospital; only model updates travel, are securely aggregated, and return." aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 640" role="img" aria-labelledby="federated-loop-title federated-loop-desc">
+  <title id="federated-loop-title">The federated learning loop</title>
+  <desc id="federated-loop-desc">Hospitals train locally and share only model updates, which are securely aggregated into a new global model each round.</desc>
+  <style>
+      :root{--dg-paper:#fafaf5;--dg-surface:#f3f1e8;--dg-ink:#1a1a1a;--dg-soft:#4a4a4a;--dg-mute:#6f6f68;--dg-rule:#d9d6c8;--dg-accent:#3553ff;--dg-tint:rgba(53,83,255,0.10);}
+      :root[data-theme="dark"]{--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}
+      @media (prefers-color-scheme: dark){:root:not([data-theme="light"]):not([data-theme="dark"]){--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}}
+
+      .dg-nm{font-family:'Source Serif 4',Georgia,serif;font-weight:600;}
+      .dg-it{font-family:'Source Serif 4',Georgia,serif;font-style:italic;}
+      .dg-mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+    </style>
+  <defs>
+    <marker id="federated-loop-arw" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-mute)"/></marker>
+    <marker id="federated-loop-acc" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-accent)"/></marker>
+  </defs>
+  <rect width="1120" height="640" fill="var(--dg-paper)"/>
+<rect x="460" y="60" width="200" height="84" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-nm" x="560.0" y="90" font-size="16" text-anchor="middle" fill="var(--dg-ink)">DISTRIBUTE</text>
+<text class="dg-mono" x="560.0" y="114" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">server → global model</text>
+
+<rect x="800" y="250" width="200" height="84" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-nm" x="900.0" y="280" font-size="16" text-anchor="middle" fill="var(--dg-ink)">TRAIN LOCALLY</text>
+<text class="dg-mono" x="900.0" y="304" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">each hospital</text>
+<text class="dg-mono" x="900.0" y="320" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">data never moves</text>
+
+<rect x="640" y="440" width="200" height="84" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-nm" x="740.0" y="470" font-size="16" text-anchor="middle" fill="var(--dg-ink)">SEND UPDATES</text>
+<text class="dg-mono" x="740.0" y="494" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">weights only</text>
+<text class="dg-mono" x="740.0" y="510" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">no records</text>
+
+<rect x="280" y="440" width="200" height="84" rx="6" fill="var(--dg-tint)" stroke="var(--dg-accent)" stroke-width="1.2"/>
+<text class="dg-nm" x="380.0" y="470" font-size="16" text-anchor="middle" fill="var(--dg-ink)">AGGREGATE</text>
+<text class="dg-mono" x="380.0" y="494" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">secure sum of updates</text>
+
+<rect x="120" y="250" width="200" height="84" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-nm" x="220.0" y="280" font-size="16" text-anchor="middle" fill="var(--dg-ink)">NEW GLOBAL</text>
+<text class="dg-mono" x="220.0" y="304" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">weighted average</text>
+<text class="dg-mono" x="220.0" y="320" font-size="10" letter-spacing="0.04em" text-anchor="middle" fill="var(--dg-mute)">FedAvg</text>
+
+<path d="M660 102 H892 A8 8 0 0 1 900 110 V242" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#federated-loop-arw)"/>
+
+<path d="M900 334 V378 A8 8 0 0 1 892 386 H748 A8 8 0 0 0 740 394 V432" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#federated-loop-arw)"/>
+
+<path d="M640 482 H488" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#federated-loop-arw)"/>
+
+<path d="M280 482 H228 A8 8 0 0 1 220 474 V342" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#federated-loop-arw)"/>
+
+<path d="M220 250 V110 A8 8 0 0 1 228 102 H452" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#federated-loop-arw)"/>
+
+<text class="dg-it" x="560" y="296" font-size="15" text-anchor="middle" fill="var(--dg-accent)">patient data never leaves the site —</text>
+<text class="dg-it" x="560" y="320" font-size="15" text-anchor="middle" fill="var(--dg-accent)">only model updates travel.</text>
+<text class="dg-mono" x="560" y="580" font-size="10" letter-spacing="0.06em" text-anchor="middle" fill="var(--dg-mute)">STANDING CAVEATS: NON-IID SITES · GRADIENT-INVERSION ATTACKS · DIFFERENTIAL PRIVACY BUDGET ε</text>
+</svg></div>
+    </div>
+    <div class="carousel__bar">
+      <div class="carousel__caption" aria-live="polite"></div>
+      <div class="carousel__controls">
+        <div class="carousel__dots">
+          <button class="carousel__dot is-active" type="button" aria-label="Plate 1" aria-current="true">01</button>
+          <button class="carousel__dot" type="button" aria-label="Plate 2" aria-current="false">02</button>
+          <button class="carousel__dot" type="button" aria-label="Plate 3" aria-current="false">03</button>
+        </div>
+        <button class="carousel__arrow carousel__prev" type="button" aria-label="Previous plate">←</button>
+        <button class="carousel__arrow carousel__next" type="button" aria-label="Next plate">→</button>
+      </div>
+    </div>
+  </div>
+      </div>
+    </section>
+
+    <section class="section" id="preface">
+      <div class="container preface-grid">
+        <div>
+          <div class="fig-tag">03 · Preface</div>
+          <h2 style="font-size:clamp(34px,3.4vw,44px);margin-top:14px;overflow-wrap:break-word;">Predictions with consequences.</h2>
+        </div>
+        <div class="preface-copy">
+          <p class="dropcap">Healthcare is the domain where machine learning meets the highest stakes. A mislabelled image is a wrong X-ray; a mislabelled diagnosis is a missed cancer. <strong>Healthcare AI</strong> is the discipline of applying artificial intelligence, machine learning, and deep learning to clinical data — electronic health records, medical images, genomic sequences, physiological signals, and the unstructured prose of clinical notes — so that diagnosis, prognosis, monitoring, and treatment decisions become measurably better, and so that they remain safe, private, and defensible when they are wrong.</p>
+          <blockquote class="pullquote">“Data richness matters less than data joined to the right question.”<cite>Chapter 4 · The medical data ecosystem</cite></blockquote>
+          <p>The book maps the field in five units: the foundations of AI in medicine and the decision systems it feeds; the preprocessing and feature engineering that decide most projects; the machine learning and deep learning architectures that dominate clinical analytics; the specialized applications at the bedside; and the ethics, regulation, and governance that decide whether any of it is allowed to touch a patient.</p>
+          <div class="stat-strip">
+            <div class="stat-strip__item"><div class="stat-strip__num">05</div><div class="stat-strip__label">Units</div></div>
+            <div class="stat-strip__item"><div class="stat-strip__num">36</div><div class="stat-strip__label">Chapters</div></div>
+            <div class="stat-strip__item"><div class="stat-strip__num">08</div><div class="stat-strip__label">Lab exercises</div></div>
+            <div class="stat-strip__item"><div class="stat-strip__num">107</div><div class="stat-strip__label">Glossary entries</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface" id="reading-paths">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <div class="fig-tag">04 · Reading paths</div>
+            <h2 style="margin-top:14px;">Read it your way.</h2>
+          </div>
+          <p>Three routes through the same book. Every route ends with the lab manual and the question bank.</p>
+        </div>
+        <div class="card-grid"><article class="card path-card">
+      <div class="card__eyebrow">I · II · III · IV · V · LABS</div>
+      <h3>14-week semester</h3>
+      <p>Units I–II in weeks 1–5, Unit III in weeks 6–9, Unit IV in weeks 10–12, Unit V in weeks 13–14; labs alongside Units II–IV.</p>
+      <div class="path-card__route"><span>I</span><span>II</span><span>III</span><span>IV</span><span>V</span><span>LABS</span></div>
+      <a class="card__link" href="#units">Choose a unit</a>
+    </article><article class="card path-card">
+      <div class="card__eyebrow">I · II · III · IV · V</div>
+      <h3>Self-study</h3>
+      <p>Read in order. Units III and IV build directly on the feature-engineering and evaluation discipline of Units I–II.</p>
+      <div class="path-card__route"><span>I</span><span>II</span><span>III</span><span>IV</span><span>V</span></div>
+      <a class="card__link" href="#units">Choose a unit</a>
+    </article><article class="card path-card">
+      <div class="card__eyebrow">KEY TERMS · QB-D · LABS</div>
+      <h3>Exam crash course</h3>
+      <p>Read the key-terms sections of each chapter, then work Appendix D: attempt every model answer from memory before reading it.</p>
+      <div class="path-card__route"><span>KEY TERMS</span><span>QB-D</span><span>LABS</span></div>
+      <a class="card__link" href="#units">Choose a unit</a>
+    </article></div>
+      </div>
+    </section>
+
+    <section class="section" id="frontiers">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <div class="fig-tag">05 · Three frontiers</div>
+            <h2 style="margin-top:14px;">Diagnose. Predict. Govern.</h2>
+          </div>
+          <p>The textbook is organized around three kinds of work. Each one has a different failure mode.</p>
+        </div>
+        <div class="card-grid"><article class="card">
+      <div class="card__num">01</div>
+      <div class="card__eyebrow">Data</div>
+      <h3>Fix the inputs</h3>
+      <p>Cleaning, missing-data mechanisms, EHR and time-series feature engineering, and the leakage discipline that keeps evaluations honest.</p>
+      <a class="card__link" href="contents.html#unit-2">Unit II →</a>
+    </article><article class="card">
+      <div class="card__num">02</div>
+      <div class="card__eyebrow">Models</div>
+      <h3>Learn the pattern</h3>
+      <p>Supervised and unsupervised learning, CNNs and transfer learning, sequence models, and the metrics that survive rare diseases.</p>
+      <a class="card__link" href="contents.html#unit-3">Unit III →</a>
+    </article><article class="card">
+      <div class="card__num">03</div>
+      <div class="card__eyebrow">Governance</div>
+      <h3>Earn the trust</h3>
+      <p>Bias and fairness audits, FDA/CE pathways for SaMD, explainability, federated learning, and the evidence that settles claims.</p>
+      <a class="card__link" href="contents.html#unit-5">Unit V →</a>
+    </article></div>
+      </div>
+    </section>
+
+    <section class="section section--surface" id="units">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <div class="fig-tag">06 · Contents</div>
+            <h2 style="margin-top:14px;">Five units. Thirty-six chapters.</h2>
+          </div>
+          <p>Open a unit to see its chapters, filter the list, and jump straight into the reader. Your progress is stored locally.</p>
+        </div>
+        <div class="units"><button class="unit-row" type="button" data-unit="unit-1" aria-haspopup="dialog">
+      <span class="unit-row__num">I</span>
+      <span class="unit-row__title">Introduction to AI in Healthcare<small>Foundations of AI in medicine, CDSS, the clinical data ecosystem, specialty applications, telemedicine</small></span>
+      <span class="unit-row__count">8 chapters</span>
+      <span class="unit-row__progress">Progress
+        <span class="unit-row__bar" data-progress-total="36" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100"><i></i></span>
+      </span>
+      <span class="unit-row__arrow" aria-hidden="true">→</span>
+    </button>
+<button class="unit-row" type="button" data-unit="unit-2" aria-haspopup="dialog">
+      <span class="unit-row__num">II</span>
+      <span class="unit-row__title">Data Preprocessing and Feature Engineering in Clinical Datasets<small>Cleaning, missing data and bias, EHR and time-series features, dimensionality reduction, clinical NLP, ICD/CPT</small></span>
+      <span class="unit-row__count">6 chapters</span>
+      <span class="unit-row__progress">Progress
+        <span class="unit-row__bar" data-progress-total="36" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100"><i></i></span>
+      </span>
+      <span class="unit-row__arrow" aria-hidden="true">→</span>
+    </button>
+<button class="unit-row" type="button" data-unit="unit-3" aria-haspopup="dialog">
+      <span class="unit-row__num">III</span>
+      <span class="unit-row__title">Machine Learning &amp; Deep Learning for Healthcare Analytics<small>Supervised and unsupervised learning, CNNs and transfer learning, RNNs/LSTMs, evaluation metrics, imbalance, LIME/SHAP, HIPAA</small></span>
+      <span class="unit-row__count">8 chapters</span>
+      <span class="unit-row__progress">Progress
+        <span class="unit-row__bar" data-progress-total="36" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100"><i></i></span>
+      </span>
+      <span class="unit-row__arrow" aria-hidden="true">→</span>
+    </button>
+<button class="unit-row" type="button" data-unit="unit-4" aria-haspopup="dialog">
+      <span class="unit-row__num">IV</span>
+      <span class="unit-row__title">Specialized AI Applications &amp; Clinical Implementation<small>Disease diagnosis, multi-modal systems, segmentation, ICU analytics, genomics, drug discovery, digital health</small></span>
+      <span class="unit-row__count">7 chapters</span>
+      <span class="unit-row__progress">Progress
+        <span class="unit-row__bar" data-progress-total="36" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100"><i></i></span>
+      </span>
+      <span class="unit-row__arrow" aria-hidden="true">→</span>
+    </button>
+<button class="unit-row" type="button" data-unit="unit-5" aria-haspopup="dialog">
+      <span class="unit-row__num">V</span>
+      <span class="unit-row__title">Ethics, Governance &amp; Regulatory Landscape<small>Bioethics, bias and fairness, FDA/CE for SaMD, responsible deployment, XAI and trust, federated learning, clinical trials</small></span>
+      <span class="unit-row__count">7 chapters</span>
+      <span class="unit-row__progress">Progress
+        <span class="unit-row__bar" data-progress-total="36" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100"><i></i></span>
+      </span>
+      <span class="unit-row__arrow" aria-hidden="true">→</span>
+    </button></div>
+        <div class="units__foot">
+          <span class="eyebrow">Each chapter ends with key terms and review questions.</span>
+          <a class="btn btn--sm" href="contents.html">Full contents →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="figures">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <div class="fig-tag">07 · Selected figures</div>
+            <h2 style="margin-top:14px;">Three figures, three arguments.</h2>
+          </div>
+          <p>Every figure is drawn from the chapter it belongs to. Click one to read the surrounding argument.</p>
+        </div>
+        <div class="figure-grid"><a class="figure-card" href="read/ch-04.html#fig-clinical-data-ecosystem">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 660" role="img" aria-labelledby="clinical-data-ecosystem-title clinical-data-ecosystem-desc">
+  <title id="clinical-data-ecosystem-title">The clinical data ecosystem</title>
+  <desc id="clinical-data-ecosystem-desc">Clinical data sources flow through shared standards and governed infrastructure into decision support and machine learning.</desc>
+  <style>
+      :root{--dg-paper:#fafaf5;--dg-surface:#f3f1e8;--dg-ink:#1a1a1a;--dg-soft:#4a4a4a;--dg-mute:#6f6f68;--dg-rule:#d9d6c8;--dg-accent:#3553ff;--dg-tint:rgba(53,83,255,0.10);}
+      :root[data-theme="dark"]{--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}
+      @media (prefers-color-scheme: dark){:root:not([data-theme="light"]):not([data-theme="dark"]){--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}}
+
+      .dg-nm{font-family:'Source Serif 4',Georgia,serif;font-weight:600;}
+      .dg-it{font-family:'Source Serif 4',Georgia,serif;font-style:italic;}
+      .dg-mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+    </style>
+  <defs>
+    <marker id="clinical-data-ecosystem-arw" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-mute)"/></marker>
+    <marker id="clinical-data-ecosystem-acc" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-accent)"/></marker>
+  </defs>
+  <rect width="1120" height="660" fill="var(--dg-paper)"/>
+<text class="dg-mono" x="40" y="58" font-size="10" letter-spacing="0.14em" fill="var(--dg-accent)">01 · SOURCES — WHAT CLINICAL CARE GENERATES</text>
+<rect x="40" y="70" width="188" height="60" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1"/>
+<text class="dg-nm" x="134.0" y="96" font-size="14" text-anchor="middle" fill="var(--dg-ink)">EHR</text>
+<text class="dg-mono" x="134.0" y="116" font-size="10" text-anchor="middle" fill="var(--dg-mute)">FHIR resources</text>
+
+<rect x="248" y="70" width="188" height="60" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1"/>
+<text class="dg-nm" x="342.0" y="96" font-size="14" text-anchor="middle" fill="var(--dg-ink)">IMAGING</text>
+<text class="dg-mono" x="342.0" y="116" font-size="10" text-anchor="middle" fill="var(--dg-mute)">DICOM · PACS</text>
+
+<rect x="456" y="70" width="188" height="60" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1"/>
+<text class="dg-nm" x="550.0" y="96" font-size="14" text-anchor="middle" fill="var(--dg-ink)">SIGNALS</text>
+<text class="dg-mono" x="550.0" y="116" font-size="10" text-anchor="middle" fill="var(--dg-mute)">ECG · EEG · PPG</text>
+
+<rect x="664" y="70" width="188" height="60" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1"/>
+<text class="dg-nm" x="758.0" y="96" font-size="14" text-anchor="middle" fill="var(--dg-ink)">GENOMICS</text>
+<text class="dg-mono" x="758.0" y="116" font-size="10" text-anchor="middle" fill="var(--dg-mute)">FASTQ → VCF</text>
+
+<rect x="872" y="70" width="188" height="60" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1"/>
+<text class="dg-nm" x="966.0" y="96" font-size="14" text-anchor="middle" fill="var(--dg-ink)">NOTES</text>
+<text class="dg-mono" x="966.0" y="116" font-size="10" text-anchor="middle" fill="var(--dg-mute)">free text · NLP</text>
+
+<path d="M540 138 V204" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#clinical-data-ecosystem-arw)"/>
+<rect x="582" y="166" width="115" height="14" fill="var(--dg-paper)"/>
+<text class="dg-mono" x="640" y="177" font-size="10" letter-spacing="0.06em" text-anchor="middle" fill="var(--dg-soft)">standards apply</text>
+
+<rect x="40" y="212" width="1020" height="64" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-nm" x="64" y="240" font-size="16" fill="var(--dg-ink)">02 · STANDARDS &amp; TERMINOLOGY</text>
+<text class="dg-mono" x="64" y="262" font-size="11" fill="var(--dg-mute)">HL7 v2 · FHIR · DICOM · ICD · SNOMED CT · LOINC · RxNorm</text>
+<path d="M540 284 V328" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#clinical-data-ecosystem-arw)"/>
+<rect x="566" y="302" width="188" height="14" fill="var(--dg-paper)"/>
+<text class="dg-mono" x="660" y="313" font-size="10" letter-spacing="0.06em" text-anchor="middle" fill="var(--dg-soft)">join on patient identifier</text>
+
+<rect x="40" y="336" width="1020" height="64" rx="6" fill="var(--dg-tint)" stroke="var(--dg-accent)" stroke-width="1.2"/>
+<text class="dg-nm" x="64" y="364" font-size="16" fill="var(--dg-ink)">03 · INFRASTRUCTURE</text>
+<text class="dg-mono" x="64" y="386" font-size="11" fill="var(--dg-mute)">warehouse / lake · de-identification · access governance</text>
+<path d="M540 408 V456" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#clinical-data-ecosystem-arw)"/>
+
+<rect x="40" y="464" width="1020" height="64" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-nm" x="64" y="492" font-size="16" fill="var(--dg-ink)">04 · CONSUMERS</text>
+<text class="dg-mono" x="64" y="514" font-size="11" fill="var(--dg-mute)">CDSS at the bedside · ML training · population dashboards</text>
+<text class="dg-it" x="40" y="576" font-size="14" fill="var(--dg-soft)">Every movement of the joined data is a compliance decision — HIPAA and GDPR govern each arrow.</text>
+<rect x="40" y="610" width="18" height="12" rx="3" fill="var(--dg-surface)" stroke="var(--dg-rule)"/>
+<text class="dg-mono" x="66" y="620" font-size="10" fill="var(--dg-mute)">data source</text>
+<rect x="178.6" y="610" width="18" height="12" rx="3" fill="var(--dg-surface)" stroke="var(--dg-ink)"/>
+<text class="dg-mono" x="204.6" y="620" font-size="10" fill="var(--dg-mute)">shared layer</text>
+<rect x="323.79999999999995" y="610" width="18" height="12" rx="3" fill="var(--dg-tint)" stroke="var(--dg-accent)"/>
+<text class="dg-mono" x="349.79999999999995" y="620" font-size="10" fill="var(--dg-mute)">governed boundary</text>
+
+</svg>
+      <div class="figure-card__meta"><span>FIG_001</span><span>Chapter 4</span></div>
+      <h3>The clinical data ecosystem</h3>
+      <p>Sources, standards, and infrastructure feed every clinical AI application — and privacy governs every movement.</p>
+    </a><a class="figure-card" href="read/ch-19.html#fig-evaluation-quadrant">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 680" role="img" aria-labelledby="evaluation-quadrant-title evaluation-quadrant-desc">
+  <title id="evaluation-quadrant-title">Choosing metrics by prevalence and cost</title>
+  <desc id="evaluation-quadrant-desc">The right evaluation metric depends on how rare the disease is and which error the clinic can afford.</desc>
+  <style>
+      :root{--dg-paper:#fafaf5;--dg-surface:#f3f1e8;--dg-ink:#1a1a1a;--dg-soft:#4a4a4a;--dg-mute:#6f6f68;--dg-rule:#d9d6c8;--dg-accent:#3553ff;--dg-tint:rgba(53,83,255,0.10);}
+      :root[data-theme="dark"]{--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}
+      @media (prefers-color-scheme: dark){:root:not([data-theme="light"]):not([data-theme="dark"]){--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}}
+
+      .dg-nm{font-family:'Source Serif 4',Georgia,serif;font-weight:600;}
+      .dg-it{font-family:'Source Serif 4',Georgia,serif;font-style:italic;}
+      .dg-mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+    </style>
+  <defs>
+    <marker id="evaluation-quadrant-arw" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-mute)"/></marker>
+    <marker id="evaluation-quadrant-acc" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-accent)"/></marker>
+  </defs>
+  <rect width="1120" height="680" fill="var(--dg-paper)"/>
+<path d="M120 560 H1032" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#evaluation-quadrant-arw)"/>
+<path d="M120 560 V108" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#evaluation-quadrant-arw)"/>
+<text class="dg-mono" x="580" y="600" font-size="11" letter-spacing="0.08em" text-anchor="middle" fill="var(--dg-soft)">DISEASE PREVALENCE — COMMON → RARE</text>
+<text class="dg-mono" x="120" y="84" font-size="11" letter-spacing="0.08em" fill="var(--dg-soft)">COST OF A MISS (FALSE NEGATIVE) — LOW → HIGH</text>
+<path d="M580 120 V560" stroke="var(--dg-rule)" stroke-width="1"/>
+<path d="M140 340 H1040" stroke="var(--dg-rule)" stroke-width="1"/>
+<rect x="140" y="120" width="420" height="190" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1.2"/>
+<text class="dg-nm" x="164" y="164" font-size="17" fill="var(--dg-ink)">Catch it — do not miss</text>
+<text class="dg-mono" x="164" y="198" font-size="11" fill="var(--dg-soft)">optimize: sensitivity</text>
+<text class="dg-mono" x="164" y="220" font-size="11" fill="var(--dg-soft)">at a stated specificity floor</text>
+
+<rect x="600" y="120" width="420" height="190" rx="6" fill="var(--dg-tint)" stroke="var(--dg-accent)" stroke-width="1.2"/>
+<text class="dg-nm" x="624" y="164" font-size="17" fill="var(--dg-ink)">Rare + cannot miss</text>
+<text class="dg-mono" x="624" y="198" font-size="11" fill="var(--dg-soft)">optimize: sensitivity + AUPRC</text>
+<text class="dg-mono" x="624" y="220" font-size="11" fill="var(--dg-soft)">report absolute numbers</text>
+
+<rect x="140" y="350" width="420" height="190" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1.2"/>
+<text class="dg-nm" x="164" y="394" font-size="17" fill="var(--dg-ink)">Rule out safely</text>
+<text class="dg-mono" x="164" y="428" font-size="11" fill="var(--dg-soft)">optimize: specificity · NPV</text>
+<text class="dg-mono" x="164" y="450" font-size="11" fill="var(--dg-soft)">protect the healthy</text>
+
+<rect x="600" y="350" width="420" height="190" rx="6" fill="var(--dg-surface)" stroke="var(--dg-rule)" stroke-width="1.2"/>
+<text class="dg-nm" x="624" y="394" font-size="17" fill="var(--dg-ink)">Rare + costly follow-up</text>
+<text class="dg-mono" x="624" y="428" font-size="11" fill="var(--dg-soft)">optimize: AUPRC · precision@k</text>
+<text class="dg-mono" x="624" y="450" font-size="11" fill="var(--dg-soft)">the base-rate trap lives here</text>
+
+<text class="dg-mono" x="120" y="640" font-size="11" fill="var(--dg-soft)">ALWAYS ADD: calibration curves · per-subgroup breakdowns · the confusion matrix at the chosen operating point.</text>
+</svg>
+      <div class="figure-card__meta"><span>FIG_004</span><span>Chapter 19</span></div>
+      <h3>Choosing metrics by prevalence and cost</h3>
+      <p>What to optimize depends on how rare the disease is and which error the clinic can afford.</p>
+    </a><a class="figure-card" href="read/ch-33.html#fig-deployment-chain">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="deployment-chain-title deployment-chain-desc">
+  <title id="deployment-chain-title">The responsible deployment chain</title>
+  <desc id="deployment-chain-desc">A model moves through validation, shadow mode, and staged rollout into monitored operation, under continuous governance.</desc>
+  <style>
+      :root{--dg-paper:#fafaf5;--dg-surface:#f3f1e8;--dg-ink:#1a1a1a;--dg-soft:#4a4a4a;--dg-mute:#6f6f68;--dg-rule:#d9d6c8;--dg-accent:#3553ff;--dg-tint:rgba(53,83,255,0.10);}
+      :root[data-theme="dark"]{--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}
+      @media (prefers-color-scheme: dark){:root:not([data-theme="light"]):not([data-theme="dark"]){--dg-paper:#0a0d1a;--dg-surface:#131830;--dg-ink:#e8e6dc;--dg-soft:#c9c7bd;--dg-mute:#8f8d86;--dg-rule:#2b3252;--dg-accent:#6b8eff;--dg-tint:rgba(107,142,255,0.18);}}
+
+      .dg-nm{font-family:'Source Serif 4',Georgia,serif;font-weight:600;}
+      .dg-it{font-family:'Source Serif 4',Georgia,serif;font-style:italic;}
+      .dg-mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+    </style>
+  <defs>
+    <marker id="deployment-chain-arw" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-mute)"/></marker>
+    <marker id="deployment-chain-acc" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dg-accent)"/></marker>
+  </defs>
+  <rect width="1200" height="520" fill="var(--dg-paper)"/>
+<rect x="40" y="110" width="188" height="140" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-mono" x="60" y="140" font-size="10" letter-spacing="0.14em" fill="var(--dg-accent)">01</text>
+<text class="dg-nm" x="60" y="170" font-size="15" fill="var(--dg-ink)">LOCAL VALIDATION</text>
+<text class="dg-mono" x="60" y="198" font-size="10" fill="var(--dg-mute)">this hospital's data</text>
+<text class="dg-mono" x="60" y="216" font-size="10" fill="var(--dg-mute)">per-subgroup metrics</text>
+<path d="M232 180 H252" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#deployment-chain-arw)"/>
+
+<path d="M134 250 V322" stroke="var(--dg-rule)" stroke-width="1" stroke-dasharray="4,3"/>
+<rect x="264" y="110" width="188" height="140" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-mono" x="284" y="140" font-size="10" letter-spacing="0.14em" fill="var(--dg-accent)">02</text>
+<text class="dg-nm" x="284" y="170" font-size="15" fill="var(--dg-ink)">SHADOW MODE</text>
+<text class="dg-mono" x="284" y="198" font-size="10" fill="var(--dg-mute)">silent parallel run</text>
+<text class="dg-mono" x="284" y="216" font-size="10" fill="var(--dg-mute)">compare vs outcomes</text>
+<path d="M456 180 H476" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#deployment-chain-arw)"/>
+
+<path d="M358 250 V322" stroke="var(--dg-rule)" stroke-width="1" stroke-dasharray="4,3"/>
+<rect x="488" y="110" width="188" height="140" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-mono" x="508" y="140" font-size="10" letter-spacing="0.14em" fill="var(--dg-accent)">03</text>
+<text class="dg-nm" x="508" y="170" font-size="15" fill="var(--dg-ink)">STAGED ROLLOUT</text>
+<text class="dg-mono" x="508" y="198" font-size="10" fill="var(--dg-mute)">unit → service → site</text>
+<text class="dg-mono" x="508" y="216" font-size="10" fill="var(--dg-mute)">rollback plan</text>
+<path d="M680 180 H700" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#deployment-chain-arw)"/>
+
+<path d="M582 250 V322" stroke="var(--dg-rule)" stroke-width="1" stroke-dasharray="4,3"/>
+<rect x="712" y="110" width="188" height="140" rx="6" fill="var(--dg-tint)" stroke="var(--dg-accent)" stroke-width="1.2"/>
+<text class="dg-mono" x="732" y="140" font-size="10" letter-spacing="0.14em" fill="var(--dg-accent)">04</text>
+<text class="dg-nm" x="732" y="170" font-size="15" fill="var(--dg-ink)">MONITORED OPERATION</text>
+<text class="dg-mono" x="732" y="198" font-size="10" fill="var(--dg-mute)">drift · equity · incidents</text>
+<text class="dg-mono" x="732" y="216" font-size="10" fill="var(--dg-mute)">model card live</text>
+<path d="M904 180 H924" fill="none" stroke="var(--dg-mute)" stroke-width="1.5" marker-end="url(#deployment-chain-arw)"/>
+
+<path d="M806 250 V322" stroke="var(--dg-rule)" stroke-width="1" stroke-dasharray="4,3"/>
+<rect x="936" y="110" width="188" height="140" rx="6" fill="var(--dg-surface)" stroke="var(--dg-ink)" stroke-width="1.2"/>
+<text class="dg-mono" x="956" y="140" font-size="10" letter-spacing="0.14em" fill="var(--dg-accent)">05</text>
+<text class="dg-nm" x="956" y="170" font-size="15" fill="var(--dg-ink)">RETIREMENT</text>
+<text class="dg-mono" x="956" y="198" font-size="10" fill="var(--dg-mute)">committee decision</text>
+<text class="dg-mono" x="956" y="216" font-size="10" fill="var(--dg-mute)">replaced or retired</text>
+<path d="M1030 250 V322" stroke="var(--dg-rule)" stroke-width="1" stroke-dasharray="4,3"/>
+<rect x="40" y="330" width="1084" height="72" rx="6" fill="var(--dg-tint)" stroke="var(--dg-accent)" stroke-width="1.2"/>
+<text class="dg-nm" x="64" y="360" font-size="16" fill="var(--dg-ink)">GOVERNANCE — CONTINUOUS</text>
+<text class="dg-mono" x="64" y="384" font-size="11" fill="var(--dg-mute)">AI committee · thresholds · versioning · incident review · model cards</text>
+<text class="dg-it" x="40" y="456" font-size="14" fill="var(--dg-soft)">Trust is an operational property: earned by validation, preserved by monitoring, governed by people whose names are on the decision.</text>
+</svg>
+      <div class="figure-card__meta"><span>FIG_006</span><span>Chapter 33</span></div>
+      <h3>The responsible deployment chain</h3>
+      <p>Local validation → shadow mode → staged rollout → monitored operation, with governance at every link.</p>
+    </a></div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="lab-program">
+      <div class="container lab-spotlight">
+        <div>
+          <div class="lab-spotlight__num">08<small>lab exercises · appendix B</small></div>
+        </div>
+        <div>
+          <div class="section__head section__head--stack" style="margin-bottom:20px;">
+            <div class="fig-tag">08 · Lab program</div>
+            <h2 style="font-size:clamp(40px,5vw,64px);color:#ece9dc;">Build the evidence.</h2>
+            <p style="color:#b9b7ae;">Every lab ends with a written report. The datasets are public or synthetic; the ground rule is data-use compliance.</p>
+          </div>
+          <div class="lab-list"><div class="lab-list__item">
+      <b>01</b><span>Map a Clinical Data Ecosystem</span><span>Ch. 1–8</span>
+    </div><div class="lab-list__item">
+      <b>02</b><span>Clean a Messy Clinical Extract</span><span>Ch. 9–10</span>
+    </div><div class="lab-list__item">
+      <b>03</b><span>Engineer EHR Features Without Leakage</span><span>Ch. 11–12</span>
+    </div><div class="lab-list__item">
+      <b>04</b><span>Clinical NLP: Negation and Auto-Coding</span><span>Ch. 13–14</span>
+    </div></div>
+          <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+            <a class="btn btn--primary" href="labs.html">Open the lab manual →</a>
+            <a class="btn" style="background:transparent;color:#ece9dc;border-color:#ece9dc;box-shadow:3px 3px 0 #6b8eff;" href="contents.html#unit-2">See the data chapters</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="colophon">
+      <div class="container colophon">
+        <div>
+          <div class="fig-tag">09 · Colophon</div>
+          <h2 style="font-size:clamp(40px,4.8vw,62px);margin-top:14px;">How to cite it.</h2>
+        </div>
+        <div>
+          <div class="cite-block" id="citation">
+            <strong>Healthcare AI (23A133403c):</strong> A Complete Textbook and Question Bank with Model Answers. First Edition, 2026. Dr. K. V. Subba Reddy Institute of Technology (Autonomous) — Dept. of CSE (AI &amp; ML). A complete textbook in five units, thirty-six chapters, and eight labs.
+            <div class="cite-block__actions">
+              <button class="btn btn--sm" type="button" data-copy="Healthcare AI (23A133403c): A Complete Textbook and Question Bank with Model Answers. First Edition, 2026.">Copy citation</button>
+              <a class="btn btn--ghost btn--sm" href="contents.html">Open contents</a>
+            </div>
+          </div>
+          <div class="colophon__notes" style="margin-top:22px;">
+            <p>Typeset in <strong>VT323</strong> for display, <strong>Source Serif 4</strong> for reading, and <strong>JetBrains Mono</strong> for metadata and code. The interface uses a warm paper ground, blueprint blue, hard shadows, and a dotted grid.</p>
+            <p>The design language is deliberately borrowed from <a href="https://aiengineeringfromscratch.com/" rel="noopener">AI Engineering from Scratch</a> (MIT): editorial structure, figure plates, numbered contents, and a local-first reading model. The textbook content is this book’s own.</p>
+            <p>Progress, theme, and reading position are stored in <code>localStorage</code>. No account, no server, no telemetry.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-label="Who the book is for">
+      <div class="marquee__label">Written for</div>
+      <div class="marquee__track">
+        <span class="marquee__item">B.Tech students</span><span class="marquee__item">Clinicians</span><span class="marquee__item">Health-informatics students</span><span class="marquee__item">ML engineers</span><span class="marquee__item">Clinical data scientists</span><span class="marquee__item">Researchers</span>
+        <span class="marquee__item">B.Tech students</span><span class="marquee__item">Clinicians</span><span class="marquee__item">Health-informatics students</span><span class="marquee__item">ML engineers</span><span class="marquee__item">Clinical data scientists</span><span class="marquee__item">Researchers</span>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><span class="brand__mark">HEALTH<span>/</span>CARE&nbsp;AI</span></a>
+          <p>Healthcare AI (23A133403c) — from the clinical data ecosystem to the ethics and regulation that decide whether a model reaches a patient.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Read</h4>
+          <a href="contents.html">Contents</a>
+          <a href="read/ch-01.html">Chapter 1</a>
+          <a href="reading.html">Reading list</a>
+          <a href="question-bank.html">Question bank</a>
+        </div>
+        <div class="footer-col">
+          <h4>Practice</h4>
+          <a href="labs.html">Lab manual</a>
+          <a href="glossary.html">Glossary</a>
+          <a href="contents.html#unit-3">ML &amp; deep learning</a>
+          <a href="contents.html#unit-5">Ethics &amp; future</a>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="index.html#preface">Preface</a>
+          <a href="index.html#colophon">Colophon</a>
+          <a href="index.html#reading-paths">Reading paths</a>
+          <a href="index.html#units">Units</a>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>First edition · 2026 · Static site · Progress stays in your browser</span>
+        <span>Design language inspired by <a href="https://aiengineeringfromscratch.com/" rel="noopener">AI Engineering from Scratch</a> (MIT)</span>
+      </div>
+    </div>
+  </footer>
+  <div class="cp" id="cmdPalette" role="dialog" aria-modal="true" aria-label="Search the textbook" aria-hidden="true">
+    <div class="cp__panel">
+      <div class="cp__head">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+        <input class="cp__input" id="cpInput" type="text" placeholder="Search chapters, sections, glossary, labs…" autocomplete="off" spellcheck="false" aria-controls="cpResults" aria-expanded="true">
+        <span class="cp__esc">ESC</span>
+        <button class="icon-btn cp__close" type="button" aria-label="Close search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+        </button>
+      </div>
+      <div class="cp__body" id="cpResults" role="listbox" aria-label="Search results"></div>
+      <div class="cp__foot">
+        <span id="cpSummary">Search 36 chapters, 200+ sections, glossary, labs, and the question bank.</span>
+        <span><kbd>↑</kbd> <kbd>↓</kbd> to move · <kbd>enter</kbd> to open · <kbd>esc</kbd> to close</span>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="unitModal" role="dialog" aria-modal="true" aria-labelledby="unitModalTitle" aria-hidden="true">
+    <div class="modal__backdrop"></div>
+    <div class="modal__panel">
+      <div class="modal__head">
+        <div>
+          <h2 id="unitModalTitle">Unit</h2>
+          <p id="unitModalKicker"></p>
+        </div>
+        <button class="icon-btn modal__close" id="unitModalClose" type="button" aria-label="Close unit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+        </button>
+      </div>
+      <div class="modal__body">
+        <div class="modal__search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+          <input id="unitModalSearch" type="search" placeholder="Filter chapters…" aria-label="Filter chapters">
+        </div>
+        <div id="unitModalBody"></div>
+        <div class="modal__foot">
+          <span class="eyebrow">Progress is stored locally.</span>
+          <a class="btn btn--sm" href="contents.html">Full contents →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/search-index.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
